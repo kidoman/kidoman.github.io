@@ -34,12 +34,16 @@ copyright = "Copyright (c) 2006 - 2015, Karan Misra; all rights reserved."
   highlight = "sunburst"
 
   gravatarHash = "8aea1ec57a05b988585f7f2c9e320cfe"
-  tagline = "Coder, Biker, Gamer"
+  tagline = """
+  Coder, Biker, Gamer
+  
+  Co-Founder, CTO<br/>
+  [SoStronk](https://www.sostronk.com/)
+  """
 
   googleAnalytics = "UA-44459958-1"
 
   googleAuthorship = "109365517985703707273"
 
   github = "https://github.com/kidoman"
-  facebook = "https://www.facebook.com/KiD0M4N"
   twitter = "https://twitter.com/kidoman_"
