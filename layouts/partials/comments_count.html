@@ -1,0 +1,1 @@
+<a {{ if .Params.disqus_url }} href="javascript:window.location='{{ .Permalink }}#disqus_thread'" data-disqus-url="{{ .Params.disqus_url }}" {{ else }} href="{{ .Permalink }}#disqus_thread" {{ end }} >Comments</a>

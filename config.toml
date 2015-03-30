@@ -1,0 +1,45 @@
+baseurl = "http://kidoman.io"
+languageCode = "en-us"
+title = "Coder, Biker, Gamer"
+disqusShortname = "kidoman"
+metaDataFormat = "yaml"
+theme = "hyde-x"
+copyright = "Copyright (c) 2006 - 2015, Karan Misra; all rights reserved."
+
+[[menu.main]]
+  url = "mailto:kidoman@gmail.com"
+  name = "Contact"
+  weight = -10
+
+[[menu.main]]
+  url = "/about"
+  name = "About"
+  weight = 0
+
+[author]
+  name = "Karan Misra"
+
+[permalinks]
+  post = "/blog/:slug/"
+
+[indexes]
+  category = "categories"
+
+[params]
+  defaultDescription = "Karan Misra's home page"
+  defaultKeywords = "kidoman,embd,sostronk"
+
+  theme = "theme-base-0f"
+
+  highlight = "sunburst"
+
+  gravatarHash = "8aea1ec57a05b988585f7f2c9e320cfe"
+  tagline = "Coder, Biker, Gamer"
+
+  googleAnalytics = "UA-44459958-1"
+
+  googleAuthorship = "109365517985703707273"
+
+  github = "https://github.com/kidoman"
+  facebook = "https://www.facebook.com/KiD0M4N"
+  twitter = "https://twitter.com/kidoman_"
