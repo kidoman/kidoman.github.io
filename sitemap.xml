@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://kidoman.io/</loc>
+    <lastmod>2014-06-11T00:00:00+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/hello-sostronk/</loc>
+    <lastmod>2014-06-11T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/goodbye-thoughtworks/</loc>
+    <lastmod>2014-06-10T16:30:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/async-io-part-1/</loc>
+    <lastmod>2014-05-13T16:24:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/god-save-the-js/</loc>
+    <lastmod>2014-05-10T03:15:15+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/embd-behind-the-scenes/</loc>
+    <lastmod>2014-05-06T06:55:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/introducing-embd/</loc>
+    <lastmod>2014-04-24T06:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/introducing-serve/</loc>
+    <lastmod>2014-04-10T06:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/thebot-adventures-in-hardware/</loc>
+    <lastmod>2014-03-02T08:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/go-getter-part-3/</loc>
+    <lastmod>2013-10-05T08:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/go-getter-part-2/</loc>
+    <lastmod>2013-10-03T04:30:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/go-getter/</loc>
+    <lastmod>2013-10-02T12:06:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/about/</loc>
+    <lastmod>2013-10-01T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/testing-the-waters-with-golang/</loc>
+    <lastmod>2013-07-26T02:44:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/nodejs-in-action-learnings/</loc>
+    <lastmod>2013-05-31T01:58:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/why-sublime-text/</loc>
+    <lastmod>2013-05-23T02:17:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/sitting-at-work/</loc>
+    <lastmod>2013-05-13T09:28:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/chrome-devtools-profiling-demystified/</loc>
+    <lastmod>2013-05-12T09:30:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/blog/welcome/</loc>
+    <lastmod>2013-05-01T02:27:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kidoman.io/about/resume/</loc>
+  </url>
+  
+</urlset>

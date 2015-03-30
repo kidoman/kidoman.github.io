@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Coder, Biker, Gamer</title>
+    <link>http://kidoman.io/about/</link>
+    <description>Recent content in Abouts on Coder, Biker, Gamer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2006 - 2015, Karan Misra; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 01 Oct 2013 00:00:00 +0530</lastBuildDate>
+    <atom:link href="http://kidoman.io/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Me</title>
+      <link>http://kidoman.io/about/</link>
+      <pubDate>Tue, 01 Oct 2013 00:00:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/about/</guid>
+      <description>&lt;p&gt;My name is &lt;strong&gt;Karan Misra&lt;/strong&gt;. I am currently busy developing a next gen eSports platform (&lt;a href=&#34;https://www.sostronk.com&#34;&gt;SoStronk&lt;/a&gt;) at Archetype (serving as the CTO and Co-Founder). My various interests include overclocking, biking, programming, gaming, etc.&lt;/p&gt;
+
+&lt;p&gt;My open source contributions can be found &lt;a href=&#34;https://github.com/kidoman&#34;&gt;here&lt;/a&gt;. And I sometimes &lt;a href=&#34;https://twitter.com/kidoman_&#34;&gt;tweet&lt;/a&gt; as well.&lt;/p&gt;
+
+&lt;p&gt;A more detailed &lt;strong&gt;resume&lt;/strong&gt; can be seen &lt;a href=&#34;http://kidoman.io/about/resume/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I can be reached at &lt;a href=&#34;mailto:kidoman@gmail.com&#34;&gt;kidoman@gmail.com&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>http://kidoman.io/about/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://kidoman.io/about/resume/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://www.gravatar.com/avatar/8aea1ec57a05b988585f7f2c9e320cfe?s=200&#34; style=&#34;float: right; margin: 0 0 10px 20px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Since &lt;strong&gt;June 2014&lt;/strong&gt;, I am busy working on my startup developing a next generation eSports platform (&lt;a href=&#34;https://www.sostronk.com&#34;&gt;SoStronk&lt;/a&gt;). So some of the information down below is possibly outdated.&lt;/p&gt;
+
+&lt;p&gt;I am a challenge driven person who gets a kick out of delivering solutions to complex and innovative problems. With a total experience of almost 8 years (94 months), the last 2+ years of my career have been in &lt;a href=&#34;http://www.thoughtworks.com/&#34;&gt;ThoughtWorks&lt;/a&gt;. This stint in ThoughtWorks has given me many innumerable opportunities to work on challenging problems in many different areas, like online ticketing, devops, performance testing, infrastructure automation and with varied technologies, like .NET/C#, Ruby, Chef, node.js, Gatling and Golang.&lt;/p&gt;
+
+&lt;p&gt;My recent passion has been centered around developing high performance systems which scale, &lt;a href=&#34;http://kidoman.io/framework/embd.html&#34;&gt;embedded systems&lt;/a&gt;, and in &lt;a href=&#34;http://golang.org/&#34;&gt;Golang&lt;/a&gt;. As a avid open source believer, I try and do my part by contributing back to the community to the best of my capacity (my &lt;a href=&#34;https://github.com/kidoman&#34;&gt;GitHub&lt;/a&gt; profile.) Some of my recent projects are &lt;a href=&#34;https://github.com/kidoman/embd&#34;&gt;embd&lt;/a&gt; and &lt;a href=&#34;https://github.com/kidoman/rays&#34;&gt;rays&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I also love speaking at technical conferences, and had the opportunity to address the good folks at &lt;a href=&#34;http://www.meetup.com/mongo-dilli/events/129611472/&#34;&gt;Mongo Dilli&lt;/a&gt;, &lt;a href=&#34;http://www.meetup.com/Golang-India/events/155483972/&#34;&gt;Golang India&lt;/a&gt; and over 3 &lt;strong&gt;XConfs&lt;/strong&gt; (technical conferences internal to ThoughtWorks) over the last 2 years.&lt;/p&gt;
+
+&lt;p&gt;My quick learning and grasping abilities have definitely helped me stay on top of everything I have put my finger on, and I have thankful for that.&lt;/p&gt;
+
+&lt;h2 id=&#34;achievements:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Achievements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Prototyped and developed &lt;a href=&#34;http://kidoman.io/blog/embd-behind-the-scenes/&#34;&gt;TheBot&lt;/a&gt; (&lt;a href=&#34;https://www.youtube.com/watch?v=iMXjkZ4B3EM&#34;&gt;video&lt;/a&gt;), a entry into the &lt;strong&gt;100 Days of Hardware&lt;/strong&gt; completition/initiative. It was the only entry from ThoughtWorks Bangalore office. Developed the bot&amp;rsquo;s firmware and hardware abstraction layer/sensor driver library from scratch in Golang (it is now open sourced as &lt;a href=&#34;http://embd.kidoman.io/&#34;&gt;EMBD&lt;/a&gt; (&lt;a href=&#34;http://embd.kidoman.io/#demo&#34;&gt;video&lt;/a&gt;)) The project was judged as &lt;strong&gt;Best Project Overall&lt;/strong&gt; by a panel of judges (one of whom was Rebecca Parsons, ThoughtWorks CTO)&lt;/li&gt;
+&lt;li&gt;Tech Lead role on various projects in ThoughtWorks&lt;/li&gt;
+&lt;li&gt;Promoted to ‘Lead Analyst’ in a record 4 years and 10 months in April 2011&lt;/li&gt;
+&lt;li&gt;Received SEE (Significantly Exceeds Expectation), the highest rating awarded at CGI, three years in a row (2009 – 2011) and got two EE ratings in the two years preceding that&lt;/li&gt;
+&lt;li&gt;Received a ‘STAR’ award for exceptional performance in the CGI Annual Tour in 2010 from CGI US East Head and acclaimed top executive, Donna Morea&lt;/li&gt;
+&lt;li&gt;Recognized for exceptional services and commitment rendered to client (Daimler) in UK during a 9 month long onsite stint&lt;/li&gt;
+&lt;li&gt;Architectured and developed a turnkey solution for bulk migration of data from varied data sources thereby shaving off months from the development time&lt;/li&gt;
+&lt;li&gt;Promoted to ‘Senior Software Engineer’ in 2 years and 10 months in April 2009&lt;/li&gt;
+&lt;li&gt;Acknowledged with the ‘Key Contributor’ award for exceptional performance in 2008&lt;/li&gt;
+&lt;li&gt;Received an All Asia Rank of #52 in Google TopCoder Challenge 2005&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;experience:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Experience&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Feb 2012 to June 2014: &lt;a href=&#34;http://www.thoughtworks.com/&#34;&gt;ThoughtWorks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A 20 year old company, &lt;strong&gt;ThoughtWorks&lt;/strong&gt; has been primarily into software. We have made our mark in the ability to create high quality custom enterprise grade software over the years. Data analytics is a key focus areas as is mobile development.&lt;/p&gt;
+
+&lt;p&gt;After joining in Feb, I got immediately started on a .NET / C# project. The project was being executed by ThoughtWorks for the largest online train ticketing site in UK. This was my first real exposure to agile and I loved the experience. After working on functional features for a while, I joined a team responsible for creating a automation system which would handle the production deployment of this large website. It was quite tricky given that the servers all ran Linux. But the Chef + Ruby combination was finally surmounted and we delivered a perfectly functional system.&lt;/p&gt;
+
+&lt;p&gt;My next project (starting around Jan 15, 2013) brought on the responsibility of seeing throught the production deployment of a green field node.js application for a Fortune 500 client of ThoughtWorks. Besides having to get up to speed with node.js in record time, we had to diagnose and resolve various teething performance issues (both in node.js and in the infrastructure.) This provided the opportunity to understand the minutiae of productionizing and deploying applications in a large enterprise (which have their own policies about high availability, performance, etc.) My abilities to interact with the client and to build a long lasting trust were also recognized as invalueable to the project.&lt;/p&gt;
+
+&lt;p&gt;Since Aug 2013, I have been working on two project simultaneously. I continue to work with the same client on a new project (we are building a next gen information sharign system&amp;hellip; you will hear about it soon enough) as my day job. My night job/second project is undoubtedly more exciting though. I have been responsible (along with Kunal, a close friend and colleague) for starting work on open hardware. Our chairman, Roy Singhman, asked all ThoughtWorkers to come and embrace the unknown. Hardware was always a second best friend for me (my 7 year old &lt;a href=&#34;http://www.erodov.com&#34;&gt;tech blog&lt;/a&gt; is a testament to that.) This seemed like a good opportunity to learn a bunch of things, and boy was my intuition right. The going has definitely been slow due to the multitasking, but we have accomplished a lot even without the dedicated time. We build a &lt;a href=&#34;https://github.com/kidoman/thebot&#34;&gt;open source&lt;/a&gt; sensor platform (in a &lt;strong&gt;car&lt;/strong&gt; form factor) and also open sourced the Golang based &lt;a href=&#34;http://kidoman.io/framework/embd.html&#34;&gt;hardware abstraction layer/sensor driver library&lt;/a&gt;. We demoed the prototype to public for the first time on Jan 10th (and dedicated the effort to Aaron Swartz, whose death anniversary was on Jan 11th) and it was very well received.&lt;/p&gt;
+
+&lt;p&gt;The same project won the &amp;lsquo;&lt;strong&gt;Best Project&lt;/strong&gt;&amp;rsquo; award in the recently (Feb &amp;lsquo;14) concluded &amp;lsquo;&lt;strong&gt;100 Days of Hardware&lt;/strong&gt;&amp;rsquo; competition at ThoughtWorks.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;June 2006 to Dec 2011: &lt;a href=&#34;http://www.cgi.com/&#34;&gt;CGI Information Systems&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CGI Group Inc. is a multinational information technology (IT) consulting, systems integration, outsourcing, and solutions company headquartered in Montreal, Canada. It was founded in 1976 by Serge Godin and André Imbeau.&lt;/p&gt;
+
+&lt;p&gt;I started off my career working in &lt;em&gt;data warehousing&lt;/em&gt; with technologies like &lt;em&gt;Informatica&lt;/em&gt;, &lt;em&gt;Oracle&lt;/em&gt; and &lt;em&gt;Actuate&lt;/em&gt;. After a few years, I worked on the Microsoft offerings in the same domain, like &lt;em&gt;SSIS&lt;/em&gt; and &lt;em&gt;SQL Server&lt;/em&gt;. Around this time, I got an opportunity to demonstrate my accumen in development by architecting a custom bulk data migration solution which saved the client a few months of work. The next 1.5 years were spent working solely in development (.NET / C#) in team lead capacity, interfacing with the client to ensure things were executed smoothly.&lt;/p&gt;
+
+&lt;h2 id=&#34;education:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Education&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;B-Tech, Computer Science, 2002 – 2006, College of Engineering and Technology, Bhubaneswar, Orissa&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Was responsible for laying the foundation of the LAN network and the emailing system at my college. Used open source technologies (qmail, Linux, iptables, Apache) and free technologies to deliver a tightly integrated and secure LAN environment.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Internship at IIT Mumbai&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Was awarded a performance certificate and a cash reward of Rs. 20,000 for developing a POC under Prof. Sachin Patkar and Prof. A. K. Pani from the Mathematics Department.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;10+2, Computer Science, 2000 – 2002, D.A.V Chandrasekharpur, Bhubaneswar, Orissa&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Took initiative and created the official website for the school (&lt;a href=&#34;http://www.davcsp.org/&#34;&gt;http://www.davcsp.org/&lt;/a&gt;, Version 1 in Year 2001.)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;10th, 2000, Chinmaya Vidyalaya, Therubali, Orissa&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;academics:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Academics&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;B-Tech Computer Science: 8.88 OGPA (9th rank overall in my stream)&lt;/li&gt;
+&lt;li&gt;10+2 (CBSE): 88.8% (Computer Science Major)&lt;/li&gt;
+&lt;li&gt;10th (CBSE): 83.6%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;other-achievements:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Other Achievements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Erodov Technlogy Blog (www.erodov.com)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Started in April 2007, it is one of the most popular hi-tech websites/forums in India (and now a registered company in Karnataka, India.)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Webopt POC for IIT Mumbai internship&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Got applauded for delivering a working prototype during a 2 month long internship at IIT Mumbai in summer of 2004. The prototype was written in .NET 2 (Visual Studio 2005) and was written to demonstrate a proof-of-concept of using web services (.asmx) to help automate repetitive tasks for the various solvers available in the Mathematics field (like Mathematica.) The POC delivered was in 2 parts: A rich client (Win Forms) which the researchers would use from their desktops to create and assign tasks. A server interface was also developed to act as the back end.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OITS, 2001&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Secured First Position in Orissa IT Olympiad&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

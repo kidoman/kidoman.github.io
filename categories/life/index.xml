@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Life on Coder, Biker, Gamer</title>
+    <link>http://kidoman.io/categories/life/</link>
+    <description>Recent content in Life on Coder, Biker, Gamer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2006 - 2015, Karan Misra; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 11 Jun 2014 00:00:00 +0530</lastBuildDate>
+    <atom:link href="http://kidoman.io/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hello SoStronk!</title>
+      <link>http://kidoman.io/blog/hello-sostronk/</link>
+      <pubDate>Wed, 11 Jun 2014 00:00:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/hello-sostronk/</guid>
+      <description>&lt;p&gt;I could not have asked for a better opportunity.&lt;/p&gt;
+
+&lt;p&gt;After spending some time contemplating the next step in life (beyond ThoughtWorks i.e.) I landed on this gig. For a while I was ready to settle for another day job (went and interviewed with Flipkart, but said no to the offer). However, even the mere thought of passing on this felt like stupidity to me.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.sostronk.com/&#34;&gt;&lt;strong&gt;SoStronk&lt;/strong&gt;&lt;/a&gt; requires me to take on the CTO role (as a Co-Founder) to help build the next generation eSports platform.&lt;/p&gt;
+
+&lt;p&gt;For people who have been living under the rock, eSports - which stands for Electronic Sports - is the next big thing in entertainment. It took a while to take off, but just recently, &lt;strong&gt;400,000&lt;/strong&gt; people watched the EMS One Katowice 2014 Championship live on Twitch.tv. &lt;a href=&#34;http://www.dota2.com/international/compendium/&#34;&gt;The Compendium&lt;/a&gt; managed to rack up a cool &lt;strong&gt;$10.9 million&lt;/strong&gt; as the prize pool for the Dota 2 International. Gamers are getting &lt;a href=&#34;http://www.theverge.com/2013/8/11/4611180/league-legends-gamer-gets-visa-recognizing-him-as-pro-athlete&#34;&gt;athletes VISA&lt;/a&gt; to the USA so that they can go compete in the events.&lt;/p&gt;
+
+&lt;p&gt;I started gaming back in 2004 (and the majority of the time has been spent playing Counter Strike.) How exactly could I say no to an opportunity which would allow me to lean back on all those years of gaming experience (and programming) to build the ultimate platform for gamers everywhere?&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s right. I couldn&amp;rsquo;t say no. Here&amp;rsquo;s to much hard work and (hopefully) some well deserved success.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update 1 (2015-03-30)&lt;/strong&gt;: We broke the magic &lt;a href=&#34;http://blog.counter-strike.net/index.php/2015/03/11685/&#34;&gt;&lt;strong&gt;1 million simultaneous viewers&lt;/strong&gt;&lt;/a&gt; on the recently (Mar 2015) concluded &lt;strong&gt;ESL One Katowice 2015 Major&lt;/strong&gt;. Thats a massive growth.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Goodbye ThoughtWorks</title>
+      <link>http://kidoman.io/blog/goodbye-thoughtworks/</link>
+      <pubDate>Tue, 10 Jun 2014 16:30:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/goodbye-thoughtworks/</guid>
+      <description>&lt;p&gt;As some of you might already know, June 10th is going to be my last day at ThoughtWorks.&lt;/p&gt;
+
+&lt;p&gt;Before I go any further, I must say: My 2.5 years journey in TW was really awesome.&lt;/p&gt;
+
+&lt;p&gt;I joined ThoughtWorks back in Feb 2012 (after 5+ years in &lt;a href=&#34;www.cgi.com&#34;&gt;CGI&lt;/a&gt;) and most days have been more exciting than any. It was quite a exciting journey as well, because even thought I have toyed around with programming since about 2001, this was my first professional gig (if you don&amp;rsquo;t count the last year at CGI doing .NET development) head first into application development.&lt;/p&gt;
+
+&lt;p&gt;Met a lot of interesting people, made a lot of life long friends, and worked on a lot of &lt;a href=&#34;http://kidoman.io/blog/thebot-adventures-in-hardware/&#34;&gt;cool&lt;/a&gt; &lt;a href=&#34;http://kidoman.io/blog/introducing-embd/&#34;&gt;things&lt;/a&gt;. And now its time to move on.&lt;/p&gt;
+
+&lt;p&gt;ThoughtWorks really helped me see what I wanted to do with my life. I was really hooked on to writing software, more so after I discovered &lt;a href=&#34;http://kidoman.io/blog/testing-the-waters-with-golang/&#34;&gt;Go&lt;/a&gt;. But I really wanted to apply this ability to working on my own project. Where I could really &lt;a href=&#34;https://inconshreveable.com/09-09-2014/sweat-the-small-stuff/&#34;&gt;sweat the small stuff&lt;/a&gt; and I could work towards giving users the best experience possible. Unfortunately, these things are really not possible in a consulting firm (which ThoughtWorks, by and large, is).&lt;/p&gt;
+
+&lt;p&gt;Therefore, I must say the hard goodbye and look excitedly towards my next gig (&lt;a href=&#34;http://kidoman.io/blog/hello-sostronk/&#34;&gt;SoStronk&lt;/a&gt;).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>EMBD: Behind the Scenes</title>
+      <link>http://kidoman.io/blog/embd-behind-the-scenes/</link>
+      <pubDate>Tue, 06 May 2014 06:55:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/embd-behind-the-scenes/</guid>
+      <description>
+
+&lt;p&gt;For the impatient, TheBot was an experiment to kickstart a hardware engineering culture at &lt;strong&gt;ThoughtWorks&lt;/strong&gt;. We choose the Raspberry Pi (RPi) as the prototyping platform and Golang as the language in which to create the firmware. We felt the need for a solid hardware abstraction layer (HAL) which would allow us to not only target the RPi, but soon expand to other platforms as well. We also wanted to make it dead easy to talk to a variety of sensors. Since there were no such existing frameworks for &lt;a href=&#34;http://golang.org/&#34;&gt;Golang&lt;/a&gt;, we ended up writing our own, and we called it &lt;a href=&#34;https://embd.kidoman.io/&#34;&gt;EMBD&lt;/a&gt; (&lt;a href=&#34;https://github.com/kidoman/embd&#34;&gt;Github&lt;/a&gt;).&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;EMBD&lt;/strong&gt; enables you to get started on your project quickly by providing build in support for the various &lt;a href=&#34;https://github.com/kidoman/embd#platforms-supported&#34;&gt;platforms&lt;/a&gt;, &lt;a href=&#34;https://github.com/kidoman/embd#protocols-supported&#34;&gt;protocols&lt;/a&gt;, &lt;a href=&#34;https://github.com/kidoman/embd#sensors-supported&#34;&gt;sensors&lt;/a&gt;, &lt;a href=&#34;https://github.com/kidoman/embd#controllers&#34;&gt;controllers&lt;/a&gt;. It also allows your prototyping code to survive through to production because of the built in hardware abstraction layer and Golang&amp;rsquo;s &lt;a href=&#34;https://github.com/kidoman/embd/wiki/Why-Go&#34;&gt;versatility&lt;/a&gt;. Thus significantly shortening the &lt;strong&gt;time to market&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;a-little-history:2505723aeef3de4a9dea60209fc5f0de&#34;&gt;A little history&lt;/h2&gt;
+
+&lt;p&gt;A 20 year old company, &lt;strong&gt;ThoughtWorks&lt;/strong&gt; has been primarily into software. We have made our mark in the ability to create high quality custom enterprise grade software over the years. Data analytics is a key focus areas, but there are others with deeper pockets already investing. Mobile development is also a conquered field. So when our chairman, &lt;a href=&#34;http://en.wikipedia.org/wiki/Neville_Roy_Singham&#34;&gt;Roy&lt;/a&gt;, asked ThoughtWorkers to preempt the next big thing, we naturally started looking at the Internet of Things (&lt;strong&gt;IoT&lt;/strong&gt;) as one of the avenues for innovation. Approaching it from a purely hardware perspective would have meant a lot of playing catch up, as we would need to seed a lot of talent in spaces before we could catch up:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;material science&lt;/li&gt;
+&lt;li&gt;industrial design&lt;/li&gt;
+&lt;li&gt;manufacturing, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We wanted to get started quickly, leveraging on abilities we have honed over the last two decades. And one of the low hanging fruits to explore was the software side of internet connected devices, firmware for the rovers and quadcopters, the user experiences of these &lt;a href=&#34;https://nest.com/thermostat/life-with-nest-thermostat/&#34;&gt;new contraptions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;enter-thebot:2505723aeef3de4a9dea60209fc5f0de&#34;&gt;Enter, TheBot&lt;/h2&gt;
+
+&lt;p&gt;We deliberately choose to build something simple - to push the odds in our favor. However, the simplicity proved to be a boon as it allowed us a lot of scope for innovation in the software side of things. We also wanted to take this opportunity to study. To glean experiences from. From many angles, this is just scratching the surface of what is to come, but you have got to start somewhere. Think of it as bulb # 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; width=&#34;640&#34; height=&#34;385&#34; src=&#34;http://www.youtube.com/embed/iMXjkZ4B3EM&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;(We first showcased this to public on Jan 10, 2014 and dedicated the effort to Aaron, a good soul and a ThoughtWorker, who passed away on Jan 11, 2013.)&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/thebot-small.jpg&#34; alt=&#34;TheBot&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;It was a lot of work. A lot of things you took for granted suddenly needed to be taken care of in code and in hardware. The fact that the code now had to actually &amp;ldquo;run&amp;rdquo; on the hardware brought in additional challenges as well. Concurrency is the name of the game. Most of the events which you needed to handle and react to (ex: a obstacle suddenly apprearing infront of the car, while the car is turning on its own) would come concurrently, in no particular guarenteed order. The firmware had to be both efficient and easy to reason about.&lt;/p&gt;
+
+&lt;h2 id=&#34;golang-to-the-rescue:2505723aeef3de4a9dea60209fc5f0de&#34;&gt;Golang to the rescue&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Created by a team at Google in 2007, Golang aimed at making software development pleasurable again. Software that built quickly, ran well on multi-core hardware in networked environments.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(see the official &lt;a href=&#34;http://golang.org/doc/faq#What_is_the_purpose_of_the_project&#34;&gt;FAQs&lt;/a&gt; for a more complete picture)&lt;/p&gt;
+
+&lt;p&gt;Golang has excellent support for concurrency in the core language. The RaspberryPi is single threaded and we needed the car to handle multiple real world interactions at the same time. Using threads would have forced us to use mutexes, etc, for synchronization. The ‘goroutines+channels’ architecture in Golang helped us focus on the “actual” interactions. (Goroutines are light weight threads which are executed via the Go runtime on real threads via a M:N mapping. Channels are a typed mechanism for passing messages between goroutines). The resulting code is much easier to read, reason with and understand.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Simply running the binary was always enough. This helped tremendously in shortening our development/build/deploy cycles and made the process even more gratifying.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Golang is a statically typed, garbage collected and compiled programming language. However, in use, it feels like a FAST (slightly) verbose scripting language which has support for systems programming and duck typing. Since the cross compiled binary was entirely self contained, no runtime was needed. Simply running the binary was enough, which helped tremendously in shortening our development, build and deploy cycles and made the process even more gratifying.&lt;/p&gt;
+
+&lt;p&gt;(a recent article by &lt;a href=&#34;https://www.spacemonkey.com/blog/posts/go-space-monkey&#34;&gt;SpaceMonkey&lt;/a&gt; details their story of switching from Python to Golang for the firmward of their embedded storage device. Its a must read to get a better idea of what Golang has to offer in this space.)&lt;/p&gt;
+
+&lt;h2 id=&#34;summary:2505723aeef3de4a9dea60209fc5f0de&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;These and various other reasons led us to create &lt;a href=&#34;http://embd.kidoman.io/&#34;&gt;EMBD&lt;/a&gt; and release it to the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PS:&lt;/strong&gt; Earlier, this article was part of the &lt;a href=&#34;http://kidoman.io/framework/embd.html&#34;&gt;Introducing EMBD&lt;/a&gt; piece. However, based on feedback, I decided to split them so that they the original article focused solely on the new framework and did not pull focus to other tertiary things.&lt;/p&gt;
+
+&lt;h2 id=&#34;links:2505723aeef3de4a9dea60209fc5f0de&#34;&gt;Links&lt;/h2&gt;
+
+&lt;p&gt;Homepage: &lt;a href=&#34;http://embd.io/&#34;&gt;http://embd.io/&lt;/a&gt;&lt;br/&gt;
+Github: &lt;a href=&#34;https://github.com/kidoman/embd&#34;&gt;https://github.com/kidoman/embd&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sitting at Work</title>
+      <link>http://kidoman.io/blog/sitting-at-work/</link>
+      <pubDate>Mon, 13 May 2013 09:28:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/sitting-at-work/</guid>
+      <description>&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/mens-push-up.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;(you might be wondering why I am posting this under Life, but hey, I have never too successful at keeping my work out of my life, so meh.)&lt;/p&gt;
+
+&lt;p&gt;I have been reading a &lt;a href=&#34;https://www.google.com/search?q=sitting+at+work+health+risks&#34;&gt;few articles&lt;/a&gt; which paint a pretty scary picture of what all can happen by vegetating infront of the computer screen day in and day out.&lt;/p&gt;
+
+&lt;p&gt;I tried the standing desk for a while. In fact, it became quite a hit (definition: A few other people also decided to get in on the fun and got the desks made.) However, I had a little problem with it. I couldn&amp;rsquo;t think while standing. Sure, I could go into drone mode and fire out code by the SLOCS, but when I came upon something interesting, my body wanted to cozy into the most comfortable position possible and then do the thinking.&lt;/p&gt;
+
+&lt;p&gt;Clearly the standing desk solution was not scalable for me.&lt;/p&gt;
+
+&lt;p&gt;So, I am trying something else now&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Every 1 hr (for the geeks: 0 * * * *), I get up and do 10 proper push ups.&lt;/p&gt;
+
+&lt;p&gt;This should help me keep the &lt;a href=&#34;http://en.wikipedia.org/wiki/Basal_metabolic_rate&#34;&gt;metabolism&lt;/a&gt; up and fight some of the side effects of sitting for long durations.&lt;/p&gt;
+
+&lt;p&gt;Hoping for the best as always!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update 1&lt;/strong&gt;
+Venki, Sneha, Kuldeep (Noodles) have already joined in on the fun!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update 2&lt;/strong&gt;
+Now Prabhu joined in on the fun!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update 3&lt;/strong&gt;
+Headcount is up to 10! And we have grown beyond just doing push ups! This is gonna be great!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Welcome...</title>
+      <link>http://kidoman.io/blog/welcome/</link>
+      <pubDate>Wed, 01 May 2013 02:27:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/welcome/</guid>
+      <description>&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/i-am-looking-at-you.jpeg&#34; alt=&#34;I see dead people&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This blog has been a long time coming. I don&amp;rsquo;t remember correctly (and am too lazy to look it up) but I think I purchased this domain more than 5 years ago! But its up now. And that&amp;rsquo;s all she said&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Did planet Earth need another blog? tl;dr: NO&lt;/p&gt;
+
+&lt;p&gt;But I thought I could add some spice to your boring lives by penning down my thoughts which move at speed of light between biking, coding, entrepreneurship and biking agin.&lt;/p&gt;
+
+&lt;p&gt;So sit back, relax and enjoy the show!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

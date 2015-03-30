@@ -1,0 +1,1471 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coder, Biker, Gamer</title>
+    <link>http://kidoman.io/</link>
+    <description>Recent content on Coder, Biker, Gamer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2006 - 2015, Karan Misra; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 11 Jun 2014 00:00:00 +0530</lastBuildDate>
+    <atom:link href="http://kidoman.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hello SoStronk!</title>
+      <link>http://kidoman.io/blog/hello-sostronk/</link>
+      <pubDate>Wed, 11 Jun 2014 00:00:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/hello-sostronk/</guid>
+      <description>&lt;p&gt;I could not have asked for a better opportunity.&lt;/p&gt;
+
+&lt;p&gt;After spending some time contemplating the next step in life (beyond ThoughtWorks i.e.) I landed on this gig. For a while I was ready to settle for another day job (went and interviewed with Flipkart, but said no to the offer). However, even the mere thought of passing on this felt like stupidity to me.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.sostronk.com/&#34;&gt;&lt;strong&gt;SoStronk&lt;/strong&gt;&lt;/a&gt; requires me to take on the CTO role (as a Co-Founder) to help build the next generation eSports platform.&lt;/p&gt;
+
+&lt;p&gt;For people who have been living under the rock, eSports - which stands for Electronic Sports - is the next big thing in entertainment. It took a while to take off, but just recently, &lt;strong&gt;400,000&lt;/strong&gt; people watched the EMS One Katowice 2014 Championship live on Twitch.tv. &lt;a href=&#34;http://www.dota2.com/international/compendium/&#34;&gt;The Compendium&lt;/a&gt; managed to rack up a cool &lt;strong&gt;$10.9 million&lt;/strong&gt; as the prize pool for the Dota 2 International. Gamers are getting &lt;a href=&#34;http://www.theverge.com/2013/8/11/4611180/league-legends-gamer-gets-visa-recognizing-him-as-pro-athlete&#34;&gt;athletes VISA&lt;/a&gt; to the USA so that they can go compete in the events.&lt;/p&gt;
+
+&lt;p&gt;I started gaming back in 2004 (and the majority of the time has been spent playing Counter Strike.) How exactly could I say no to an opportunity which would allow me to lean back on all those years of gaming experience (and programming) to build the ultimate platform for gamers everywhere?&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s right. I couldn&amp;rsquo;t say no. Here&amp;rsquo;s to much hard work and (hopefully) some well deserved success.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update 1 (2015-03-30)&lt;/strong&gt;: We broke the magic &lt;a href=&#34;http://blog.counter-strike.net/index.php/2015/03/11685/&#34;&gt;&lt;strong&gt;1 million simultaneous viewers&lt;/strong&gt;&lt;/a&gt; on the recently (Mar 2015) concluded &lt;strong&gt;ESL One Katowice 2015 Major&lt;/strong&gt;. Thats a massive growth.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Goodbye ThoughtWorks</title>
+      <link>http://kidoman.io/blog/goodbye-thoughtworks/</link>
+      <pubDate>Tue, 10 Jun 2014 16:30:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/goodbye-thoughtworks/</guid>
+      <description>&lt;p&gt;As some of you might already know, June 10th is going to be my last day at ThoughtWorks.&lt;/p&gt;
+
+&lt;p&gt;Before I go any further, I must say: My 2.5 years journey in TW was really awesome.&lt;/p&gt;
+
+&lt;p&gt;I joined ThoughtWorks back in Feb 2012 (after 5+ years in &lt;a href=&#34;www.cgi.com&#34;&gt;CGI&lt;/a&gt;) and most days have been more exciting than any. It was quite a exciting journey as well, because even thought I have toyed around with programming since about 2001, this was my first professional gig (if you don&amp;rsquo;t count the last year at CGI doing .NET development) head first into application development.&lt;/p&gt;
+
+&lt;p&gt;Met a lot of interesting people, made a lot of life long friends, and worked on a lot of &lt;a href=&#34;http://kidoman.io/blog/thebot-adventures-in-hardware/&#34;&gt;cool&lt;/a&gt; &lt;a href=&#34;http://kidoman.io/blog/introducing-embd/&#34;&gt;things&lt;/a&gt;. And now its time to move on.&lt;/p&gt;
+
+&lt;p&gt;ThoughtWorks really helped me see what I wanted to do with my life. I was really hooked on to writing software, more so after I discovered &lt;a href=&#34;http://kidoman.io/blog/testing-the-waters-with-golang/&#34;&gt;Go&lt;/a&gt;. But I really wanted to apply this ability to working on my own project. Where I could really &lt;a href=&#34;https://inconshreveable.com/09-09-2014/sweat-the-small-stuff/&#34;&gt;sweat the small stuff&lt;/a&gt; and I could work towards giving users the best experience possible. Unfortunately, these things are really not possible in a consulting firm (which ThoughtWorks, by and large, is).&lt;/p&gt;
+
+&lt;p&gt;Therefore, I must say the hard goodbye and look excitedly towards my next gig (&lt;a href=&#34;http://kidoman.io/blog/hello-sostronk/&#34;&gt;SoStronk&lt;/a&gt;).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Async IO - Part 1</title>
+      <link>http://kidoman.io/blog/async-io-part-1/</link>
+      <pubDate>Tue, 13 May 2014 16:24:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/async-io-part-1/</guid>
+      <description>
+
+&lt;p&gt;I was recently reading a &lt;a href=&#34;http://venkateshcm.com/2014/04/Reactor-Pattern-Part-4-Write-Sequential-Non-Blocking-IO-Code-With-Fibers-In-NodeJS/&#34;&gt;series&lt;/a&gt; on &amp;ldquo;Write Sequential Non-Blocking IO Code With Fibers in NodeJS&amp;rdquo; by &lt;a href=&#34;http://venkateshcm.com/&#34;&gt;Venkatesh&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Venki was essentially trying to emphasize that writing non-blocking code in NodeJS (either via callbacks, or using promises) can get hairy really fast. For example, this code demonstrates that aptly:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var express = require(&#39;express&#39;);
+var app = express();
+
+app.get(&#39;/users/:fbId&#39;, function(req, res) {
+  var id = req.params.id;
+  var key = &#39;user:&#39; + id;
+  client.get(key, function(err, reply) {
+    if (err !== null) {
+      res.send(500);
+      return;
+    }
+
+    if (reply === null) {
+      res.send(404);
+      return;
+    }
+
+    res.send(200, {id: id, name: reply});
+  });
+});
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The exact code is available on &lt;a href=&#34;https://github.com/kidoman/fibrous/blob/master/nodejs/callback.js#L59-L72&#34;&gt;GitHub&lt;/a&gt; (so is the &lt;a href=&#34;https://github.com/kidoman/fibrous/blob/master/nodejs/promise.js#L55-L65&#34;&gt;promises driven version&lt;/a&gt;, but I won&amp;rsquo;t bother inlining it.)&lt;/p&gt;
+
+&lt;p&gt;What we actually wanted to write (if it were possible, was):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var express = require(&#39;express&#39;);
+var app = express();
+
+app.get(&#39;/users/:fbId&#39;, function(req, res) {
+  var id = req.params.id;
+  var key = &#39;user:&#39; + id;
+
+  try {
+    var reply = client.get(key);
+    if (reply === null) {
+      res.send(404);
+      return;
+    }
+
+    res.send(200, {id: id, name: reply});
+  }
+  catch(err) {
+      res.send(500);
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The magic would happen in line number 9 (above.) Instead of having to provide a cascade of callbacks (what if we wanted to do another lookup after we got the value back from the first), we could just write them serially, one after the other.&lt;/p&gt;
+
+&lt;p&gt;Well. Apparently we can!&lt;/p&gt;
+
+&lt;h2 id=&#34;fibers:34925da0f2297dc82f0506c40b37e0cb&#34;&gt;Fibers&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A fiber is a particularly lightweight thread of execution. Like threads, fibers share address space. However, fibers use co-operative multitasking while threads use pre-emptive multitasking. Threads often depend on the kernel&amp;rsquo;s thread scheduler to preempt a busy thread and resume another thread; fibers yield themselves to run another fiber while executing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Fibers allow exactly this kind of black magic in NodeJS. It is still callbacks internally, but we are exposed to none of it in our application code. Sure you will end up writing a bunch of wrappers (or have some tool generate them for us), but we would have the sweet sweet pleasure of writing async IO code without having to jump through all the hoops. This is how the wrapper code for redis client looks like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var Fiber = require(&#39;fibers&#39;);
+var client = require(&#39;./redis-client&#39;);
+
+exports.get = function(key) {
+  var err, reply;
+  var fiber = Fiber.current;
+
+  client.get(key, function(_err, _reply) {
+    err = _err;
+    reply = _reply;
+    fiber.run();
+  });
+
+  Fiber.yield();
+
+  if (err != null) {
+    throw err;
+  }
+
+  return reply;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(the &lt;a href=&#34;https://github.com/kidoman/fibrous/blob/master/nodejs/fiber.js#L52-L60&#34;&gt;real code&lt;/a&gt; is here in case you are curious)&lt;/p&gt;
+
+&lt;p&gt;I liked how the code looked. Having survided a &amp;lsquo;promising&amp;rsquo; node.js project, I was definitely curious about this new style. Maybe this can be the saving grace (before generators and &lt;strong&gt;yield&lt;/strong&gt; take over the JS world) for real world server side JavaScript.&lt;/p&gt;
+
+&lt;h2 id=&#34;fibers-you-say:34925da0f2297dc82f0506c40b37e0cb&#34;&gt;Fibers you say&lt;/h2&gt;
+
+&lt;p&gt;But the code (and the underlying technique which makes it tick) sounded very familiar, and reminded me of a similar technique which is used in Go to allow writing beautiful async IO code. For example, the same function from above in Go:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;m.Get(&amp;quot;/users/:id&amp;quot;, func(db *DB, params martini.Params) (int, []byte) {
+  str := params[&amp;quot;id&amp;quot;]
+  id, err := strconv.Atoi(str)
+  if err != nil {
+    return http.StatusBadRequest, []byte{}
+  }
+
+  u, err := db.LoadUser(id)
+  if err != nil {
+    return http.StatusNotFound, []byte{}
+  }
+  return http.StatusOK, encoder.Must(enc.Encode(u))
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sure, there is a little more happening in here (Go is statically typed), buts its the exact same thing as the fibers example, without all the manual wrapping. Any call which does IO (like line 8) blocks the currently executing goroutine (just like a fiber, a lightweight thread.) The natural question to ask is, if the goroutine gets blocked, how do other requests get processed? Its quite simple actually. The Go runtime automatically schedules any other goroutine which is ready to run (their IO call is done) on the thread on which the current goroutine was running.&lt;/p&gt;
+
+&lt;p&gt;Since goroutines are light weight (stack size is just 4 KB in Go 1.3beta1 compared to the much larger ~2 MB thread stacks), it is not unusual to have hundreds of thousands of goroutines actively running in a single process, all humming along together. The best part, since the threads have to do less context switching (the same physical thread can continue running on the processor core, just the instruction pointer keeps changing as the goroutines shuffle in and out, just as in method calls), we are able to extract a lot more efficiency from the same unit of hardware than otherwise. Otherwise IO calls, which would otherwise cause the thread to block and wait, could cripple the system and bring it down to its knees. Read &lt;a href=&#34;http://venkateshcm.com/2014/05/How-To-Determine-Web-Applications-Thread-Poll-Size/&#34;&gt;this&lt;/a&gt; article for more context on this.&lt;/p&gt;
+
+&lt;h2 id=&#34;performance:34925da0f2297dc82f0506c40b37e0cb&#34;&gt;Performance&lt;/h2&gt;
+
+&lt;p&gt;A fellow ThoughtWorker asked me, &amp;ldquo;Does performance matter when choosing a framework?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I know where he was coming from, and how we shouldn&amp;rsquo;t make decisions purely based on performance (we would all be doing assembly if that was the case.) While it is true that as a startup (or even in the case of a well established player), building the MVP and getting it to the users is paramount, you really dont want to face the situation where you suddenly have a huge influx of users (say it goes viral) and you are caught between a ROCK (scale horizontally by throwing compute units at the problem) and a HARD PLACE (have to rewrite the solution in a technology more amenable to scaling.) Both of these options are expensive, and can potentially be a deal breaker.&lt;/p&gt;
+
+&lt;p&gt;Therefore, provided everything else is more or less equal, choosing the more performant one is never a bad thing.&lt;/p&gt;
+
+&lt;p&gt;With this context, I decided to compare the two solutions for their performance, given that they more or less looked the same. I decided to allow the system under test to use as many cores as they wanted, and then hit them with 100 concurrent users, each of which is going full tilk for around 20 seconds (used the awesome &lt;a href=&#34;https://github.com/wg/wrk&#34;&gt;wrk&lt;/a&gt; tool for benchmarking.)&lt;/p&gt;
+
+&lt;p&gt;The results:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Golang&lt;/th&gt;
+&lt;th&gt;&amp;nbsp;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Stdlib&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/kidoman/fibrous/blob/master/go/stdlib.go&#34;&gt;134566&lt;/a&gt; (3.81ms)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Gorilla&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/kidoman/fibrous/blob/master/go/gorilla.go&#34;&gt;125092&lt;/a&gt; (4.28ms)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Martini&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/kidoman/fibrous/blob/master/go/martini.go&#34;&gt;51330&lt;/a&gt; (9.51ms)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;node.js&lt;/th&gt;
+&lt;th&gt;&amp;nbsp;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Stdlib&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/kidoman/fibrous/blob/master/nodejs/stdlib.js&#34;&gt;54510&lt;/a&gt; (7.78ms)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Callbacks*&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/kidoman/fibrous/blob/master/nodejs/callback.js&#34;&gt;36107&lt;/a&gt; (10.84ms)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Fibers*&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/kidoman/fibrous/blob/master/nodejs/fiber.js&#34;&gt;27372&lt;/a&gt; (18.76ms)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Promises*&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/kidoman/fibrous/blob/master/nodejs/promise.js&#34;&gt;22665&lt;/a&gt; (17.15ms)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;* The Callbacks, Fibers and Promises versions are created using Express. The Stdlib versions use the &lt;strong&gt;http&lt;/strong&gt; support in the corresponding standard libraries.&lt;/p&gt;
+
+&lt;p&gt;All the numbers are in &lt;strong&gt;req/s&lt;/strong&gt; as given by wrk (higher is better.) The latency details are in brackets (lower is better.) Clicking the numbers will take you to the corresponding code in the &lt;a href=&#34;https://github.com/kidoman/fibrous&#34;&gt;GitHub repo&lt;/a&gt; (the &lt;a href=&#34;https://github.com/kidoman/fibrous/blob/master/README.md&#34;&gt;README&lt;/a&gt; has the detailed numbers.)&lt;/p&gt;
+
+&lt;p&gt;The tests were done on an updated Ubuntu 14.04 box with a Intel i7 4770 processor, 16 GB of RAM and a SSD.&lt;/p&gt;
+
+&lt;p&gt;As you can see, the &lt;strong&gt;fibers&lt;/strong&gt; method of doing async IO in &lt;strong&gt;node.js&lt;/strong&gt; comes with a perceivable loss in throughput compared to the pure &lt;strong&gt;callbacks&lt;/strong&gt; based approach, but looks relatively better than the &lt;strong&gt;promises&lt;/strong&gt; version for this micro-benchmark.&lt;/p&gt;
+
+&lt;p&gt;At the same time, the default way of doing IO in Golang does very well for itself. More than &lt;strong&gt;134,000 req/s&lt;/strong&gt; with a &lt;strong&gt;3.81 ms&lt;/strong&gt; 99th percentile latency. All this without having to go through crazy callbacks/promises hoops. How cool is that?&lt;/p&gt;
+
+&lt;h2 id=&#34;how-the-tests-were-run:34925da0f2297dc82f0506c40b37e0cb&#34;&gt;How the tests were run?&lt;/h2&gt;
+
+&lt;h3 id=&#34;software-versions:34925da0f2297dc82f0506c40b37e0cb&#34;&gt;Software versions&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go 1.3beta1&lt;/li&gt;
+&lt;li&gt;node.js 0.10.28&lt;/li&gt;
+&lt;li&gt;wrk 3.1.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;command-used-to-run:34925da0f2297dc82f0506c40b37e0cb&#34;&gt;Command used to run&lt;/h3&gt;
+
+&lt;p&gt;A more detailed description is available in the &lt;a href=&#34;https://github.com/kidoman/fibrous&#34;&gt;README&lt;/a&gt; but I will explain a simple version here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Start the program (by say running ./start_martini.sh)&lt;/li&gt;
+&lt;li&gt;Run the benchmark (by running ./bench.sh)&lt;/li&gt;
+&lt;li&gt;Record the result&lt;/li&gt;
+&lt;li&gt;Rince and repeat 3 times and take the best run&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;notes:34925da0f2297dc82f0506c40b37e0cb&#34;&gt;Notes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;All cores on the Intel i7 4770 were set to the performance governor&lt;/li&gt;
+&lt;li&gt;Redis was not tweaked&lt;/li&gt;
+&lt;li&gt;ulimit was not raised&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;summary:34925da0f2297dc82f0506c40b37e0cb&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;This is part 1 in a multipart series looking at how async IO (and programming in general) is done in various languages/platforms. We will be going indepth into one language/platform with the every new article in the series. Future parts will look at Scala, Clojure, Java, C#, Python and Ruby based frameworks and try and present a holistic view of the async world.&lt;/p&gt;
+
+&lt;p&gt;But one thing is very clear, async IO is here to stay. Not embrassing it would be foolhardy given the need to stay lean. Hope these articles help you understand gravity of the decision.&lt;/p&gt;
+
+&lt;p&gt;While some might argue that what we did in Golang was not really async, as the call was blocking in nature. But the net result achieved, and the reason why Go is still able to provide an awesome throughput despite blocking IO calls, is because the Go runtime essentially does the heavy lifting for you. When one goroutine is busy waiting for the results of a IO call to come back, other goroutines can take their place and not waste CPU cycles. The fact that this mechanism allows us to get away with fewer threads that would be required otherwise, is the icing on top.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>God save the JS</title>
+      <link>http://kidoman.io/blog/god-save-the-js/</link>
+      <pubDate>Sat, 10 May 2014 03:15:15 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/god-save-the-js/</guid>
+      <description>
+
+&lt;p&gt;Golang has has this feature right from the start. Very innocuously named &lt;code&gt;gofmt&lt;/code&gt; this tool (distributed as part of the Go compiler toolchain) ensures that all Go code have a common look and feel to it. It does that by enforcing a few things:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ensure that the imports are all sorted alphabetically&lt;/li&gt;
+&lt;li&gt;Removes all unneeded semicolon from the code&lt;/li&gt;
+&lt;li&gt;Aligns &lt;code&gt;const&lt;/code&gt;, &lt;code&gt;var&lt;/code&gt; and &lt;code&gt;struct&lt;/code&gt; constructs so that the variable names all line up nicely&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since &lt;code&gt;gofmt&lt;/code&gt; is integrated into most text editors used to work on Golang, using the tool becomes ubiquitous. Essentially, it can take Go code which looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import &amp;quot;github.com/go-martini/martini&amp;quot;
+
+import &amp;quot;log&amp;quot;
+
+func main() {
+  m := martini.Classic()
+  log.Print(&amp;quot;Starting...&amp;quot;);
+    m.Run()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and make it this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;log&amp;quot;
+
+    &amp;quot;github.com/go-martini/martini&amp;quot;
+)
+
+func main() {
+    m := martini.Classic()
+    log.Print(&amp;quot;Starting...&amp;quot;)
+    m.Run()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Unless otherwise instructed, it also does all indentation using real tabs. Before you turn away in disgust, let me tell you this. Its actually quite amazing how TABS, when done right, can actually be a benefit. Since all Go code gets run through &lt;code&gt;gofmt&lt;/code&gt; anyways, all Go code end up using real TABs. And that allows for people to have their own indentation widths without effecting the actual sourde code. Want more spacing, sure go ahead and ask your favorite editor to represent the TAB as 8 spaces, DONE! Coming from Ruby land, 2 spaces for a TAB it is then. Might sound too good to be true, but it just works.&lt;/p&gt;
+
+&lt;h2 id=&#34;enter-javascript:2fa1dfed2095738c466eda77c46ee3f1&#34;&gt;Enter JavaScript&lt;/h2&gt;
+
+&lt;p&gt;This Github repo showed up in HackerNews front page today.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rdio/jsfmt&#34;&gt;https://github.com/rdio/jsfmt&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Looks like an attempt to bring the same &lt;code&gt;gofmt&lt;/code&gt; magic over to the JavaScript land. And I am excited about the sanity that will ensue if this becomes popular among JavaScript programmers. One true/universal way for all JavaScript code formatting. Having suffered &lt;code&gt;IntelliJ&lt;/code&gt;&amp;rsquo;s shoddy JavaScript default formatting enough, this feels like the light at the end of a tunnel.&lt;/p&gt;
+
+&lt;p&gt;So &lt;code&gt;go spreadTheWord()&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>EMBD: Behind the Scenes</title>
+      <link>http://kidoman.io/blog/embd-behind-the-scenes/</link>
+      <pubDate>Tue, 06 May 2014 06:55:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/embd-behind-the-scenes/</guid>
+      <description>
+
+&lt;p&gt;For the impatient, TheBot was an experiment to kickstart a hardware engineering culture at &lt;strong&gt;ThoughtWorks&lt;/strong&gt;. We choose the Raspberry Pi (RPi) as the prototyping platform and Golang as the language in which to create the firmware. We felt the need for a solid hardware abstraction layer (HAL) which would allow us to not only target the RPi, but soon expand to other platforms as well. We also wanted to make it dead easy to talk to a variety of sensors. Since there were no such existing frameworks for &lt;a href=&#34;http://golang.org/&#34;&gt;Golang&lt;/a&gt;, we ended up writing our own, and we called it &lt;a href=&#34;https://embd.kidoman.io/&#34;&gt;EMBD&lt;/a&gt; (&lt;a href=&#34;https://github.com/kidoman/embd&#34;&gt;Github&lt;/a&gt;).&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;EMBD&lt;/strong&gt; enables you to get started on your project quickly by providing build in support for the various &lt;a href=&#34;https://github.com/kidoman/embd#platforms-supported&#34;&gt;platforms&lt;/a&gt;, &lt;a href=&#34;https://github.com/kidoman/embd#protocols-supported&#34;&gt;protocols&lt;/a&gt;, &lt;a href=&#34;https://github.com/kidoman/embd#sensors-supported&#34;&gt;sensors&lt;/a&gt;, &lt;a href=&#34;https://github.com/kidoman/embd#controllers&#34;&gt;controllers&lt;/a&gt;. It also allows your prototyping code to survive through to production because of the built in hardware abstraction layer and Golang&amp;rsquo;s &lt;a href=&#34;https://github.com/kidoman/embd/wiki/Why-Go&#34;&gt;versatility&lt;/a&gt;. Thus significantly shortening the &lt;strong&gt;time to market&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;a-little-history:2505723aeef3de4a9dea60209fc5f0de&#34;&gt;A little history&lt;/h2&gt;
+
+&lt;p&gt;A 20 year old company, &lt;strong&gt;ThoughtWorks&lt;/strong&gt; has been primarily into software. We have made our mark in the ability to create high quality custom enterprise grade software over the years. Data analytics is a key focus areas, but there are others with deeper pockets already investing. Mobile development is also a conquered field. So when our chairman, &lt;a href=&#34;http://en.wikipedia.org/wiki/Neville_Roy_Singham&#34;&gt;Roy&lt;/a&gt;, asked ThoughtWorkers to preempt the next big thing, we naturally started looking at the Internet of Things (&lt;strong&gt;IoT&lt;/strong&gt;) as one of the avenues for innovation. Approaching it from a purely hardware perspective would have meant a lot of playing catch up, as we would need to seed a lot of talent in spaces before we could catch up:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;material science&lt;/li&gt;
+&lt;li&gt;industrial design&lt;/li&gt;
+&lt;li&gt;manufacturing, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We wanted to get started quickly, leveraging on abilities we have honed over the last two decades. And one of the low hanging fruits to explore was the software side of internet connected devices, firmware for the rovers and quadcopters, the user experiences of these &lt;a href=&#34;https://nest.com/thermostat/life-with-nest-thermostat/&#34;&gt;new contraptions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;enter-thebot:2505723aeef3de4a9dea60209fc5f0de&#34;&gt;Enter, TheBot&lt;/h2&gt;
+
+&lt;p&gt;We deliberately choose to build something simple - to push the odds in our favor. However, the simplicity proved to be a boon as it allowed us a lot of scope for innovation in the software side of things. We also wanted to take this opportunity to study. To glean experiences from. From many angles, this is just scratching the surface of what is to come, but you have got to start somewhere. Think of it as bulb # 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; width=&#34;640&#34; height=&#34;385&#34; src=&#34;http://www.youtube.com/embed/iMXjkZ4B3EM&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;(We first showcased this to public on Jan 10, 2014 and dedicated the effort to Aaron, a good soul and a ThoughtWorker, who passed away on Jan 11, 2013.)&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/thebot-small.jpg&#34; alt=&#34;TheBot&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;It was a lot of work. A lot of things you took for granted suddenly needed to be taken care of in code and in hardware. The fact that the code now had to actually &amp;ldquo;run&amp;rdquo; on the hardware brought in additional challenges as well. Concurrency is the name of the game. Most of the events which you needed to handle and react to (ex: a obstacle suddenly apprearing infront of the car, while the car is turning on its own) would come concurrently, in no particular guarenteed order. The firmware had to be both efficient and easy to reason about.&lt;/p&gt;
+
+&lt;h2 id=&#34;golang-to-the-rescue:2505723aeef3de4a9dea60209fc5f0de&#34;&gt;Golang to the rescue&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Created by a team at Google in 2007, Golang aimed at making software development pleasurable again. Software that built quickly, ran well on multi-core hardware in networked environments.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(see the official &lt;a href=&#34;http://golang.org/doc/faq#What_is_the_purpose_of_the_project&#34;&gt;FAQs&lt;/a&gt; for a more complete picture)&lt;/p&gt;
+
+&lt;p&gt;Golang has excellent support for concurrency in the core language. The RaspberryPi is single threaded and we needed the car to handle multiple real world interactions at the same time. Using threads would have forced us to use mutexes, etc, for synchronization. The ‘goroutines+channels’ architecture in Golang helped us focus on the “actual” interactions. (Goroutines are light weight threads which are executed via the Go runtime on real threads via a M:N mapping. Channels are a typed mechanism for passing messages between goroutines). The resulting code is much easier to read, reason with and understand.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Simply running the binary was always enough. This helped tremendously in shortening our development/build/deploy cycles and made the process even more gratifying.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Golang is a statically typed, garbage collected and compiled programming language. However, in use, it feels like a FAST (slightly) verbose scripting language which has support for systems programming and duck typing. Since the cross compiled binary was entirely self contained, no runtime was needed. Simply running the binary was enough, which helped tremendously in shortening our development, build and deploy cycles and made the process even more gratifying.&lt;/p&gt;
+
+&lt;p&gt;(a recent article by &lt;a href=&#34;https://www.spacemonkey.com/blog/posts/go-space-monkey&#34;&gt;SpaceMonkey&lt;/a&gt; details their story of switching from Python to Golang for the firmward of their embedded storage device. Its a must read to get a better idea of what Golang has to offer in this space.)&lt;/p&gt;
+
+&lt;h2 id=&#34;summary:2505723aeef3de4a9dea60209fc5f0de&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;These and various other reasons led us to create &lt;a href=&#34;http://embd.kidoman.io/&#34;&gt;EMBD&lt;/a&gt; and release it to the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PS:&lt;/strong&gt; Earlier, this article was part of the &lt;a href=&#34;http://kidoman.io/framework/embd.html&#34;&gt;Introducing EMBD&lt;/a&gt; piece. However, based on feedback, I decided to split them so that they the original article focused solely on the new framework and did not pull focus to other tertiary things.&lt;/p&gt;
+
+&lt;h2 id=&#34;links:2505723aeef3de4a9dea60209fc5f0de&#34;&gt;Links&lt;/h2&gt;
+
+&lt;p&gt;Homepage: &lt;a href=&#34;http://embd.io/&#34;&gt;http://embd.io/&lt;/a&gt;&lt;br/&gt;
+Github: &lt;a href=&#34;https://github.com/kidoman/embd&#34;&gt;https://github.com/kidoman/embd&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing EMBD</title>
+      <link>http://kidoman.io/blog/introducing-embd/</link>
+      <pubDate>Thu, 24 Apr 2014 06:00:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/introducing-embd/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/kidoman/embd&#34;&gt;EMBD&lt;/a&gt;&lt;/strong&gt; is a framework for &lt;strong&gt;Go&lt;/strong&gt; which does &lt;strong&gt;GPIO&lt;/strong&gt; (General Purpose I/O), talks the &lt;strong&gt;I²C&lt;/strong&gt; protocol (+ many more) and provides the drivers necessary to interact with &lt;strong&gt;many hardware sensors&lt;/strong&gt; (eg. gyroscope, magnetometer, barometer, etc.) It&amp;rsquo;s non-intrusive API allows you to quickly prototype solutions (see below for example) without sacrifising production-worthiness. And the best part? The code will run on a multitude of supported hosts (like the Raspberry Pi, and the BeagleBone Black) without change!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://embd.kidoman.io&#34;&gt;http://embd.kidoman.io&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/kidoman/embd&#34;&gt;https://github.com/kidoman/embd&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;embed video-player&#34;&gt;
+&lt;iframe type=&#34;text/html&#34; width=&#34;640&#34; height=&#34;385&#34; src=&#34;https://player.vimeo.com/video/92990437&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Although the framework started its life as &lt;strong&gt;go-rpi&lt;/strong&gt;, we soon realized the potential of making it even more useful. The driver code we had written to talk to a &lt;a href=&#34;https://github.com/kidoman/embd#sensors-supported&#34;&gt;plethora of sensors&lt;/a&gt; were not really dependent on the Raspberry Pi. They expected a I²C bus and not much else. So we immediately started thinking of ways in which we could allow people to leverage all that code in other platforms which Golang ran on (which turned out to be &lt;a href=&#34;https://github.com/kidoman/embd#platforms-supported&#34;&gt;quite a few&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;h2 id=&#34;api-design:b1fa4ed83b7cc349584dedfbd0989262&#34;&gt;API Design&lt;/h2&gt;
+
+&lt;p&gt;We spent a bunch of time fine tuning the &amp;ldquo;feel&amp;rdquo; of the API. We have aimed to provide both &lt;strong&gt;real world usability&lt;/strong&gt; (we did not want a toy feel to the API) and the ability to be be used for quick/rapid hardware prototyping.&lt;/p&gt;
+
+&lt;p&gt;For example, it leans towards rapid prototyping when needed:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func main() {
+  for {
+    embd.LEDToggle(&amp;quot;LED0&amp;quot;)
+    time.Sleep(250 * time.Millisecond)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or, gives you the control when necessary:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func main() {
+  panicIf(embd.InitLED())
+  defer embd.CloseLED()
+
+  led, err := embd.NewLED(&amp;quot;LED0&amp;quot;)
+  if err != nil {
+    panic(err)
+  }
+  defer led.Off()
+
+  // Cleanly exit if someone hits Ctrl-C
+  quit := make(chan os.Signal, 1)
+  signal.Notify(quit, os.Interrupt, os.Kill)
+
+  for {
+    select {
+    case &amp;lt;-time.After(250 * time.Millisecond):
+      panicIf(led.Toggle())
+      fmt.Println(&amp;quot;Toggled&amp;quot;)
+    case &amp;lt;-quit:
+      return
+    }
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It currently has good support for the Raspberry Pi and the BeagleBone Black, with support for other platforms coming in the near future. This should almost guarentee that the particular combination of prototyping board, sensors, etc. would most probably work OOTB with EMBD.&lt;/p&gt;
+
+&lt;h2 id=&#34;summary:b1fa4ed83b7cc349584dedfbd0989262&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;EMBD&lt;/strong&gt; is a bold attempt at creating a cross platform embedded programming library. A lot of work is needed to flesh out the sensor library and to bring in support for new hosts. The &lt;a href=&#34;https://github.com/kidoman/embd/blob/master/ROADMAP.md&#34;&gt;ROADMAP&lt;/a&gt; lists some of the short/long terms goals we have ahead of us, but we won&amp;rsquo;t get too far down that list without the support of the community. So looking forward to those &lt;a href=&#34;https://github.com/kidoman/embd/pulls&#34;&gt;pull requests&lt;/a&gt;! Also, while we have done our best, if you do come across a bug, please &lt;a href=&#34;https://github.com/kidoman/embd/issues&#34;&gt;let us know&lt;/a&gt; so that we can tackle it in the best way possible. And if you need any help, we will be hanging around &lt;a href=&#34;https://groups.google.com/forum/#!forum/go-embd&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To read the backstory, read &lt;a href=&#34;http://kidoman.io/blog/embd-behind-the-scenes/&#34;&gt;this&lt;/a&gt; article as well.&lt;/p&gt;
+
+&lt;h2 id=&#34;links:b1fa4ed83b7cc349584dedfbd0989262&#34;&gt;Links&lt;/h2&gt;
+
+&lt;p&gt;Homepage: &lt;a href=&#34;http://embd.kidoman.io/&#34;&gt;http://embd.kidoman.io/&lt;/a&gt;&lt;br/&gt;
+Github: &lt;a href=&#34;https://github.com/kidoman/embd&#34;&gt;https://github.com/kidoman/embd&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing Serve</title>
+      <link>http://kidoman.io/blog/introducing-serve/</link>
+      <pubDate>Thu, 10 Apr 2014 06:00:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/introducing-serve/</guid>
+      <description>
+
+&lt;p&gt;Sometimes, it takes a great deal of effort to create something simple.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What is the smallest feature set you can support and still be useful?&lt;/li&gt;
+&lt;li&gt;How elegant should the implementation be?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are the typical questions which would come to your mind when aiming for simplicity.&lt;/p&gt;
+
+&lt;p&gt;Well, here is my dedication to the shrine of &lt;a href=&#34;http://www.infoq.com/presentations/Simple-Made-Easy&#34;&gt;simplicity&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-this:9500deee02e3b178a3c32ab881b9219b&#34;&gt;What is this?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Serve&lt;/strong&gt; makes serving static content out of directories &lt;strong&gt;simple&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why would you want to do this?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;python -m SimpleHTTPServer 8080
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When you can just do this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;serve .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Serve&lt;/strong&gt; is a single binary. Easy installed via &lt;a href=&#34;http://brew.sh/&#34;&gt;Homebrew&lt;/a&gt; with a single command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install kidoman/tools/serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(there are a few other ways of installing Serve, including but not limited to precompiled binaries. But they are much better documented at the &lt;a href=&#34;https://github.com/kidoman/serve&#34;&gt;Github repo&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-use:9500deee02e3b178a3c32ab881b9219b&#34;&gt;How to use&lt;/h2&gt;
+
+&lt;p&gt;Provided you have &lt;code&gt;serve&lt;/code&gt; under your $PATH somewhere:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;serve .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will serve the current directory at &lt;code&gt;http://localhost:5000/&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;serve -p 9999 ~/my-awesome-blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Will serve the contents of the folder &lt;code&gt;~/my-awesome-blog&lt;/code&gt; at &lt;code&gt;http://localhost:9999/&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;serve -x /my ~/precious
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You guessed it, &lt;code&gt;http://localhost:5000/my&lt;/code&gt; is now wired up to &lt;code&gt;~/precious&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;serve -o ~/sesame
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Wires up &lt;code&gt;http://localhost:5000&lt;/code&gt; to &lt;code&gt;~/sesame&lt;/code&gt; and opens the URL in your favorite browser while it is at it.&lt;/p&gt;
+
+&lt;h2 id=&#34;next-steps:9500deee02e3b178a3c32ab881b9219b&#34;&gt;Next Steps&lt;/h2&gt;
+
+&lt;p&gt;The next logical thing would be to allow the &lt;code&gt;serve&lt;/code&gt; functionality to be used by simply importing the package. But it totally depends on the simplicity of the change! Happy serving.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TheBot - Adventures in Hardware</title>
+      <link>http://kidoman.io/blog/thebot-adventures-in-hardware/</link>
+      <pubDate>Sun, 02 Mar 2014 08:00:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/thebot-adventures-in-hardware/</guid>
+      <description>
+
+&lt;p&gt;(cross posted from the &lt;a href=&#34;http://thoughtworks.github.io/p2/issue09/thebot&#34;&gt;P2 Magazine&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;“Robots that are controlled by node.js.” The idea imprinted on me immediately.&lt;/p&gt;
+
+&lt;p&gt;“A crowd controlled robotic car!&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/thebot-1.png&#34; alt=&#34;TheBot Mascot&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;A fun product with a tonne of learning potential. However, doing a &amp;ldquo;follow the blog posts/tutorials&amp;rdquo; stitch and patch job recommended on the NodeBots site did not excite me one bit. Sure, we’d done it in two days, but what would we have learned in the process?&lt;/p&gt;
+
+&lt;p&gt;Despite having worked extensively on node.js, the language did not interest me much - ambiguous syntax, callbacks, promises, etc. I had been looking for an opportunity do something real in Golang, and building a concurrent open source firmware for TheBot was just the ticket.&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/thebot-2.jpg&#34; alt=&#34;TheBot&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;TheBot is first and foremost an experiment. An experiment aimed at research and learning. An experiment to kickstart a hardware engineering culture in ThoughtWorks. Birthed as a crowd controlled robotic car that transmits video feed back to the controller; the vision has transformed many times during the development. Can it be the ultimate open source sensing/proximity prototyping platform? Could we extract a product out of this?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“TheBot’s value is the immense learning and research potential.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;On first appearance, TheBot looks like the result of odd inter-breeding between a remote-controlled car and the contents of your local Radio Shack. TheBot itself though, is not really just a car, it is actually a fully-fledged Golang based framework for working with hardware sensors and motor control. In it’s current incarnation, the RaspberryPi-based robot allows you to control it remotely using any device capable of running a modern browser. The on-board smarts do things like use rangefinders to implement collision avoidance, and you can even send it logo-ish commands like ‘turn 90 degrees right’.&lt;/p&gt;
+
+&lt;p&gt;Right now, we are laying down the rails for what is to come next. The modules are already taking shape and we are using our learnings from TheBot to drive the development of the framework(s) and the underlying hardware abstraction layer.&lt;/p&gt;
+
+&lt;p&gt;Unique Selling Proposal: TheBot’s value is the immense learning and research potential in its current form. The fact that it looks like a car and has 4 wheels is just a bonus.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-guts:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;The Guts&lt;/h3&gt;
+
+&lt;p&gt;We plan on doing a proper video walk through of the hardware soon, but until then:&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/thebot-3.png&#34; alt=&#34;Block Diagram&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;why-golang:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;Why Golang?&lt;/h3&gt;
+
+&lt;p&gt;Golang has excellent and remarkable support for concurrency in the core language. The RaspberryPi is single threaded and we needed the car to handle multiple real world interactions at the same time. Using threads would have forced us to use mutexes, etc, for synchronization. The ‘goroutines+channels&amp;rsquo; architecture in Golang helped us focus on the &amp;ldquo;actual&amp;rdquo; interactions. (Goroutines are light weight threads which are executed via the Go runtime on real threads via a M:N mapping. Channels are a typed mechanism for passing messages between goroutines). The resulting code is much easier to read, reason with and understand.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Simply running the binary was always enough. This helped tremendously in shortening our development/build/deploy cycles and made the process even more gratifying.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Golang is a statically typed, garbage collected and compiled programming language. However, in use, it feels like a FAST (slightly) verbose scripting language which has support for systems programming  and duck typing. Since the cross compiled binary was entirely self contained, no runtime was needed. Simply running the binary was enough, which helped tremendously in shortening our development, build and deploy cycles and made the process even more gratifying.&lt;/p&gt;
+
+&lt;h3 id=&#34;why-raspberrypi:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;Why RaspberryPi?&lt;/h3&gt;
+
+&lt;p&gt;The RaspberryPi represents the most available lowest common denominator; an ARM chip running Linux. Besides marrying well with cross compiled Golang, it also doesn’t skimp in the I/O department. It supports I2C, GPIO, and PWM. The forgiving nature of the hardware, integrated HDMI/Ethernet/USB go a long way in making it a good first choice.&lt;/p&gt;
+
+&lt;p&gt;That being said, we could deploy the firmware, in its current form, on any Linux based platform that has the ability to talk GPIO/I2C, including:
+BeagleBone Black
+PandaBoard, etc.&lt;/p&gt;
+
+&lt;p&gt;Our long term goal is to be able to target raw microcontrollers.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-does-it-do:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;What does it do ?&lt;/h3&gt;
+
+&lt;p&gt;&lt;div class=&#34;embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; width=&#34;640&#34; height=&#34;385&#34; src=&#34;http://www.youtube.com/embed/iMXjkZ4B3EM&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;what-next:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;What next?&lt;/h3&gt;
+
+&lt;p&gt;The current form factor was an evolutionary step; a convenience which allowed us to get started quickly.&lt;/p&gt;
+
+&lt;p&gt;We definitely want to cater to the hobbyist / education space - possibly in the form of a stripped down, dressed up Super 8 sensor kit, to help people get started quickly - as it has the potential for maximum impact at the grassroots level. At the same time, we want to balance things out by looking at solidly marketable areas like B2B logistics / delivery - which could apply to the rural health care space - and home automation. The home automation space is particularly exciting as the potential for integration between smart software and hardware innovation is really high - aptly demonstrated by the NEST devices.&lt;/p&gt;
+
+&lt;p&gt;To make the above happen, we will need to stretch TheBot’s legs and expand its capabilities. We are in the process of extracting a hardware abstraction framework (EMBD) which will allow us to target a variety of hosts - RPi, BBB, etc. - from a single code base. This is particularly helpful because it will allow us to quickly prototype solutions using readily available hobby boards, while still retaining the ability to target the final hardware. Besides that, we are also interested in route mapping and visualization, as capability in this area will open many more opportunities.&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; ⁂ &amp;lt;-&lt;/p&gt;
+
+&lt;p&gt;The development process was nothing short of enthralling. We did not have well established libraries to lean back on. We went into this &amp;ldquo;batteries not included.&amp;rdquo; The decisions were deliberate; to use Golang and not pre-existing libraries because the potential for learning would have been limited. We optimized for maximized learning. And boy did it pay off. Not only did we end up writing our very own Golang libraries for interfacing with all these sensors, we also had the opportunity to try and model the interactions of software with the real world. Imagine for one second how many different ways there are to make the car turn right. Things we take for granted in software can open a can of worms when the &amp;ldquo;real world&amp;rdquo; gets involved!&lt;/p&gt;
+
+&lt;p&gt;The technical attractiveness of such an undertaking is obvious, but there is more to it. I believe that a lot of good can be done for the &amp;ldquo;voiceless&amp;rdquo; by getting cheap commodity devices into their hands. A simple 2G connected solar powered open hardware device could allow a village like Panchayat, India, to bypass all the middle men and leverage social networking to report grievances to their congress representative. This could bring about a revolution. What minister worth his salt would want to look bad on Facebook? Our hope is that the resulting learnings and framework created from TheBot effort can and will make this possible.&lt;/p&gt;
+
+&lt;p&gt;The possibilities are truly endless.&lt;/p&gt;
+
+&lt;h3 id=&#34;links-to-watch:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;Links to Watch&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kidoman/embd&#34; target=&#34;_blank&#34;&gt;github.com/kidoman/embd&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;credits:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;Credits&lt;/h3&gt;
+
+&lt;p&gt;Contributors in no particular order: Sapto, Rohit, Kunal, Nikesh, Shantanu, Hanu, Gagan, Shaunak, Kashyap, Mukund, Akhil, Vishwas, Mallik, Deepthi, Shaun, Nag, Bala &amp;amp; Sam Newman&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/thebot-4.jpg&#34; alt=&#34;The Team&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Go Getter Part 3</title>
+      <link>http://kidoman.io/blog/go-getter-part-3/</link>
+      <pubDate>Sat, 05 Oct 2013 08:00:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/go-getter-part-3/</guid>
+      <description>
+
+&lt;h2 id=&#34;hurray-multi-threading:6c8772a427b8b32f29b4bf794867848c&#34;&gt;Hurray multi-threading&lt;/h2&gt;
+
+&lt;p&gt;This is the second follow up article to the slightly polarizing &lt;a href=&#34;http://kidoman.io/programming/go-getter.html&#34;&gt;original&lt;/a&gt; which had solely focused on extracting the max performance out of Go. The C++ community has really stepped up the game now. A few extreme pull requests (thanks &lt;a href=&#34;https://github.com/kidoman/rays/pull/2&#34;&gt;t-mat&lt;/a&gt; and &lt;a href=&#34;https://github.com/kidoman/rays/pull/4&#34;&gt;m42a&lt;/a&gt;) later the C++ version is essentially running on steroids. I thought it was a good time to rerun the benchmarks and see how things fared.&lt;/p&gt;
+
+&lt;p&gt;Plug: The original project (&lt;a href=&#34;https://github.com/kidoman/rays&#34;&gt;https://github.com/kidoman/rays&lt;/a&gt;) is now restructured so that we can add in new language implementations and see how they fair in this micro-benchmark.&lt;/p&gt;
+
+&lt;h2 id=&#34;go-land:6c8772a427b8b32f29b4bf794867848c&#34;&gt;Go Land&lt;/h2&gt;
+
+&lt;p&gt;Things were not quite in the Go land. I looked at the awesome optimizations contributed by &lt;a href=&#34;https://github.com/m42a&#34;&gt;m42a&lt;/a&gt; and ported a few things over to Go (+ a little spice of my own.) A quick run down:&lt;/p&gt;
+
+&lt;h2 id=&#34;inlining-rand:6c8772a427b8b32f29b4bf794867848c&#34;&gt;Inlining Rand&lt;/h2&gt;
+
+&lt;p&gt;The origin rand function, although elegant, was not getting inlined by the Go compiler. I would always suggest building performance sensitive parts of your application with the &amp;lsquo;-m&amp;rsquo; flag, like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go build -gcflags -m
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When I ran this on the projects main.go, it was immediately apparent that the anon-func inside makeRand() was not getting inlined as it was dependent on the &amp;lsquo;seed&amp;rsquo; variable:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type randFn func() float64
+
+func makeRand(seed uint32) randFn {
+    return func() float64 {
+        seed += seed
+        seed ^= 1
+        if int32(seed) &amp;lt; 0 {
+          seed ^= 0x88888eef
+        }
+        return float64(seed%95) / float64(95)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The solution was to simplify this and get it to inline:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func rnd(s *uint32) float64 {
+    ss := *s
+    ss += ss
+    ss ^= 1
+    if int32(ss) &amp;lt; 0 {
+        ss ^= 0x88888eef
+    }
+    *s = ss
+    return float64(*s%95) / float64(95)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The callers pass in the seed and life is good again. This simple change netted a &lt;strong&gt;4.3 %&lt;/strong&gt; improvement. Not too shabby.&lt;/p&gt;
+
+&lt;h2 id=&#34;computing-the-bounce-vector:6c8772a427b8b32f29b4bf794867848c&#34;&gt;Computing the bounce vector&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-diff&#34;&gt;@@ -223,11 +223,15 @@ func tracer(orig, dir vector.Vector) (st status, dist float64, bounce vector.Vec
+
+       if s &amp;lt; dist &amp;amp;&amp;amp; s &amp;gt; 0.01 {
+         dist = s
+-        bounce = p.Add(dir.Scale(dist)).Normalize()
++        bounce = p // We can lazy compute bounce based on value of p
+         st = hit
+       }
+     }
+   }
+
++  if st == hit {
++    bounce = bounce.Add(dir.Scale(dist)).Normalize()
++  }
++
+   return
+ }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(link to &lt;a href=&#34;https://github.com/kidoman/rays/commit/efa1672ad5c8fa41550a611217ec3fe239cfd3c6&#34;&gt;diff&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;This shaved off a further &lt;strong&gt;4 %&lt;/strong&gt; from the execution time. The reason: instead of doing a expensive &lt;strong&gt;Normalize()&lt;/strong&gt; (line 5) call inside a loop, why not pull it out and do it only if &amp;lsquo;st&amp;rsquo; == &amp;lsquo;hit&amp;rsquo;&lt;/p&gt;
+
+&lt;h2 id=&#34;objects:6c8772a427b8b32f29b4bf794867848c&#34;&gt;Objects&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-diff&#34;&gt;@@ -27,18 +27,14 @@ var art = []string{
+
+ var objects = makeObjects()
+
+-type object struct {
+-  k, j int
+-}
+-
+-func makeObjects() []object {
++func makeObjects() []vector.Vector {
+   nr := len(art)
+   nc := len(art[0])
+-  objects := make([]object, 0, nr*nc)
++  objects := make([]vector.Vector, 0, nr*nc)
+   for k := nc - 1; k &amp;gt;= 0; k-- {
+     for j := nr - 1; j &amp;gt;= 0; j-- {
+       if art[j][nc-1-k] != &#39; &#39; {
+-        objects = append(objects, object{k: -k, j: -(nr - 1 - j)})
++        objects = append(objects, vector.Vector{X: -float64(k), Y: 3, Z: -float64(nr-1-j) - 4})
+       }
+     }
+   }
+@@ -215,10 +211,8 @@ func tracer(orig, dir vector.Vector) (st status, dist float64, bounce vector.Vec
+     st = missDownward
+   }
+
+-  for _, object := range objects {
+-    k, j := object.k, object.j
+-
+-    p := orig.Add(vector.Vector{X: float64(k), Y: 3, Z: float64(j - 4)})
++  for i, _ := range objects {
++    p := orig.Add(objects[i])
+     b := p.DotProduct(dir)
+     c := p.DotProduct(p) - 1
+     q := b*b - c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Got rid of the separate &lt;strong&gt;object&lt;/strong&gt; struct and leveraged the &lt;strong&gt;Vector&lt;/strong&gt; struct to get rid of some repeatitive operations inside the loop.&lt;/p&gt;
+
+&lt;p&gt;Some of theses changes need to be ported back to C++ (not that it needs them); but I haven&amp;rsquo;t had time yet.&lt;/p&gt;
+
+&lt;h2 id=&#34;alright-alright-give-me-the-results:6c8772a427b8b32f29b4bf794867848c&#34;&gt;Alright, alright, give me the results&lt;/h2&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/512x512-3.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/2048x2048-3.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/4096x4096-3.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;All of the above benchmarks were run on a Hetzner dedicated server machine with a i7 2600 + 16 GB RAM&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;At this stage, C++ is now more than twice as fast as an equivalent Go program. If you look at the previous 2048 x 2048 test results, you will see how far ahead the C++ results have come:&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/go-vs-cpp-after-both-optimized.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;From taking 58.15 seconds (single threaded), it has now dropped to a extremely impressive 36.36 seconds (again single threaded), making it almost twice as fast as the optimized Go version.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion:6c8772a427b8b32f29b4bf794867848c&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I am pretty sure the Go version will get closer and closer as the compiler gets more mature. Its just a matter of time. Infact, a few common compiler optimization misses are causing it to not extract as much performance as it potentially could. But thats the subject of a different blog post (this one is already getting too long.)&lt;/p&gt;
+
+&lt;p&gt;Also, it will be worthwhile to test how gccgo performs with the same code.&lt;/p&gt;
+
+&lt;h2 id=&#34;road-ahead:6c8772a427b8b32f29b4bf794867848c&#34;&gt;Road Ahead&lt;/h2&gt;
+
+&lt;p&gt;I have restuctured the github project (&lt;a href=&#34;https://github.com/kidoman/rays&#34;&gt;https://github.com/kidoman/rays&lt;/a&gt;) so that it is easy to add other language implementations to it. A Java, Clojure, Rust, Python, etc. version would definitely make things interesting and spice things up a bit. If you are interested in picking up a cause, please go right ahead&amp;hellip; all pull requests are welcome.&lt;/p&gt;
+
+&lt;p&gt;As usual, reachable at kidoman@gmail.com / &lt;a href=&#34;https://twitter.com/kidoman_&#34;&gt;@kidoman_&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Go Getter Part 2</title>
+      <link>http://kidoman.io/blog/go-getter-part-2/</link>
+      <pubDate>Thu, 03 Oct 2013 04:30:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/go-getter-part-2/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;*Update:&lt;/strong&gt; I have now posted a &lt;a href=&#34;http://kidoman.io/programming/go-getter-part-3.html&#34;&gt;second follow up article&lt;/a&gt; with the benchmarks rerun with a multi-threaded optimized C++ version&lt;/p&gt;
+
+&lt;h2 id=&#34;apples-oranges:ec7f7c4d36f75cd2bcf7441ab0438aa1&#34;&gt;Apples? Oranges?&lt;/h2&gt;
+
+&lt;p&gt;This is a follow up article to the initial &lt;a href=&#34;http://kidoman.io/programming/go-getter.html&#34;&gt;Go Getter&lt;/a&gt; article which focused purely on optimizing the Go solution. The comparision was not apples-to-apples (and still isn&amp;rsquo;t; as we are talking about two very different platforms here) and was never meant to be. Instead it was focused on:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Learn idiomatic Go&lt;/li&gt;
+&lt;li&gt;Document optimizations which help make the Go solution faster&lt;/li&gt;
+&lt;li&gt;Fire up all cylinders (erm cores) and see how the performance scales&lt;/li&gt;
+&lt;li&gt;Discover any avenues of optimizing Go further (after all, we are just at version 1.2rc1)&lt;/li&gt;
+&lt;li&gt;Fun?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It was never meant to mislead people into believing that Go was faster than a fully optimized C++ solution, or to deceive people into adopting Go as a result. Since its been a while (7 years) I went knee deep into C++, I had left it upto more experienced hands to properly optimize the C++ version. Evidently, it was wishful thinking.&lt;/p&gt;
+
+&lt;h2 id=&#34;full-steam-ahead:ec7f7c4d36f75cd2bcf7441ab0438aa1&#34;&gt;Full Steam Ahead&lt;/h2&gt;
+
+&lt;p&gt;I spent the last couple of hours applying the optimizations learnt from the Go story to the C++ version: &lt;a href=&#34;https://github.com/kidoman/rays/compare/bbb8395aa999883a595267fd0230087b1ddf646c...940c91f601ef840e6d75ddf272ab6cd3eb8d5531&#34;&gt;diff of the optimizations&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Needless to say, the C++ performance is &lt;strong&gt;exciting&lt;/strong&gt; again. Mind you, although I tried using OpenMP to bring in some multi-threaded love, it didn&amp;rsquo;t work out so well. So I will truly have to leave that upto more capable hands.&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/go-vs-cpp-after-both-optimized.png&#34; alt=&#34;Go vs C&amp;#43;&amp;#43; after both are optimized&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;It was compiled by &amp;ldquo;c++ -O3&amp;rdquo; using G++ 4.7.3 and benchmarked on a Core i7 2600 16 GB dedicated Hetzner server running an updated Ubuntu 13.04 installation&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;road-ahead:ec7f7c4d36f75cd2bcf7441ab0438aa1&#34;&gt;Road Ahead&lt;/h2&gt;
+
+&lt;p&gt;I hope to takes these numbers to the Go community and try and close the gap as much as possible. Go suffers from relatively slower performance because it tries to be as safe as possible when used in a concurrent scenario (for example, the default &amp;ldquo;global rand&amp;rdquo; is synchronized and good to access from multiple goroutines.) That is something I would definitely desire when doing real world coding. There is definitely scope for improvement, but considering everything else (GC, compilation speed, goroutines, channels, etc.) that Go brings to the table, I guess it will always be a game of balance.&lt;/p&gt;
+
+&lt;p&gt;As usual, reachable at kidoman@gmail.com / karanm@thoughtworks.com / &lt;a href=&#34;https://twitter.com/kid0m4n&#34;&gt;@kid0m4n&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Go Getter</title>
+      <link>http://kidoman.io/blog/go-getter/</link>
+      <pubDate>Wed, 02 Oct 2013 12:06:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/go-getter/</guid>
+      <description>
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/42.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;A ray traced image produced by the program&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Long story short:&lt;/strong&gt; After optimizations, the Go ray tracer was &lt;strong&gt;8.4 %&lt;/strong&gt; faster than a functionally equivalent C++ (but &lt;em&gt;unoptimized*&lt;/em&gt;) version when rendering a &lt;strong&gt;4.2 MegaPixel&lt;/strong&gt; image using a single thread. With multi-threading enabled, the performance gap widened to &lt;strong&gt;76.2 %&lt;/strong&gt; on a 8 Core machine. Not only was it really simple to utilize the complete CPU in Go, it was easy to immediately feel productive in the language due to its simple and thoughtful design. &amp;ldquo;&lt;a href=&#34;http://commandcenter.blogspot.in/2012/06/less-is-exponentially-more.html&#34;&gt;Less is indeed more !&lt;/a&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;*Update:&lt;/strong&gt; I have posted a &lt;a href=&#34;http://kidoman.io/programming/go-getter-part-2.html&#34;&gt;follow up article&lt;/a&gt; with the benchmarks rerun using a optimized C++ solution.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;*Update 2:&lt;/strong&gt; I have posted a &lt;a href=&#34;http://kidoman.io/programming/go-getter-part-3.html&#34;&gt;second follow up article&lt;/a&gt; with the benchmarks rerun with a multi-threaded optimized C++ version.&lt;/p&gt;
+
+&lt;h2 id=&#34;ray-tracing:22874e73058aad7692af175b0e945489&#34;&gt;Ray tracing? **&lt;/h2&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/ray-tracing.png&#34; alt=&#34;Ray Tracing&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Ray_tracing_(graphics&#34;&gt;Ray tracing&lt;/a&gt; is a technique for generating an image by tracing the path of light through pixels in an image and simulating the effects of its encounters with virtual objects.&lt;/p&gt;
+
+&lt;p&gt;Since it is computationally intensive and you figure out the final color of each pixel on its own, without caring about neighbouring pixels, the algorithm is inherently parallelizable; atleast in its current form.&lt;/p&gt;
+
+&lt;p&gt;Although a poor fit for rendering realtime graphics (read games and simulations where speed is critical) without expensive hardware, it sees a lot of usage in the film and television where the image can be rendered slowly ahead of time.&lt;/p&gt;
+
+&lt;h2 id=&#34;fire-your-engines:22874e73058aad7692af175b0e945489&#34;&gt;Fire your engines&lt;/h2&gt;
+
+&lt;p&gt;Few days ago, I chanced upon &lt;a href=&#34;http://fabiensanglard.net/rayTracing_back_of_business_card/index.php&#34;&gt;this blog post&lt;/a&gt; on &lt;a href=&#34;https://news.ycombinator.com/news&#34;&gt;Hacker News&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I loved the breakdown provided by the author, and frankly speaking, since the subject was about ray tracing, it didn&amp;rsquo;t take much for me to get fully engrossed in it. I mean, a &lt;a href=&#34;https://gist.github.com/kidoman/6708750&#34;&gt;ray tracer&lt;/a&gt;, concise enough to fit at the back of the business card, measuring up to a grand total of 1337 bytes&amp;hellip; yummmmmmmmmmmy!&lt;/p&gt;
+
+&lt;p&gt;Like any programmer worth his salt, I immediately decided to port this brilliant piece of art to a programming language I am trying to internalize, Go. Did I hear you ask &amp;ldquo;Why &lt;a href=&#34;http://golang.org/&#34;&gt;Go&lt;/a&gt; ?&amp;rdquo;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go is poised to be fast, system level programming language&lt;/li&gt;
+&lt;li&gt;Performance is one of the key factors&lt;/li&gt;
+&lt;li&gt;Scaling to multiple cores is supposed to be a breeze&lt;/li&gt;
+&lt;li&gt;Its supposedly easy to leverage all the features provided by the Go language and runtime and write &amp;ldquo;correct&amp;rdquo; and &amp;ldquo;idiomatic&amp;rdquo; programs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So a couple of hours later, I got the &lt;a href=&#34;https://github.com/kidoman/rays/blob/0e2c2c467221d6e5ee27fcf95f8a9412c6a8b21d/main.go&#34;&gt;first version&lt;/a&gt; up and running. I modified both the C++ and the Go versions slightly to generate the same &lt;a href=&#34;http://i.imgur.com/yFicPrE.png&#34;&gt;exact image&lt;/a&gt; (512 x 512) so that it was as close a comparision as possible (no disrespect to prodigal aek.)&lt;/p&gt;
+
+&lt;p&gt;This is how the numbers stacked up:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C++ version: 11.803 s&lt;/li&gt;
+&lt;li&gt;Go version: 28.883 s&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Not too shabby for a few hours of coding, but obviously I was not going to let it rest there. I decided to seek help from the community.&lt;/p&gt;
+
+&lt;p&gt;Note: All initial testing was done on a Late-2011 MacBook Pro 15 with a Intel i7 2675QM processor, equipped with 16GB of RAM, running Mac OS X 10.9&lt;/p&gt;
+
+&lt;h2 id=&#34;links:22874e73058aad7692af175b0e945489&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Golang-nuts discussion thread: &lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/mxYzHQSV3rw&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;gorays Github repo: &lt;a href=&#34;https://github.com/kidoman/rays&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;C++ version gist: &lt;a href=&#34;https://gist.github.com/kidoman/6680629&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Various parallel options tried: &lt;a href=&#34;https://github.com/kidoman/rays/commits/parallel&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;aside:22874e73058aad7692af175b0e945489&#34;&gt;Aside&lt;/h2&gt;
+
+&lt;p&gt;There seems to be a misconception (by and large) that there is a lack of community support around Go. But it could not be far from the truth. 2013 has been the best year for Go as far as I can tell. The &lt;a href=&#34;http://www.gophercon.com/&#34;&gt;first &amp;ldquo;big&amp;rdquo; conference&lt;/a&gt; around Go has been announced + the energy around Go in the &lt;a href=&#34;https://groups.google.com/forum/#!forum/golang-nuts&#34;&gt;community&lt;/a&gt; is at a new high. The amount of code being written in Go is also on a rise. Just have a look at the &lt;a href=&#34;https://github.com/trending?l=go&#34;&gt;language stats page&lt;/a&gt; in Github to get a brief overview.&lt;/p&gt;
+
+&lt;p&gt;My first step was to collate all the information I had about my problem statement into a post at &lt;a href=&#34;https://groups.google.com/forum/#!forum/golang-nuts&#34;&gt;golang-nuts&lt;/a&gt;: &lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/mxYzHQSV3rw/dOA78aeVLgEJ&#34;&gt;the post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The amount of constructive advice I got in the first couple of hours was amazing. Let me summarize some of the biggest performance leaps for you:&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/go-improvements.png&#34; alt=&#34;Go Go Go&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Graph of Go performance improvements&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;br /&gt;
+(raw data available &lt;a href=&#34;http://kidoman.io/images/go-raw-data.png&#34;&gt;here&lt;/a&gt;, also C++ solution was kept constant while optimizing the Go version)&lt;/p&gt;
+
+&lt;h2 id=&#34;move-to-go1-2rc1:22874e73058aad7692af175b0e945489&#34;&gt;Move to go1.2rc1&lt;/h2&gt;
+
+&lt;p&gt;Change# 1&lt;br/&gt;
+Before: 28.883 s&lt;br/&gt;
+After: 25.644 s&lt;br/&gt;
+Change: &lt;strong&gt;11.2 %&lt;/strong&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;The initial benchmark run was on go1.1.2. But it didn&amp;rsquo;t make sense to continue benchmarking on this old/stable release as the &lt;strong&gt;1.2&lt;/strong&gt; release is just around the corner and &lt;strong&gt;1.2rc1&lt;/strong&gt; is already available; with performance improvements in tow.&lt;/p&gt;
+
+&lt;p&gt;This is one awesome property of Go. Every new release, we are magically given a new leash on life in form of additional performance &lt;em&gt;without having to make a single line of change&lt;/em&gt;. And since we are guaranteed that a well formed Go1 code will continue to work and compile with all Go1.x releases, this is &amp;ldquo;sone pe suhaga&amp;rdquo; (for my English speaking brethren: icing on the cake.) For example, the Go1.1 release saw as much as a 30% boost in performance for a lot of Go programs over Go1.0.&lt;/p&gt;
+
+&lt;p&gt;In this particular case, it was a 11.2 % win. With zero changes to code. Hurray!&lt;/p&gt;
+
+&lt;h2 id=&#34;global-to-local-rand:22874e73058aad7692af175b0e945489&#34;&gt;Global to Local Rand&lt;/h2&gt;
+
+&lt;p&gt;Change# 2 (&lt;a href=&#34;https://github.com/kidoman/rays/commit/5f16e4131faf9f712e716b04038523bd57bbca9b&#34;&gt;commit 2&lt;/a&gt;)&lt;br/&gt;
+Before: 25.644 s&lt;br/&gt;
+After: 23.816 s&lt;br/&gt;
+Change: &lt;strong&gt;7.13 %&lt;/strong&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;This one was a doozy. I will mark this up to my inexperience with Go in general and lack of sleep in particular. The convenience of the in built &lt;a href=&#34;http://golang.org/pkg/math/rand/&#34;&gt;math/rand&lt;/a&gt; package&amp;rsquo;s rand.Float64() caught me of guard. What &lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/mxYzHQSV3rw/lRxaH8z2IfoJ&#34;&gt;Sebastien Binet&lt;/a&gt; rightly pointed out, and what is amply clear from the documentation, is that rand.Float64() is thread safe and is overkill in single threaded/goroutined/gophered scenario. It uses locks internally to ensure that multiple goroutines (parallel to threads in other dimensions) can access it without mucking up (in general.)&lt;/p&gt;
+
+&lt;p&gt;Needless to say, using a local rand (i.e. calling rand.New(&amp;hellip;) and using the returned instance everywhere) netted me a cool 7.13 % boost.&lt;/p&gt;
+
+&lt;h2 id=&#34;buffer-to-win:22874e73058aad7692af175b0e945489&#34;&gt;Buffer to Win&lt;/h2&gt;
+
+&lt;p&gt;Change# 3 &amp;amp; 4 (&lt;a href=&#34;https://github.com/kidoman/rays/commit/e9c418ec3a77d014ced05bcbd52f38aa3ef7c2af&#34;&gt;commit 3&lt;/a&gt; and &lt;a href=&#34;https://github.com/kidoman/rays/commit/1d09eac86697d7f50cdf5866fd9a6988f4cf6e84&#34;&gt;commit 4&lt;/a&gt;)&lt;br/&gt;
+Before: 23.816 s&lt;br/&gt;
+After: 22.818 s&lt;br/&gt;
+Change: &lt;strong&gt;4.23 %&lt;/strong&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;This was a two parter (as are all good movies.) The first part involved not writing to &lt;a href=&#34;http://golang.org/pkg/os/#pkg-variables&#34;&gt;os.Stdout&lt;/a&gt; inside the inner loop of the ray tracer. I guess writing to os.Stdout is not bad in general, but placing it inside a super tight inner loop (which essentially iterates through every pixel of the rendered image) is a big &lt;strong&gt;NO-NO&lt;/strong&gt;! Getting rid of that was easy. Just use a bytes.Buffer (hat tip to &lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/mxYzHQSV3rw/kJkpTdN7uP0J&#34;&gt;Robert Melton&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;The real win was avoiding the &lt;a href=&#34;https://github.com/kidoman/rays/blob/e9c418ec3a77d014ced05bcbd52f38aa3ef7c2af/main.go#L73&#34;&gt;allocation of a byte slice&lt;/a&gt; inside the inner loop. Its common knowledge in the Go world: lesser the garbage you create, the more performant your application becomes. By avoiding the allocation of the byte slice per pixel (thanks &lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/mxYzHQSV3rw/3Z0vi5pilF8J&#34;&gt;Nigel Tao&lt;/a&gt;), we optimized things further and brough the overall execution time down to 22.818 s (2x compared to the C++ version.) Not too shabby.&lt;/p&gt;
+
+&lt;h2 id=&#34;engage-warp-engines:22874e73058aad7692af175b0e945489&#34;&gt;Engage Warp Engines&lt;/h2&gt;
+
+&lt;p&gt;Change# 5 (&lt;a href=&#34;https://github.com/kidoman/rays/commit/249f229ba8c769c38d7dc018acfdf29cc86d6e43&#34;&gt;commit 5&lt;/a&gt;)&lt;br/&gt;
+Before: 22.818 s&lt;br/&gt;
+After: 12.747 s&lt;br/&gt;
+Change: &lt;strong&gt;44.14 %&lt;/strong&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;I did myself a solid by looking closely at the &lt;a href=&#34;https://github.com/kidoman/rays/blob/249f229ba8c769c38d7dc018acfdf29cc86d6e43/main.go#L149&#34;&gt;tracer()&lt;/a&gt; function. It was being called a gazillion times and required some much needed love. Instead of looping through all possible &amp;ldquo;potential&amp;rdquo; spheres every time &lt;strong&gt;tracer&lt;/strong&gt; was called, why not precompute the various possible sphere locations (information which is readily available) and avoid the &lt;a href=&#34;https://github.com/kidoman/rays/blob/1d09eac86697d7f50cdf5866fd9a6988f4cf6e84/main.go#L142&#34;&gt;double loop&lt;/a&gt; in the first place?&lt;/p&gt;
+
+&lt;p&gt;This minor optimization saw the most massive jump thus far. A 44.14 % boost. And now, we were just 0.944 s shy of the C++ program&amp;rsquo;s raw speed. Was this a apples-to-apples comparison anymore? Well no, but it was never meant to be. Attempt was to use the best of what &lt;strong&gt;Go&lt;/strong&gt; has to offer to extract maximum performance. And we were barrelling down that road.&lt;/p&gt;
+
+&lt;h2 id=&#34;scotty-is-that-all-you-got:22874e73058aad7692af175b0e945489&#34;&gt;Scotty, is that all you got?&lt;/h2&gt;
+
+&lt;p&gt;Change# 6 (&lt;a href=&#34;https://github.com/kidoman/rays/commit/9066519c24a092b7f672b71327f5c825f84a77a4&#34;&gt;commit 6&lt;/a&gt;)&lt;br/&gt;
+Before: 12.747 s&lt;br/&gt;
+After: 12.644 s&lt;br/&gt;
+Change: &lt;strong&gt;0.81 %&lt;/strong&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a significant change (thanks to the suggestion from &lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/mxYzHQSV3rw/zMvk18jvbyYJ&#34;&gt;kortschak&lt;/a&gt;) but probably subdued as it came late in the game. Yep, thats right, its the damn rand function again. Apparently, it&amp;rsquo;s okay to &lt;strong&gt;NOT&lt;/strong&gt; use a random generator when generating a raytraced image. The already well oiled engine quickened a little further to 12.644 s (an improvement of 0.81 %)&lt;/p&gt;
+
+&lt;h2 id=&#34;warp-speed-ahead:22874e73058aad7692af175b0e945489&#34;&gt;Warp Speed Ahead&lt;/h2&gt;
+
+&lt;p&gt;Change# 7 &amp;amp; 8 (&lt;a href=&#34;https://github.com/kidoman/rays/commit/7420ef3f94be2dd0d1887d98cdbec67a14a07f9f&#34;&gt;commit 7&lt;/a&gt; and &lt;a href=&#34;https://github.com/kidoman/rays/commit/ddfe825f0902877c02467a4f65f46c4044bc7939&#34;&gt;commit 8&lt;/a&gt;)&lt;br/&gt;
+Before: 12.644 s&lt;br/&gt;
+After: 2.947 s&lt;br/&gt;
+Change: &lt;strong&gt;76.69 %&lt;/strong&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;Concurrency (&lt;a href=&#34;http://blog.golang.org/concurrency-is-not-parallelism&#34;&gt;not parallelism&lt;/a&gt;) is the forte of Go. It makes it easy to think in concurrent terms. In fact, you can end up coding a &lt;a href=&#34;http://talks.golang.org/2012/concurrency.slide#50&#34;&gt;replicated search client&lt;/a&gt; which reduces tail latency without having to use a lock, conditional variable or callback.&lt;/p&gt;
+
+&lt;p&gt;However, ray tracing (at least in its currently coded form) is inherently a parallel problem. So how did Go fair? Very well, thanks for asking.&lt;/p&gt;
+
+&lt;p&gt;I tried a &lt;a href=&#34;https://github.com/kidoman/rays/commit/8df629c60998400c0bdfdb549552005eff36816c&#34;&gt;couple&lt;/a&gt; &lt;a href=&#34;https://github.com/kidoman/rays/commit/ab0dd18274694e68aa9205fd1a1855230749d725&#34;&gt;of&lt;/a&gt; &lt;a href=&#34;https://github.com/kidoman/rays/commit/45567013de4c58f484d72d40179a179c578268ba&#34;&gt;approaches&lt;/a&gt; and this one worked the best. One reason why I could try all these approaches so quickly is because of how easy it was to express my intent in Go. And that is an understatement.&lt;/p&gt;
+
+&lt;p&gt;Final approach used: Fire up N* goroutines and have them on standby; with each one capable of rendering a full row of the image. Then queue up all the rows that need rendering in a channel which feeds into all the available goroutines. There is no starvation as each goroutine has work available the moment it gets done with its current row. Awesome right? No locks, conditional variables or callbacks!&lt;/p&gt;
+
+&lt;p&gt;*N = runtime.NumCPU()&lt;/p&gt;
+
+&lt;h2 id=&#34;smart-pow:22874e73058aad7692af175b0e945489&#34;&gt;Smart Pow&lt;/h2&gt;
+
+&lt;p&gt;Change# 9, 10 &amp;amp; 11 (&lt;a href=&#34;https://github.com/kidoman/rays/commit/527e08317c9307316e2a7a8e9379cf40778eeaa1&#34;&gt;commit 9&lt;/a&gt;, &lt;a href=&#34;https://github.com/kidoman/rays/commit/6bc7a2c4c635c269d364fddd68fa999877a0c98c&#34;&gt;commit 10&lt;/a&gt; and &lt;a href=&#34;https://github.com/kidoman/rays/commit/86329c598d79e3d366ce83bba3fc80a6e8a69edd&#34;&gt;commit 11&lt;/a&gt;)&lt;br/&gt;
+Before: 2.947 s&lt;br/&gt;
+After: 2.593 s&lt;br/&gt;
+Change: &lt;strong&gt;12.01 %&lt;/strong&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;Michael Jones rightly &lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/mxYzHQSV3rw/sGxylrYx638J&#34;&gt;pointed&lt;/a&gt; (&lt;a href=&#34;https://groups.google.com/d/msg/golang-nuts/mxYzHQSV3rw/blcuZtZSiAEJ&#34;&gt;twice&lt;/a&gt;) that multiplications are way better that &lt;a href=&#34;http://golang.org/pkg/math/#Pow&#34;&gt;math.Pow&lt;/a&gt; when the exponents are known and optimization friendly (like 4 and 99.) Having exponentiation in the language itself would definitely help as the compiler would be able to do a good job of optimizing the multiply chains.&lt;/p&gt;
+
+&lt;p&gt;Commit 11 also optimized things further by skipping computing &lt;strong&gt;r&lt;/strong&gt; if not required (because of a potential early return.)&lt;/p&gt;
+
+&lt;h2 id=&#34;base-test-revisited:22874e73058aad7692af175b0e945489&#34;&gt;Base Test: Revisited&lt;/h2&gt;
+
+&lt;p&gt;Remember this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C++ version: 11.803 s&lt;/li&gt;
+&lt;li&gt;Go version: 28.883 s (single core)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now that we have done ALL these optimizations, how do these numbers change:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C++ version: 11.803 s&lt;/li&gt;
+&lt;li&gt;Go version: 10.349 s (single core)&lt;/li&gt;
+&lt;li&gt;Go version: 2.593 s (multi core)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We started the journey being 144.7 % slower than an equivalent C++ version to being 12.32 % faster, in single threaded mode. With multiple cores enabled, we ended up being &lt;strong&gt;78.03 %&lt;/strong&gt; faster than a functionally equivalent C++ version.&lt;/p&gt;
+
+&lt;p&gt;I also did some additional testing on a dedicated machine powered by Ubuntu 13.04 (kernel 3.8.0.26) i7 2600 with 16 GB RAM. The results were very heartwarming to say the least:&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/go-vs-cpp-after-optimizations.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Go vs C&amp;#43;&amp;#43; after optimizations&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1C = 1 Core&lt;/li&gt;
+&lt;li&gt;8C = 8 Core&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conclusion:22874e73058aad7692af175b0e945489&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This much improvement would not have been possible without support from the Go community. You guys rock!&lt;/li&gt;
+&lt;li&gt;Asking a genuine constructive question on golang-nuts has always gotten people a +ve response. Even if it is a &amp;ldquo;Sorry, it would be a difficult to do this in Go right now&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Go is maturing quickly. Every new version brings in new backward compatible performance; just recompile your code and voila!&lt;/li&gt;
+&lt;li&gt;It was a breeze to do the various optimizations suggested by the community, and it is very possible that some of these optimizations would not be required in the near future (like say with a language build in exponentiation)&lt;/li&gt;
+&lt;li&gt;We are comparing C++ to a language which not only has garbage collection built into the statically compiled binary, it also has the ability to handle multiple cores / synchrony baked right into the language&lt;/li&gt;
+&lt;li&gt;I am looking forward to redoing these tests with an optimized C++ version (single-core, multi-core) if someone is willing to contribute those changes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;The succinctness and simplicity of the resultant Go code is a big BIG win! Because it is so easy to grasp all of the Go language, you are able to channelize your thought process to actually solving the problem at hand. At a much faster pace. And the best part is: more often than not, the first solution which you will code up in Go will probably be the correct solution (or very close to it.) This would definitely not have been possible if the language was any less thoughtfully designed.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;links-1:22874e73058aad7692af175b0e945489&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Golang-nuts discussion thread: &lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/mxYzHQSV3rw&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;gorays Github repo: &lt;a href=&#34;https://github.com/kidoman/rays&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;C++ version gist: &lt;a href=&#34;https://gist.github.com/kidoman/6680629&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Various parallel options tried: &lt;a href=&#34;https://github.com/kidoman/rays/commits/parallel&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That&amp;rsquo;s all folks. Thanks for reading. If you have any comments, feel free to leave them here on the blog or you can always email me at kidoman@gmail.com. Also reachable at &lt;a href=&#34;https://twitter.com/kidoman_&#34;&gt;@kidoman_&lt;/a&gt; on Twitter. Ciao!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.reddit.com/r/golang/comments/1nlgbq/business_card_ray_tracer_go_faster_than_c/&#34;&gt;Reddit discussion thread&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>http://kidoman.io/about/</link>
+      <pubDate>Tue, 01 Oct 2013 00:00:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/about/</guid>
+      <description>&lt;p&gt;My name is &lt;strong&gt;Karan Misra&lt;/strong&gt;. I am currently busy developing a next gen eSports platform (&lt;a href=&#34;https://www.sostronk.com&#34;&gt;SoStronk&lt;/a&gt;) at Archetype (serving as the CTO and Co-Founder). My various interests include overclocking, biking, programming, gaming, etc.&lt;/p&gt;
+
+&lt;p&gt;My open source contributions can be found &lt;a href=&#34;https://github.com/kidoman&#34;&gt;here&lt;/a&gt;. And I sometimes &lt;a href=&#34;https://twitter.com/kidoman_&#34;&gt;tweet&lt;/a&gt; as well.&lt;/p&gt;
+
+&lt;p&gt;A more detailed &lt;strong&gt;resume&lt;/strong&gt; can be seen &lt;a href=&#34;http://kidoman.io/about/resume/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I can be reached at &lt;a href=&#34;mailto:kidoman@gmail.com&#34;&gt;kidoman@gmail.com&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Golang: testing the waters</title>
+      <link>http://kidoman.io/blog/testing-the-waters-with-golang/</link>
+      <pubDate>Fri, 26 Jul 2013 02:44:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/testing-the-waters-with-golang/</guid>
+      <description>
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;//1-ps.googleusercontent.com/x/s.golang-org.appspot.com/golang.org/doc/gopher/xfrontpage.png.pagespeed.ic._-JkwHsaKq.webp&#34; alt=&#34;Gopher&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://golang.org/&#34;&gt;Go&lt;/a&gt; has caught my fancy. There, I said it.&lt;/p&gt;
+
+&lt;p&gt;The Rubyist in me loves the static duck typing. Loves the promise of never having to navigate &amp;lsquo;murdered by design-patterns&amp;rsquo; code (AbstractFactoryFactory anyone?) Loves the near C/C++ speeds (ok, I know Ruby is not the fastest language, but I can always wish, right?) Loves the ability to compile large code bases in seconds. Loves the channels and the freedom they provide in implementing good/crisp CSP.&lt;/p&gt;
+
+&lt;p&gt;Sure, there are a few rough edges but nothing sharp enough to stop me from proposing to build the next enterprise application in Go. I mean, if Google betting YouTube and their primary &lt;a href=&#34;http://www.oscon.com/oscon2013/public/schedule/detail/28669&#34;&gt;download&lt;/a&gt; &lt;a href=&#34;http://talks.golang.org/2013/oscon-dl.slide#1&#34;&gt;service&lt;/a&gt; on it isn&amp;rsquo;t precedence enough, I don&amp;rsquo;t know what can be.&lt;/p&gt;
+
+&lt;p&gt;I do not want ThoughtWorks to be late to the party (&lt;a href=&#34;http://nodejs.org/&#34;&gt;again&lt;/a&gt;.) The time is ripe; the community is still taking shape and extremely malleable (in a good way.) So if a little/lot/hardcore evangelizing is what it takes, I am up for the challenge.&lt;/p&gt;
+
+&lt;h2 id=&#34;link-to-the-talk:a05636a247f88479f78e9e98ce654321&#34;&gt;Link to the talk&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://goo.gl/geuWOP&#34;&gt;click&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-talk:a05636a247f88479f78e9e98ce654321&#34;&gt;The Talk&lt;/h2&gt;
+
+&lt;p&gt;The talk was never intended to be a hands on session (although it transfigured into one towards the end.) More &amp;ldquo;daze and amaze.&amp;rdquo; I think I succeeded on the first part at least.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-amaze:a05636a247f88479f78e9e98ce654321&#34;&gt;The Amaze&lt;/h3&gt;
+
+&lt;p&gt;I wanted to highlight the best bits of Golang from the start. No stringing along for 40 slides whilst pretending to know a lot more than I did.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Static duck typing&lt;/li&gt;
+&lt;li&gt;No explicit inheritance + focus on composing&lt;/li&gt;
+&lt;li&gt;Pointers for efficient access&lt;/li&gt;
+&lt;li&gt;Built in language support for channels&lt;/li&gt;
+&lt;li&gt;Super fast compilation&lt;/li&gt;
+&lt;li&gt;Garbage collection&lt;/li&gt;
+&lt;li&gt;Gofmt (no more arguments about indentation)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;the-daze:a05636a247f88479f78e9e98ce654321&#34;&gt;The Daze&lt;/h3&gt;
+
+&lt;p&gt;Go will probably make inroads faster into some areas vs others. Main areas of focus are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Creating a highly efficient backend service based on RPC / JSON RPC&lt;/li&gt;
+&lt;li&gt;Best possible platform for implementing an API end point&lt;/li&gt;
+&lt;li&gt;Load balancer / database type applications&lt;/li&gt;
+&lt;li&gt;(world is Go&amp;rsquo;s oyster)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;testing-story:a05636a247f88479f78e9e98ce654321&#34;&gt;Testing Story&lt;/h3&gt;
+
+&lt;p&gt;The core members of Go are ensuring that people do not associate Go with not having to test their code. In fact, the best place to learn testing in Go is to browse through the implementation of Go packages (written by the creators of Go themselves.)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/pkg/testing/&#34;&gt;&amp;ldquo;testing&amp;rdquo;&lt;/a&gt; package makes testing really simple; some may say the approach taken is naive&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/orfjackal/gospec&#34;&gt;GoSpec&lt;/a&gt; aims to solve that. Provides a BDD type testing interface for Golang&lt;/li&gt;
+&lt;li&gt;Speed of running tests makes the whole process a joy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;deployment:a05636a247f88479f78e9e98ce654321&#34;&gt;Deployment&lt;/h3&gt;
+
+&lt;p&gt;Deployment couldn&amp;rsquo;t be easier. Go spits out a statically linked executable, making dependency management a thing of the past. Package up your executable into a RPM/DEB/what-not and throw it up. Couldn&amp;rsquo;t be simpler.&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion:a05636a247f88479f78e9e98ce654321&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;There are still nascent areas of Go which will require attention from the community to gain traction and get smoothened out. However this shouldn&amp;rsquo;t stop us from deploying Go as a API backend for a RoR powered AngularJS based single page application. Use the best bits of the various platforms to get going in the fastest manner possible. Throw the rot out as better Go based alternatives become available. :)&lt;/p&gt;
+
+&lt;h3 id=&#34;resources:a05636a247f88479f78e9e98ce654321&#34;&gt;Resources&lt;/h3&gt;
+
+&lt;p&gt;Listing the various resources and good to read links (in no particular order):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.usingcsp.com/&#34;&gt;CSP&lt;/a&gt; (&lt;a href=&#34;http://en.wikipedia.org/wiki/Communicating_sequential_processes&#34;&gt;wiki&lt;/a&gt;), a must read for understand CSP&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/&#34;&gt;Official homepage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://play.golang.org/&#34;&gt;A web based Go runner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.golang.org/&#34;&gt;Official blog roll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.mongodb.org/post/60359054233/going-with-go&#34;&gt;MongoDB Going with Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/channel/UCtXKDgv1AVoG88PLl8nGXmw&#34;&gt;Google Tech Talks YouTube channel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/diptanu/seli&#34;&gt;Seli&lt;/a&gt; (written by Diptanu)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/orfjackal/gospec&#34;&gt;GoSpec&lt;/a&gt;, BDD in Go&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/golang/groupcache&#34;&gt;GroupCache&lt;/a&gt;, a distributed hybrid client/server memcache alternative&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/languages/go&#34;&gt;Awesome language metrics by Github for Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/bradfitz&#34;&gt;Brad Fitzpatrik&amp;rsquo;s Github Profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/golang&#34;&gt;Golang Github Profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.docker.io/&#34;&gt;Docker&lt;/a&gt; an awesome LXC management tool (&lt;a href=&#34;https://github.com/dotcloud/docker&#34;&gt;github&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mozilla-services/heka&#34;&gt;Heka&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://flynn.io/&#34;&gt;Flynn&lt;/a&gt;, a Docker based OSS Heroku clone&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://robfig.github.io/revel/&#34;&gt;Revel&lt;/a&gt;, emerging defacto Go web framework&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.techempower.com/benchmarks&#34;&gt;Techempower Benchmarks&lt;/a&gt;, comparing Go&amp;rsquo;s performance to various other web frameworks&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://talks.golang.org/2013/oscon-dl.slide#1&#34;&gt;dl.google.com in Go&lt;/a&gt;, slides from Brad Fitzpatrik&amp;rsquo;s talk at oscon about reimplementing dl.google.com in Go&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dave.cheney.net/2013/08/06/go-1-1-on-the-cubieboard-2&#34;&gt;Go running on a Cubieboard2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Must watch videos on YouTube
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=f6kdp27TYZs&#34;&gt;Go Concurrency Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=MzYZhh6gpI0&#34;&gt;Tour of Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=kKQLhGZVN4A&#34;&gt;Go in Production&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>node.js in action: Learnings</title>
+      <link>http://kidoman.io/blog/nodejs-in-action-learnings/</link>
+      <pubDate>Fri, 31 May 2013 01:58:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/nodejs-in-action-learnings/</guid>
+      <description>
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/node.js.png&#34; alt=&#34;node.js&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I recently gave a talk on node.js at work&amp;hellip; the talk was surprisingly well attended. It was scheduled to start at 1 PM. At around 1:02 PM, I was alone in the room with not another soul in sight. The room filled to the brim in the next 10 minutes. Last count = 33&lt;/p&gt;
+
+&lt;h2 id=&#34;link-to-the-talk:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Link to the talk&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://goo.gl/Pcz2wQ&#34;&gt;click&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-talk:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;The Talk&lt;/h2&gt;
+
+&lt;p&gt;The theme of the talk was to get people excited about the node.js work we were doing for a large enterprise client. Almost 9 months into development, we had figured out a tonne of patterns and idioms and had actually started becoming productive with it. Talking about the hurdles faced during the non avoidable learning curve seemed like a sensible thing to do.&lt;/p&gt;
+
+&lt;h3 id=&#34;tech-stack:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Tech Stack&lt;/h3&gt;
+
+&lt;p&gt;Although I cannot reveal any actual URLs atm, the stack of the application we are developing is as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;node.js (Platform)&lt;/li&gt;
+&lt;li&gt;Express (Web Server)&lt;/li&gt;
+&lt;li&gt;Sequelize (ORM)&lt;/li&gt;
+&lt;li&gt;MySQL (Database)&lt;/li&gt;
+&lt;li&gt;Q (Promises)&lt;/li&gt;
+&lt;li&gt;Mocha/Sinon/Chai (and their -as-promised bretheren, for TDD)&lt;/li&gt;
+&lt;li&gt;Grunt (Command runner)&lt;/li&gt;
+&lt;li&gt;Coffee-Resque (For background jobs)&lt;/li&gt;
+&lt;li&gt;Socket.io (For realtime tracking of connected clients)&lt;/li&gt;
+&lt;li&gt;Redis (As a datastore for our generated socket.io handshake tokens)&lt;/li&gt;
+&lt;li&gt;connect-assetmanager (For managing our assets; &lt;strong&gt;update&lt;/strong&gt; we have now replaced this with our own hand rolled solution)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;promises-to-keep-q:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Promises to Keep: Q&lt;/h3&gt;
+
+&lt;p&gt;I think it is essential for any new node.js project to base itself on a solid promises library. As indicated above, the library of choice for us was Q. I would go out on a limb and say this - &amp;ldquo;Avoiding callback hell is probably the least interesting feature of Q.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Q allows us to beautifully structure our code without excessive &amp;ldquo;pyramiding.&amp;rdquo; You still end up with a few nested promises from time to time, but that is also avoidable with judicious usage of Q.spread.&lt;/p&gt;
+
+&lt;h3 id=&#34;testing:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Testing&lt;/h3&gt;
+
+&lt;p&gt;Equally important is the need to get the TDD/BDD pattern flowing right from get go. Mocha/Sinon/Chai allow BDD in JavaScript to look almost as elegant as RSpec (which I consider to be the holy grail of developer friendly BDD.) Being smart and using the -as-promised utility node modules will also save you a lot of grief and restore a sense of sanity to the test cases (you can then essentially start returning promises of future asserts from your test cases, instead of having to call a &lt;strong&gt;done()&lt;/strong&gt; at the end to signal the end.)&lt;/p&gt;
+
+&lt;h3 id=&#34;scaling-and-deployment:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Scaling and Deployment&lt;/h3&gt;
+
+&lt;p&gt;Our dreams of serving a million requests from a single node.js process were quickly shattered when we discovered a pegged 100% CPU (on a single core.) Besides trying to fix the main issue (which turned out to be the MySQL driver being used by sequelize) we also spent some time getting the &lt;a href=&#34;http://unicorn.bogomips.org/&#34;&gt;unicornification&lt;/a&gt; of node.js right. We ended up with a master-slave arrangement which allowed us to scale our application to N-1 cores (where N is the total number of cores available in the machine.) Common sense dictated the &lt;strong&gt;-1&lt;/strong&gt; part (to leave a core aside for the kernel and various sub systems.)&lt;/p&gt;
+
+&lt;p&gt;Figuring our deployments was also fun. Although there was some talk of building and deploying a .rpm (our target Linux distribution was CentOS 6.4), the general lack of time lead us to adapt a git based deployment mechanism. Any SHA is a good candidate for deployment to any of our environments. We obviously ended up tagging the good ones.&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;We really went out on a limb here by using node.js for the project when we did not actually have much in house expertise on the same. However, the effort has redeemed itself many fold. A lot of people have successfully managed to &lt;strong&gt;get&lt;/strong&gt; &amp;ldquo;concurrent programming&amp;rdquo; as a result. Coming out from the comfort zone of RoR, .NET and Java also possibly has changed the course of their lives for ever! :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why Sublime Text?</title>
+      <link>http://kidoman.io/blog/why-sublime-text/</link>
+      <pubDate>Thu, 23 May 2013 02:17:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/why-sublime-text/</guid>
+      <description>
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/sublime.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I wanted to pen down the results of my 5 month long &amp;ldquo;select the best text editor available&amp;rdquo; thought experiment. So here we go&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;tl-dr:0417c938ca2fcad5241b8cb95c4dfd65&#34;&gt;tl;dr&lt;/h2&gt;
+
+&lt;p&gt;Although &lt;strong&gt;vim&lt;/strong&gt; gets the best text editor award, I choose to continue using Sublime Text &lt;strong&gt;3&lt;/strong&gt; for all my development needs. Read on to find out why&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-experiment:0417c938ca2fcad5241b8cb95c4dfd65&#34;&gt;The Experiment&lt;/h2&gt;
+
+&lt;p&gt;This journey started with me being infatuated with the &lt;a href=&#34;http://railscasts.com/about&#34;&gt;RailsCasts&lt;/a&gt; theme which Ryan Bates made famous via his &lt;a href=&#34;http://railscasts.com/&#34;&gt;podcasts&lt;/a&gt;. Coming from a data warehousing / .NET background, this felt surreal.&lt;/p&gt;
+
+&lt;p&gt;As a budding Rubyist, I fell in love with &lt;a href=&#34;http://macromates.com/&#34;&gt;TextMate&lt;/a&gt;. It was fast and elegant. The fact that the grubby little fingers of my .NET-abled friends could not get at it made it more wonderful. It provided just enough control&amp;hellip; the balance produced elegant harmony.&lt;/p&gt;
+
+&lt;p&gt;So naturally, when I had to code Ruby for a Windows infrastructure automation project (based on &lt;a href=&#34;http://www.opscode.com/chef/&#34;&gt;Chef&lt;/a&gt;) we were doing for our client, I pounced at Sublime Text. It brought in the elegance of TextMate and acted as a necessary survival tool in a Microsoft dev environment. The awesome snippet system eliminated any need I &lt;strong&gt;possibly&lt;/strong&gt; could have felt for an IDE (RubyMine, I am looking at you.) And need I mention the beautiful Cmd + P fuzzy file lookup implementation (Ctrl + P for the devs who call Seattle their home.)&lt;/p&gt;
+
+&lt;p&gt;Its now been a few months since I have had to boot up Windows for &lt;em&gt;work&lt;/em&gt;. Now that I had used Sublime Text for a good few months, I wanted to evaluate the other options available with Mac OS X and adopt the &lt;em&gt;ultimate&lt;/em&gt; nirvana&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;A quick research showed me the following available tunnels:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;vim (Inspired from &lt;a href=&#34;http://blog.extracheese.org/&#34;&gt;Gary Bernhardt&lt;/a&gt;, of &lt;a href=&#34;https://www.destroyallsoftware.com/&#34;&gt;DAS&lt;/a&gt; fame)&lt;/li&gt;
+&lt;li&gt;emacs (Inspired from &lt;a href=&#34;http://onestepback.org/&#34;&gt;Jim Weirich&lt;/a&gt;, of Rake fame)&lt;/li&gt;
+&lt;li&gt;MacVim (Inspired from the ever loveable &lt;a href=&#34;http://tenderlovemaking.com/&#34;&gt;tenderlove&lt;/a&gt;, a Ruby and Rails core committer)&lt;/li&gt;
+&lt;li&gt;Sublime Text (Based on my own experience)&lt;/li&gt;
+&lt;li&gt;TextMate 1 / 2 (Inspired from watching Ryan Bates work his magic in the screen casts)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am not going to elaborate too much about these choices but just provide an abstract about some of them to help you find the light.&lt;/p&gt;
+
+&lt;h2 id=&#34;mac-vim-emacs:0417c938ca2fcad5241b8cb95c4dfd65&#34;&gt;(Mac)vim &amp;amp; emacs&lt;/h2&gt;
+
+&lt;p&gt;vim felt like &lt;strong&gt;God&amp;rsquo;s Own Editor&lt;/strong&gt;. Seeing Gary fly through the code was a revelation. In his own words (paraphrasing), &amp;ldquo;I don&amp;rsquo;t want to show you my key strokes (in the recorded podcasts, contrary to how Ryan does it in his) because they will fly by so fast that you won&amp;rsquo;t have time to see them.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;This reveals a lot about the core vim. A fully done up vim instance (perhaps decorated with &lt;a href=&#34;https://github.com/carlhuda/janus&#34;&gt;Janus&lt;/a&gt;) is so &amp;ldquo;busy&amp;rdquo;, that there is hardly any time for you to be motionless. You are doing something all the time&amp;hellip; As you learn more of the legendary editor, you manage short cuts and macros which would make Chuck Norris turn in his bed. Hell, after a while, you ever start using the wonderful vim script &lt;a href=&#34;https://github.com/tpope/vim-fugitive&#34;&gt;Fugitive&lt;/a&gt; to make tender love to Git! All from within your text editor&amp;hellip; what could be better than that?&lt;/p&gt;
+
+&lt;p&gt;The same can also be said for emacs too (some people even use emacs as their shell / OS replacement!)&lt;/p&gt;
+
+&lt;h2 id=&#34;one-man-s-meat-is-another-man-s-poison:0417c938ca2fcad5241b8cb95c4dfd65&#34;&gt;One man&amp;rsquo;s meat is another man&amp;rsquo;s poison&lt;/h2&gt;
+
+&lt;p&gt;And I am not saying this in the passing. After using vim/MacVim for a good 3+ months (I had picked up decent speed with the editor and figured out a bunch of essential plugins which helped me almost avoid having to step out to &lt;a href=&#34;http://www.iterm2.com/&#34;&gt;iTerm&lt;/a&gt;) I realized that it had not made me any faster at programming. Sure, I could &amp;ldquo;edit&amp;rdquo; a document at the speed of light, &lt;a href=&#34;https://github.com/Lokaltog/vim-easymotion&#34;&gt;motion&lt;/a&gt; around effortlessly&amp;hellip; but when it came to solving a real hard business problem, I found myself retracting my hands from the keyboard&amp;hellip; a &lt;strong&gt;setTimeout(.., 0)&lt;/strong&gt; of sorts!&lt;/p&gt;
+
+&lt;p&gt;Although a lot of people claim that they can multitask super efficiently, scientific studies have proven that it is human to have your work deteriorate when multi-tasking. It was hard to organize my thoughts with the constant rattle of keyboard which vim encourages.&lt;/p&gt;
+
+&lt;p&gt;For me, the realisation dawned one lazy afternoon when trying to trace down a memory leak problem as I witnessed myself involuntarily quit vim and open up the same project directory in Sublime Text.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The think time that was afforded to my brain when using a less efficient editor was missing when using a ninja text editor like vim. vim kept the brain so busy because of its efficiency and throughput (keys pressed per second) that the left lobe hardly got any time to go &lt;a href=&#34;http://lwn.net/Articles/549580/&#34;&gt;tickless&lt;/a&gt; and actually focus on the problem at hand.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The same happened when I had to use the mouse to shift through files as well&amp;hellip; the time slices were larger because of the easy nature of navigation in a simple text editor which hardly took any thinking. So the brain could subconsciously continue working on the problem at hand instead of trying to figure out the best possible way to do the required action in vim.&lt;/p&gt;
+
+&lt;h2 id=&#34;summary:0417c938ca2fcad5241b8cb95c4dfd65&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;Sublime Text / TextMate are hardly the best editors out there. But, when it comes to actually letting you focus on the job at hand (remember, our forte is smart programming, not smart editing of source files); they &lt;strong&gt;SHINE&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is why I shifted back to Sublime Text (now in its &lt;strong&gt;3rd&lt;/strong&gt; incarnation) after my 5 month &lt;strong&gt;thought&lt;/strong&gt; experiment and I couldn&amp;rsquo;t be happier.&lt;/p&gt;
+
+&lt;p&gt;Give it a honest shot (just like you had to for your full featured IDE or vim/emacs) and you will understand how short and rewarding the learning curve is. The sweet sensation you will feel at the tip of your tongue after your first multi line edit is totally worth it! Trust me.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PS&lt;/strong&gt;: For folks stuck in Java / .NET, I feel for you!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

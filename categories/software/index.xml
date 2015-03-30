@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software on Coder, Biker, Gamer</title>
+    <link>http://kidoman.io/categories/software/</link>
+    <description>Recent content in Software on Coder, Biker, Gamer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2006 - 2015, Karan Misra; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 10 Apr 2014 06:00:00 +0530</lastBuildDate>
+    <atom:link href="http://kidoman.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introducing Serve</title>
+      <link>http://kidoman.io/blog/introducing-serve/</link>
+      <pubDate>Thu, 10 Apr 2014 06:00:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/introducing-serve/</guid>
+      <description>
+
+&lt;p&gt;Sometimes, it takes a great deal of effort to create something simple.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What is the smallest feature set you can support and still be useful?&lt;/li&gt;
+&lt;li&gt;How elegant should the implementation be?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are the typical questions which would come to your mind when aiming for simplicity.&lt;/p&gt;
+
+&lt;p&gt;Well, here is my dedication to the shrine of &lt;a href=&#34;http://www.infoq.com/presentations/Simple-Made-Easy&#34;&gt;simplicity&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-this:9500deee02e3b178a3c32ab881b9219b&#34;&gt;What is this?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Serve&lt;/strong&gt; makes serving static content out of directories &lt;strong&gt;simple&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why would you want to do this?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;python -m SimpleHTTPServer 8080
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When you can just do this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;serve .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Serve&lt;/strong&gt; is a single binary. Easy installed via &lt;a href=&#34;http://brew.sh/&#34;&gt;Homebrew&lt;/a&gt; with a single command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install kidoman/tools/serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(there are a few other ways of installing Serve, including but not limited to precompiled binaries. But they are much better documented at the &lt;a href=&#34;https://github.com/kidoman/serve&#34;&gt;Github repo&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-use:9500deee02e3b178a3c32ab881b9219b&#34;&gt;How to use&lt;/h2&gt;
+
+&lt;p&gt;Provided you have &lt;code&gt;serve&lt;/code&gt; under your $PATH somewhere:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;serve .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will serve the current directory at &lt;code&gt;http://localhost:5000/&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;serve -p 9999 ~/my-awesome-blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Will serve the contents of the folder &lt;code&gt;~/my-awesome-blog&lt;/code&gt; at &lt;code&gt;http://localhost:9999/&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;serve -x /my ~/precious
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You guessed it, &lt;code&gt;http://localhost:5000/my&lt;/code&gt; is now wired up to &lt;code&gt;~/precious&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;serve -o ~/sesame
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Wires up &lt;code&gt;http://localhost:5000&lt;/code&gt; to &lt;code&gt;~/sesame&lt;/code&gt; and opens the URL in your favorite browser while it is at it.&lt;/p&gt;
+
+&lt;h2 id=&#34;next-steps:9500deee02e3b178a3c32ab881b9219b&#34;&gt;Next Steps&lt;/h2&gt;
+
+&lt;p&gt;The next logical thing would be to allow the &lt;code&gt;serve&lt;/code&gt; functionality to be used by simply importing the package. But it totally depends on the simplicity of the change! Happy serving.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Framework on Coder, Biker, Gamer</title>
+    <link>http://kidoman.io/categories/framework/</link>
+    <description>Recent content in Framework on Coder, Biker, Gamer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2006 - 2015, Karan Misra; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 24 Apr 2014 06:00:00 +0530</lastBuildDate>
+    <atom:link href="http://kidoman.io/categories/framework/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introducing EMBD</title>
+      <link>http://kidoman.io/blog/introducing-embd/</link>
+      <pubDate>Thu, 24 Apr 2014 06:00:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/introducing-embd/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/kidoman/embd&#34;&gt;EMBD&lt;/a&gt;&lt;/strong&gt; is a framework for &lt;strong&gt;Go&lt;/strong&gt; which does &lt;strong&gt;GPIO&lt;/strong&gt; (General Purpose I/O), talks the &lt;strong&gt;I²C&lt;/strong&gt; protocol (+ many more) and provides the drivers necessary to interact with &lt;strong&gt;many hardware sensors&lt;/strong&gt; (eg. gyroscope, magnetometer, barometer, etc.) It&amp;rsquo;s non-intrusive API allows you to quickly prototype solutions (see below for example) without sacrifising production-worthiness. And the best part? The code will run on a multitude of supported hosts (like the Raspberry Pi, and the BeagleBone Black) without change!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://embd.kidoman.io&#34;&gt;http://embd.kidoman.io&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/kidoman/embd&#34;&gt;https://github.com/kidoman/embd&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;embed video-player&#34;&gt;
+&lt;iframe type=&#34;text/html&#34; width=&#34;640&#34; height=&#34;385&#34; src=&#34;https://player.vimeo.com/video/92990437&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Although the framework started its life as &lt;strong&gt;go-rpi&lt;/strong&gt;, we soon realized the potential of making it even more useful. The driver code we had written to talk to a &lt;a href=&#34;https://github.com/kidoman/embd#sensors-supported&#34;&gt;plethora of sensors&lt;/a&gt; were not really dependent on the Raspberry Pi. They expected a I²C bus and not much else. So we immediately started thinking of ways in which we could allow people to leverage all that code in other platforms which Golang ran on (which turned out to be &lt;a href=&#34;https://github.com/kidoman/embd#platforms-supported&#34;&gt;quite a few&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;h2 id=&#34;api-design:b1fa4ed83b7cc349584dedfbd0989262&#34;&gt;API Design&lt;/h2&gt;
+
+&lt;p&gt;We spent a bunch of time fine tuning the &amp;ldquo;feel&amp;rdquo; of the API. We have aimed to provide both &lt;strong&gt;real world usability&lt;/strong&gt; (we did not want a toy feel to the API) and the ability to be be used for quick/rapid hardware prototyping.&lt;/p&gt;
+
+&lt;p&gt;For example, it leans towards rapid prototyping when needed:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func main() {
+  for {
+    embd.LEDToggle(&amp;quot;LED0&amp;quot;)
+    time.Sleep(250 * time.Millisecond)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or, gives you the control when necessary:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func main() {
+  panicIf(embd.InitLED())
+  defer embd.CloseLED()
+
+  led, err := embd.NewLED(&amp;quot;LED0&amp;quot;)
+  if err != nil {
+    panic(err)
+  }
+  defer led.Off()
+
+  // Cleanly exit if someone hits Ctrl-C
+  quit := make(chan os.Signal, 1)
+  signal.Notify(quit, os.Interrupt, os.Kill)
+
+  for {
+    select {
+    case &amp;lt;-time.After(250 * time.Millisecond):
+      panicIf(led.Toggle())
+      fmt.Println(&amp;quot;Toggled&amp;quot;)
+    case &amp;lt;-quit:
+      return
+    }
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It currently has good support for the Raspberry Pi and the BeagleBone Black, with support for other platforms coming in the near future. This should almost guarentee that the particular combination of prototyping board, sensors, etc. would most probably work OOTB with EMBD.&lt;/p&gt;
+
+&lt;h2 id=&#34;summary:b1fa4ed83b7cc349584dedfbd0989262&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;EMBD&lt;/strong&gt; is a bold attempt at creating a cross platform embedded programming library. A lot of work is needed to flesh out the sensor library and to bring in support for new hosts. The &lt;a href=&#34;https://github.com/kidoman/embd/blob/master/ROADMAP.md&#34;&gt;ROADMAP&lt;/a&gt; lists some of the short/long terms goals we have ahead of us, but we won&amp;rsquo;t get too far down that list without the support of the community. So looking forward to those &lt;a href=&#34;https://github.com/kidoman/embd/pulls&#34;&gt;pull requests&lt;/a&gt;! Also, while we have done our best, if you do come across a bug, please &lt;a href=&#34;https://github.com/kidoman/embd/issues&#34;&gt;let us know&lt;/a&gt; so that we can tackle it in the best way possible. And if you need any help, we will be hanging around &lt;a href=&#34;https://groups.google.com/forum/#!forum/go-embd&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To read the backstory, read &lt;a href=&#34;http://kidoman.io/blog/embd-behind-the-scenes/&#34;&gt;this&lt;/a&gt; article as well.&lt;/p&gt;
+
+&lt;h2 id=&#34;links:b1fa4ed83b7cc349584dedfbd0989262&#34;&gt;Links&lt;/h2&gt;
+
+&lt;p&gt;Homepage: &lt;a href=&#34;http://embd.kidoman.io/&#34;&gt;http://embd.kidoman.io/&lt;/a&gt;&lt;br/&gt;
+Github: &lt;a href=&#34;https://github.com/kidoman/embd&#34;&gt;https://github.com/kidoman/embd&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

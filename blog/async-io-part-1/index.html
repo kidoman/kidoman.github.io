@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Async IO - Part 1 | Karan Misra</title>
+
+  
+  <link rel="stylesheet" href="http://kidoman.io//css/poole.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/poole-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-x.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link href="/favicon.png" rel="icon">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Coder, Biker, Gamer | Karan Misra" />
+
+  <meta name="description" content="Comparing node.js and Go.">
+  <meta name="keywords" content="kidoman,embd,sostronk">
+  <link rel="author" href="http://plus.google.com/109365517985703707273">
+</head>
+<body class="theme-base-0f">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://kidoman.io//"><img src="http://www.gravatar.com/avatar/8aea1ec57a05b988585f7f2c9e320cfe?s=200" alt="gravatar"></a>
+      <h1>Karan Misra</h1>
+      <p class="lead"><p>Coder, Biker, Gamer</p>
+
+<p>Co-Founder, CTO @<br/>
+  <a href="https://www.sostronk.com/">SoStronk</a></p>
+</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://kidoman.io//">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="mailto:kidoman@gmail.com">Contact</a></li>
+      
+      <li class="sidebar-nav-item"><a href="/about/">About</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://github.com/kidoman">GitHub</a></li>
+      
+      
+      
+      <li class="sidebar-nav-item"><a href="https://twitter.com/kidoman_">Twitter</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Async IO - Part 1</h1>
+    <span class="post-date">May 13, 2014 &middot; 7 minute read &middot; <a  href="javascript:window.location='http://kidoman.io/blog/async-io-part-1/#disqus_thread'" data-disqus-url="http://kidoman.io/programming/async-io-part-1.html"  >Comments</a>
+
+    
+    <br/>
+    
+    <a class="label" href="http://kidoman.io//categories/programming">programming</a>
+    </span>
+    
+
+<p>I was recently reading a <a href="http://venkateshcm.com/2014/04/Reactor-Pattern-Part-4-Write-Sequential-Non-Blocking-IO-Code-With-Fibers-In-NodeJS/">series</a> on &ldquo;Write Sequential Non-Blocking IO Code With Fibers in NodeJS&rdquo; by <a href="http://venkateshcm.com/">Venkatesh</a>.</p>
+
+<p>Venki was essentially trying to emphasize that writing non-blocking code in NodeJS (either via callbacks, or using promises) can get hairy really fast. For example, this code demonstrates that aptly:</p>
+
+<pre><code class="language-javascript">var express = require('express');
+var app = express();
+
+app.get('/users/:fbId', function(req, res) {
+  var id = req.params.id;
+  var key = 'user:' + id;
+  client.get(key, function(err, reply) {
+    if (err !== null) {
+      res.send(500);
+      return;
+    }
+
+    if (reply === null) {
+      res.send(404);
+      return;
+    }
+
+    res.send(200, {id: id, name: reply});
+  });
+});
+
+</code></pre>
+
+<p>The exact code is available on <a href="https://github.com/kidoman/fibrous/blob/master/nodejs/callback.js#L59-L72">GitHub</a> (so is the <a href="https://github.com/kidoman/fibrous/blob/master/nodejs/promise.js#L55-L65">promises driven version</a>, but I won&rsquo;t bother inlining it.)</p>
+
+<p>What we actually wanted to write (if it were possible, was):</p>
+
+<pre><code class="language-javascript">var express = require('express');
+var app = express();
+
+app.get('/users/:fbId', function(req, res) {
+  var id = req.params.id;
+  var key = 'user:' + id;
+
+  try {
+    var reply = client.get(key);
+    if (reply === null) {
+      res.send(404);
+      return;
+    }
+
+    res.send(200, {id: id, name: reply});
+  }
+  catch(err) {
+      res.send(500);
+  }
+});
+</code></pre>
+
+<p>The magic would happen in line number 9 (above.) Instead of having to provide a cascade of callbacks (what if we wanted to do another lookup after we got the value back from the first), we could just write them serially, one after the other.</p>
+
+<p>Well. Apparently we can!</p>
+
+<h2 id="fibers:34925da0f2297dc82f0506c40b37e0cb">Fibers</h2>
+
+<blockquote>
+<p>A fiber is a particularly lightweight thread of execution. Like threads, fibers share address space. However, fibers use co-operative multitasking while threads use pre-emptive multitasking. Threads often depend on the kernel&rsquo;s thread scheduler to preempt a busy thread and resume another thread; fibers yield themselves to run another fiber while executing.</p>
+</blockquote>
+
+<p>Fibers allow exactly this kind of black magic in NodeJS. It is still callbacks internally, but we are exposed to none of it in our application code. Sure you will end up writing a bunch of wrappers (or have some tool generate them for us), but we would have the sweet sweet pleasure of writing async IO code without having to jump through all the hoops. This is how the wrapper code for redis client looks like:</p>
+
+<pre><code class="language-javascript">var Fiber = require('fibers');
+var client = require('./redis-client');
+
+exports.get = function(key) {
+  var err, reply;
+  var fiber = Fiber.current;
+
+  client.get(key, function(_err, _reply) {
+    err = _err;
+    reply = _reply;
+    fiber.run();
+  });
+
+  Fiber.yield();
+
+  if (err != null) {
+    throw err;
+  }
+
+  return reply;
+};
+</code></pre>
+
+<p>(the <a href="https://github.com/kidoman/fibrous/blob/master/nodejs/fiber.js#L52-L60">real code</a> is here in case you are curious)</p>
+
+<p>I liked how the code looked. Having survided a &lsquo;promising&rsquo; node.js project, I was definitely curious about this new style. Maybe this can be the saving grace (before generators and <strong>yield</strong> take over the JS world) for real world server side JavaScript.</p>
+
+<h2 id="fibers-you-say:34925da0f2297dc82f0506c40b37e0cb">Fibers you say</h2>
+
+<p>But the code (and the underlying technique which makes it tick) sounded very familiar, and reminded me of a similar technique which is used in Go to allow writing beautiful async IO code. For example, the same function from above in Go:</p>
+
+<pre><code class="language-go">m.Get(&quot;/users/:id&quot;, func(db *DB, params martini.Params) (int, []byte) {
+  str := params[&quot;id&quot;]
+  id, err := strconv.Atoi(str)
+  if err != nil {
+    return http.StatusBadRequest, []byte{}
+  }
+
+  u, err := db.LoadUser(id)
+  if err != nil {
+    return http.StatusNotFound, []byte{}
+  }
+  return http.StatusOK, encoder.Must(enc.Encode(u))
+})
+</code></pre>
+
+<p>Sure, there is a little more happening in here (Go is statically typed), buts its the exact same thing as the fibers example, without all the manual wrapping. Any call which does IO (like line 8) blocks the currently executing goroutine (just like a fiber, a lightweight thread.) The natural question to ask is, if the goroutine gets blocked, how do other requests get processed? Its quite simple actually. The Go runtime automatically schedules any other goroutine which is ready to run (their IO call is done) on the thread on which the current goroutine was running.</p>
+
+<p>Since goroutines are light weight (stack size is just 4 KB in Go 1.3beta1 compared to the much larger ~2 MB thread stacks), it is not unusual to have hundreds of thousands of goroutines actively running in a single process, all humming along together. The best part, since the threads have to do less context switching (the same physical thread can continue running on the processor core, just the instruction pointer keeps changing as the goroutines shuffle in and out, just as in method calls), we are able to extract a lot more efficiency from the same unit of hardware than otherwise. Otherwise IO calls, which would otherwise cause the thread to block and wait, could cripple the system and bring it down to its knees. Read <a href="http://venkateshcm.com/2014/05/How-To-Determine-Web-Applications-Thread-Poll-Size/">this</a> article for more context on this.</p>
+
+<h2 id="performance:34925da0f2297dc82f0506c40b37e0cb">Performance</h2>
+
+<p>A fellow ThoughtWorker asked me, &ldquo;Does performance matter when choosing a framework?&rdquo;</p>
+
+<p>I know where he was coming from, and how we shouldn&rsquo;t make decisions purely based on performance (we would all be doing assembly if that was the case.) While it is true that as a startup (or even in the case of a well established player), building the MVP and getting it to the users is paramount, you really dont want to face the situation where you suddenly have a huge influx of users (say it goes viral) and you are caught between a ROCK (scale horizontally by throwing compute units at the problem) and a HARD PLACE (have to rewrite the solution in a technology more amenable to scaling.) Both of these options are expensive, and can potentially be a deal breaker.</p>
+
+<p>Therefore, provided everything else is more or less equal, choosing the more performant one is never a bad thing.</p>
+
+<p>With this context, I decided to compare the two solutions for their performance, given that they more or less looked the same. I decided to allow the system under test to use as many cores as they wanted, and then hit them with 100 concurrent users, each of which is going full tilk for around 20 seconds (used the awesome <a href="https://github.com/wg/wrk">wrk</a> tool for benchmarking.)</p>
+
+<p>The results:</p>
+
+<table>
+<thead>
+<tr>
+<th>Golang</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Stdlib</td>
+<td><a href="https://github.com/kidoman/fibrous/blob/master/go/stdlib.go">134566</a> (3.81ms)</td>
+</tr>
+
+<tr>
+<td>Gorilla</td>
+<td><a href="https://github.com/kidoman/fibrous/blob/master/go/gorilla.go">125092</a> (4.28ms)</td>
+</tr>
+
+<tr>
+<td>Martini</td>
+<td><a href="https://github.com/kidoman/fibrous/blob/master/go/martini.go">51330</a> (9.51ms)</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>node.js</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Stdlib</td>
+<td><a href="https://github.com/kidoman/fibrous/blob/master/nodejs/stdlib.js">54510</a> (7.78ms)</td>
+</tr>
+
+<tr>
+<td>Callbacks*</td>
+<td><a href="https://github.com/kidoman/fibrous/blob/master/nodejs/callback.js">36107</a> (10.84ms)</td>
+</tr>
+
+<tr>
+<td>Fibers*</td>
+<td><a href="https://github.com/kidoman/fibrous/blob/master/nodejs/fiber.js">27372</a> (18.76ms)</td>
+</tr>
+
+<tr>
+<td>Promises*</td>
+<td><a href="https://github.com/kidoman/fibrous/blob/master/nodejs/promise.js">22665</a> (17.15ms)</td>
+</tr>
+</tbody>
+</table>
+
+<p>* The Callbacks, Fibers and Promises versions are created using Express. The Stdlib versions use the <strong>http</strong> support in the corresponding standard libraries.</p>
+
+<p>All the numbers are in <strong>req/s</strong> as given by wrk (higher is better.) The latency details are in brackets (lower is better.) Clicking the numbers will take you to the corresponding code in the <a href="https://github.com/kidoman/fibrous">GitHub repo</a> (the <a href="https://github.com/kidoman/fibrous/blob/master/README.md">README</a> has the detailed numbers.)</p>
+
+<p>The tests were done on an updated Ubuntu 14.04 box with a Intel i7 4770 processor, 16 GB of RAM and a SSD.</p>
+
+<p>As you can see, the <strong>fibers</strong> method of doing async IO in <strong>node.js</strong> comes with a perceivable loss in throughput compared to the pure <strong>callbacks</strong> based approach, but looks relatively better than the <strong>promises</strong> version for this micro-benchmark.</p>
+
+<p>At the same time, the default way of doing IO in Golang does very well for itself. More than <strong>134,000 req/s</strong> with a <strong>3.81 ms</strong> 99th percentile latency. All this without having to go through crazy callbacks/promises hoops. How cool is that?</p>
+
+<h2 id="how-the-tests-were-run:34925da0f2297dc82f0506c40b37e0cb">How the tests were run?</h2>
+
+<h3 id="software-versions:34925da0f2297dc82f0506c40b37e0cb">Software versions</h3>
+
+<ul>
+<li>Go 1.3beta1</li>
+<li>node.js 0.10.28</li>
+<li>wrk 3.1.0</li>
+</ul>
+
+<h3 id="command-used-to-run:34925da0f2297dc82f0506c40b37e0cb">Command used to run</h3>
+
+<p>A more detailed description is available in the <a href="https://github.com/kidoman/fibrous">README</a> but I will explain a simple version here:</p>
+
+<ul>
+<li>Start the program (by say running ./start_martini.sh)</li>
+<li>Run the benchmark (by running ./bench.sh)</li>
+<li>Record the result</li>
+<li>Rince and repeat 3 times and take the best run</li>
+</ul>
+
+<h3 id="notes:34925da0f2297dc82f0506c40b37e0cb">Notes</h3>
+
+<ul>
+<li>All cores on the Intel i7 4770 were set to the performance governor</li>
+<li>Redis was not tweaked</li>
+<li>ulimit was not raised</li>
+</ul>
+
+<h2 id="summary:34925da0f2297dc82f0506c40b37e0cb">Summary</h2>
+
+<p>This is part 1 in a multipart series looking at how async IO (and programming in general) is done in various languages/platforms. We will be going indepth into one language/platform with the every new article in the series. Future parts will look at Scala, Clojure, Java, C#, Python and Ruby based frameworks and try and present a holistic view of the async world.</p>
+
+<p>But one thing is very clear, async IO is here to stay. Not embrassing it would be foolhardy given the need to stay lean. Hope these articles help you understand gravity of the decision.</p>
+
+<p>While some might argue that what we did in Golang was not really async, as the call was blocking in nature. But the net result achieved, and the reason why Go is still able to provide an awesome throughput despite blocking IO calls, is because the Go runtime essentially does the heavy lifting for you. When one goroutine is busy waiting for the results of a IO call to come back, other goroutines can take their place and not waste CPU cycles. The fact that this mechanism allows us to get away with fewer threads that would be required otherwise, is the icing on top.</p>
+
+    <p>
+      
+      <a href="http://www.reddit.com/r/golang/comments/25iic3/async_io_part_1_go_vs_nodejs/">Reddit Discussion Thread</a>
+      
+      <br/>
+      
+      <a href="javascript:window.location='http://news.ycombinator.com/submitlink?u='+encodeURIComponent(location.href)+'&t=Async%20IO%20-%20Part%201'">Submit to Hacker News</a>
+      
+      <br/>
+      <a href="javascript:window.location='http://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text=Async%20IO%20-%20Part%201&via=kidoman_'">Tweet this</a>
+    </p>
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "kidoman";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "kidoman";
+    
+    var disqus_url = "http://kidoman.io/programming/async-io-part-1.html";
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://kidoman.io//js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-44459958-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>

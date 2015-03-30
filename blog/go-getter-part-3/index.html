@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Go Getter Part 3 | Karan Misra</title>
+
+  
+  <link rel="stylesheet" href="http://kidoman.io//css/poole.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/poole-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-x.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link href="/favicon.png" rel="icon">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Coder, Biker, Gamer | Karan Misra" />
+
+  <meta name="description" content="Further optimizations and a multi-threaded C&#43;&#43; version.">
+  <meta name="keywords" content="kidoman,embd,sostronk">
+  <link rel="author" href="http://plus.google.com/109365517985703707273">
+</head>
+<body class="theme-base-0f">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://kidoman.io//"><img src="http://www.gravatar.com/avatar/8aea1ec57a05b988585f7f2c9e320cfe?s=200" alt="gravatar"></a>
+      <h1>Karan Misra</h1>
+      <p class="lead"><p>Coder, Biker, Gamer</p>
+
+<p>Co-Founder, CTO @<br/>
+  <a href="https://www.sostronk.com/">SoStronk</a></p>
+</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://kidoman.io//">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="mailto:kidoman@gmail.com">Contact</a></li>
+      
+      <li class="sidebar-nav-item"><a href="/about/">About</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://github.com/kidoman">GitHub</a></li>
+      
+      
+      
+      <li class="sidebar-nav-item"><a href="https://twitter.com/kidoman_">Twitter</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Go Getter Part 3</h1>
+    <span class="post-date">Oct 5, 2013 &middot; 5 minute read &middot; <a  href="javascript:window.location='http://kidoman.io/blog/go-getter-part-3/#disqus_thread'" data-disqus-url="http://kidoman.io/programming/go-getter-part-3.html"  >Comments</a>
+
+    
+    <br/>
+    
+    <a class="label" href="http://kidoman.io//categories/programming">programming</a>
+    </span>
+    
+
+<h2 id="hurray-multi-threading:6c8772a427b8b32f29b4bf794867848c">Hurray multi-threading</h2>
+
+<p>This is the second follow up article to the slightly polarizing <a href="/programming/go-getter.html">original</a> which had solely focused on extracting the max performance out of Go. The C++ community has really stepped up the game now. A few extreme pull requests (thanks <a href="https://github.com/kidoman/rays/pull/2">t-mat</a> and <a href="https://github.com/kidoman/rays/pull/4">m42a</a>) later the C++ version is essentially running on steroids. I thought it was a good time to rerun the benchmarks and see how things fared.</p>
+
+<p>Plug: The original project (<a href="https://github.com/kidoman/rays">https://github.com/kidoman/rays</a>) is now restructured so that we can add in new language implementations and see how they fair in this micro-benchmark.</p>
+
+<h2 id="go-land:6c8772a427b8b32f29b4bf794867848c">Go Land</h2>
+
+<p>Things were not quite in the Go land. I looked at the awesome optimizations contributed by <a href="https://github.com/m42a">m42a</a> and ported a few things over to Go (+ a little spice of my own.) A quick run down:</p>
+
+<h2 id="inlining-rand:6c8772a427b8b32f29b4bf794867848c">Inlining Rand</h2>
+
+<p>The origin rand function, although elegant, was not getting inlined by the Go compiler. I would always suggest building performance sensitive parts of your application with the &lsquo;-m&rsquo; flag, like so:</p>
+
+<pre><code>go build -gcflags -m
+</code></pre>
+
+<p>When I ran this on the projects main.go, it was immediately apparent that the anon-func inside makeRand() was not getting inlined as it was dependent on the &lsquo;seed&rsquo; variable:</p>
+
+<pre><code class="language-go">type randFn func() float64
+
+func makeRand(seed uint32) randFn {
+    return func() float64 {
+        seed += seed
+        seed ^= 1
+        if int32(seed) &lt; 0 {
+          seed ^= 0x88888eef
+        }
+        return float64(seed%95) / float64(95)
+    }
+}
+</code></pre>
+
+<p>The solution was to simplify this and get it to inline:</p>
+
+<pre><code class="language-go">func rnd(s *uint32) float64 {
+    ss := *s
+    ss += ss
+    ss ^= 1
+    if int32(ss) &lt; 0 {
+        ss ^= 0x88888eef
+    }
+    *s = ss
+    return float64(*s%95) / float64(95)
+}
+</code></pre>
+
+<p>The callers pass in the seed and life is good again. This simple change netted a <strong>4.3 %</strong> improvement. Not too shabby.</p>
+
+<h2 id="computing-the-bounce-vector:6c8772a427b8b32f29b4bf794867848c">Computing the bounce vector</h2>
+
+<pre><code class="language-diff">@@ -223,11 +223,15 @@ func tracer(orig, dir vector.Vector) (st status, dist float64, bounce vector.Vec
+
+       if s &lt; dist &amp;&amp; s &gt; 0.01 {
+         dist = s
+-        bounce = p.Add(dir.Scale(dist)).Normalize()
++        bounce = p // We can lazy compute bounce based on value of p
+         st = hit
+       }
+     }
+   }
+
++  if st == hit {
++    bounce = bounce.Add(dir.Scale(dist)).Normalize()
++  }
++
+   return
+ }
+</code></pre>
+
+<p>(link to <a href="https://github.com/kidoman/rays/commit/efa1672ad5c8fa41550a611217ec3fe239cfd3c6">diff</a>)</p>
+
+<p>This shaved off a further <strong>4 %</strong> from the execution time. The reason: instead of doing a expensive <strong>Normalize()</strong> (line 5) call inside a loop, why not pull it out and do it only if &lsquo;st&rsquo; == &lsquo;hit&rsquo;</p>
+
+<h2 id="objects:6c8772a427b8b32f29b4bf794867848c">Objects</h2>
+
+<pre><code class="language-diff">@@ -27,18 +27,14 @@ var art = []string{
+
+ var objects = makeObjects()
+
+-type object struct {
+-  k, j int
+-}
+-
+-func makeObjects() []object {
++func makeObjects() []vector.Vector {
+   nr := len(art)
+   nc := len(art[0])
+-  objects := make([]object, 0, nr*nc)
++  objects := make([]vector.Vector, 0, nr*nc)
+   for k := nc - 1; k &gt;= 0; k-- {
+     for j := nr - 1; j &gt;= 0; j-- {
+       if art[j][nc-1-k] != ' ' {
+-        objects = append(objects, object{k: -k, j: -(nr - 1 - j)})
++        objects = append(objects, vector.Vector{X: -float64(k), Y: 3, Z: -float64(nr-1-j) - 4})
+       }
+     }
+   }
+@@ -215,10 +211,8 @@ func tracer(orig, dir vector.Vector) (st status, dist float64, bounce vector.Vec
+     st = missDownward
+   }
+
+-  for _, object := range objects {
+-    k, j := object.k, object.j
+-
+-    p := orig.Add(vector.Vector{X: float64(k), Y: 3, Z: float64(j - 4)})
++  for i, _ := range objects {
++    p := orig.Add(objects[i])
+     b := p.DotProduct(dir)
+     c := p.DotProduct(p) - 1
+     q := b*b - c
+</code></pre>
+
+<p>Got rid of the separate <strong>object</strong> struct and leveraged the <strong>Vector</strong> struct to get rid of some repeatitive operations inside the loop.</p>
+
+<p>Some of theses changes need to be ported back to C++ (not that it needs them); but I haven&rsquo;t had time yet.</p>
+
+<h2 id="alright-alright-give-me-the-results:6c8772a427b8b32f29b4bf794867848c">Alright, alright, give me the results</h2>
+
+<p>
+<figure >
+    
+        <img src="/images/512x512-3.png" />
+    
+    
+</figure>
+</p>
+
+<p>
+<figure >
+    
+        <img src="/images/2048x2048-3.png" />
+    
+    
+</figure>
+</p>
+
+<p>
+<figure >
+    
+        <img src="/images/4096x4096-3.png" />
+    
+    
+</figure>
+</p>
+
+<p><em>All of the above benchmarks were run on a Hetzner dedicated server machine with a i7 2600 + 16 GB RAM</em></p>
+
+<p>At this stage, C++ is now more than twice as fast as an equivalent Go program. If you look at the previous 2048 x 2048 test results, you will see how far ahead the C++ results have come:</p>
+
+<p>
+<figure >
+    
+        <img src="/images/go-vs-cpp-after-both-optimized.png" />
+    
+    
+</figure>
+</p>
+
+<p>From taking 58.15 seconds (single threaded), it has now dropped to a extremely impressive 36.36 seconds (again single threaded), making it almost twice as fast as the optimized Go version.</p>
+
+<h2 id="conclusion:6c8772a427b8b32f29b4bf794867848c">Conclusion</h2>
+
+<p>I am pretty sure the Go version will get closer and closer as the compiler gets more mature. Its just a matter of time. Infact, a few common compiler optimization misses are causing it to not extract as much performance as it potentially could. But thats the subject of a different blog post (this one is already getting too long.)</p>
+
+<p>Also, it will be worthwhile to test how gccgo performs with the same code.</p>
+
+<h2 id="road-ahead:6c8772a427b8b32f29b4bf794867848c">Road Ahead</h2>
+
+<p>I have restuctured the github project (<a href="https://github.com/kidoman/rays">https://github.com/kidoman/rays</a>) so that it is easy to add other language implementations to it. A Java, Clojure, Rust, Python, etc. version would definitely make things interesting and spice things up a bit. If you are interested in picking up a cause, please go right ahead&hellip; all pull requests are welcome.</p>
+
+<p>As usual, reachable at kidoman@gmail.com / <a href="https://twitter.com/kidoman_">@kidoman_</a></p>
+
+    <p>
+      
+      <a href="http://www.reddit.com/r/golang/comments/1nlgbq/business_card_ray_tracer_go_faster_than_c/">Reddit Discussion Thread</a>
+      
+      <br/>
+      
+      <a href="https://news.ycombinator.com/item?id=6499203">Hacker News Discussion Thread</a>
+      
+      <br/>
+      <a href="javascript:window.location='http://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text=Go%20Getter%20Part%203&via=kidoman_'">Tweet this</a>
+    </p>
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "kidoman";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "kidoman";
+    
+    var disqus_url = "http://kidoman.io/programming/go-getter-part-3.html";
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://kidoman.io//js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-44459958-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>

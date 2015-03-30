@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Introducing EMBD | Karan Misra</title>
+
+  
+  <link rel="stylesheet" href="http://kidoman.io//css/poole.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/poole-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-x.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link href="/favicon.png" rel="icon">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Coder, Biker, Gamer | Karan Misra" />
+
+  <meta name="description" content="A superheroic embedded programming framework.">
+  <meta name="keywords" content="kidoman,embd,sostronk">
+  <link rel="author" href="http://plus.google.com/109365517985703707273">
+</head>
+<body class="theme-base-0f">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://kidoman.io//"><img src="http://www.gravatar.com/avatar/8aea1ec57a05b988585f7f2c9e320cfe?s=200" alt="gravatar"></a>
+      <h1>Karan Misra</h1>
+      <p class="lead"><p>Coder, Biker, Gamer</p>
+
+<p>Co-Founder, CTO @<br/>
+  <a href="https://www.sostronk.com/">SoStronk</a></p>
+</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://kidoman.io//">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="mailto:kidoman@gmail.com">Contact</a></li>
+      
+      <li class="sidebar-nav-item"><a href="/about/">About</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://github.com/kidoman">GitHub</a></li>
+      
+      
+      
+      <li class="sidebar-nav-item"><a href="https://twitter.com/kidoman_">Twitter</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Introducing EMBD</h1>
+    <span class="post-date">Apr 24, 2014 &middot; 3 minute read &middot; <a  href="javascript:window.location='http://kidoman.io/blog/introducing-embd/#disqus_thread'" data-disqus-url="http://kidoman.io/framework/embd.html"  >Comments</a>
+
+    
+    <br/>
+    
+    <a class="label" href="http://kidoman.io//categories/framework">framework</a>
+    </span>
+    
+
+<p><strong><a href="https://github.com/kidoman/embd">EMBD</a></strong> is a framework for <strong>Go</strong> which does <strong>GPIO</strong> (General Purpose I/O), talks the <strong>I²C</strong> protocol (+ many more) and provides the drivers necessary to interact with <strong>many hardware sensors</strong> (eg. gyroscope, magnetometer, barometer, etc.) It&rsquo;s non-intrusive API allows you to quickly prototype solutions (see below for example) without sacrifising production-worthiness. And the best part? The code will run on a multitude of supported hosts (like the Raspberry Pi, and the BeagleBone Black) without change!</p>
+
+<p><a href="http://embd.kidoman.io">http://embd.kidoman.io</a><br>
+<a href="https://github.com/kidoman/embd">https://github.com/kidoman/embd</a></p>
+
+<p><div class="embed video-player">
+<iframe type="text/html" width="640" height="385" src="https://player.vimeo.com/video/92990437" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+</iframe>
+</div>
+</p>
+
+<p>Although the framework started its life as <strong>go-rpi</strong>, we soon realized the potential of making it even more useful. The driver code we had written to talk to a <a href="https://github.com/kidoman/embd#sensors-supported">plethora of sensors</a> were not really dependent on the Raspberry Pi. They expected a I²C bus and not much else. So we immediately started thinking of ways in which we could allow people to leverage all that code in other platforms which Golang ran on (which turned out to be <a href="https://github.com/kidoman/embd#platforms-supported">quite a few</a>.)</p>
+
+<h2 id="api-design:b1fa4ed83b7cc349584dedfbd0989262">API Design</h2>
+
+<p>We spent a bunch of time fine tuning the &ldquo;feel&rdquo; of the API. We have aimed to provide both <strong>real world usability</strong> (we did not want a toy feel to the API) and the ability to be be used for quick/rapid hardware prototyping.</p>
+
+<p>For example, it leans towards rapid prototyping when needed:</p>
+
+<pre><code class="language-go">func main() {
+  for {
+    embd.LEDToggle(&quot;LED0&quot;)
+    time.Sleep(250 * time.Millisecond)
+  }
+}
+</code></pre>
+
+<p>Or, gives you the control when necessary:</p>
+
+<pre><code class="language-go">func main() {
+  panicIf(embd.InitLED())
+  defer embd.CloseLED()
+
+  led, err := embd.NewLED(&quot;LED0&quot;)
+  if err != nil {
+    panic(err)
+  }
+  defer led.Off()
+
+  // Cleanly exit if someone hits Ctrl-C
+  quit := make(chan os.Signal, 1)
+  signal.Notify(quit, os.Interrupt, os.Kill)
+
+  for {
+    select {
+    case &lt;-time.After(250 * time.Millisecond):
+      panicIf(led.Toggle())
+      fmt.Println(&quot;Toggled&quot;)
+    case &lt;-quit:
+      return
+    }
+  }
+}
+
+</code></pre>
+
+<p>It currently has good support for the Raspberry Pi and the BeagleBone Black, with support for other platforms coming in the near future. This should almost guarentee that the particular combination of prototyping board, sensors, etc. would most probably work OOTB with EMBD.</p>
+
+<h2 id="summary:b1fa4ed83b7cc349584dedfbd0989262">Summary</h2>
+
+<p><strong>EMBD</strong> is a bold attempt at creating a cross platform embedded programming library. A lot of work is needed to flesh out the sensor library and to bring in support for new hosts. The <a href="https://github.com/kidoman/embd/blob/master/ROADMAP.md">ROADMAP</a> lists some of the short/long terms goals we have ahead of us, but we won&rsquo;t get too far down that list without the support of the community. So looking forward to those <a href="https://github.com/kidoman/embd/pulls">pull requests</a>! Also, while we have done our best, if you do come across a bug, please <a href="https://github.com/kidoman/embd/issues">let us know</a> so that we can tackle it in the best way possible. And if you need any help, we will be hanging around <a href="https://groups.google.com/forum/#!forum/go-embd">here</a>.</p>
+
+<p>To read the backstory, read <a href="/blog/embd-behind-the-scenes/">this</a> article as well.</p>
+
+<h2 id="links:b1fa4ed83b7cc349584dedfbd0989262">Links</h2>
+
+<p>Homepage: <a href="http://embd.kidoman.io/">http://embd.kidoman.io/</a><br/>
+Github: <a href="https://github.com/kidoman/embd">https://github.com/kidoman/embd</a></p>
+
+    <p>
+      
+      <a href="javascript:location.href='http://www.reddit.com/submit?url='+encodeURIComponent(location.href)+'&title=Introducing%20EMBD'">Submit to Reddit</a>
+      
+      <br/>
+      
+      <a href="javascript:window.location='http://news.ycombinator.com/submitlink?u='+encodeURIComponent(location.href)+'&t=Introducing%20EMBD'">Submit to Hacker News</a>
+      
+      <br/>
+      <a href="javascript:window.location='http://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text=Introducing%20EMBD&via=kidoman_'">Tweet this</a>
+    </p>
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "kidoman";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "kidoman";
+    
+    var disqus_url = "http://kidoman.io/framework/embd.html";
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://kidoman.io//js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-44459958-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>

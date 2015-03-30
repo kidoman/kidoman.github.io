@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>node.js in action: Learnings | Karan Misra</title>
+
+  
+  <link rel="stylesheet" href="http://kidoman.io//css/poole.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/poole-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-x.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link href="/favicon.png" rel="icon">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Coder, Biker, Gamer | Karan Misra" />
+
+  <meta name="description" content="Talk on node.js, learnings.">
+  <meta name="keywords" content="kidoman,embd,sostronk">
+  <link rel="author" href="http://plus.google.com/109365517985703707273">
+</head>
+<body class="theme-base-0f">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://kidoman.io//"><img src="http://www.gravatar.com/avatar/8aea1ec57a05b988585f7f2c9e320cfe?s=200" alt="gravatar"></a>
+      <h1>Karan Misra</h1>
+      <p class="lead"><p>Coder, Biker, Gamer</p>
+
+<p>Co-Founder, CTO @<br/>
+  <a href="https://www.sostronk.com/">SoStronk</a></p>
+</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://kidoman.io//">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="mailto:kidoman@gmail.com">Contact</a></li>
+      
+      <li class="sidebar-nav-item"><a href="/about/">About</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://github.com/kidoman">GitHub</a></li>
+      
+      
+      
+      <li class="sidebar-nav-item"><a href="https://twitter.com/kidoman_">Twitter</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>node.js in action: Learnings</h1>
+    <span class="post-date">May 31, 2013 &middot; 3 minute read &middot; <a  href="javascript:window.location='http://kidoman.io/blog/nodejs-in-action-learnings/#disqus_thread'" data-disqus-url="http://kidoman.io/engineering/node-dot-js-in-action-learnings.html"  >Comments</a>
+
+    
+    <br/>
+    
+    <a class="label" href="http://kidoman.io//categories/engineering">engineering</a>
+    </span>
+    
+
+<p>
+<figure >
+    
+        <img src="/images/node.js.png" alt="node.js" />
+    
+    
+</figure>
+</p>
+
+<p>I recently gave a talk on node.js at work&hellip; the talk was surprisingly well attended. It was scheduled to start at 1 PM. At around 1:02 PM, I was alone in the room with not another soul in sight. The room filled to the brim in the next 10 minutes. Last count = 33</p>
+
+<h2 id="link-to-the-talk:f9a73f2e921275ebff59efd3600f4cd3">Link to the talk</h2>
+
+<p><a href="http://goo.gl/Pcz2wQ">click</a></p>
+
+<h2 id="the-talk:f9a73f2e921275ebff59efd3600f4cd3">The Talk</h2>
+
+<p>The theme of the talk was to get people excited about the node.js work we were doing for a large enterprise client. Almost 9 months into development, we had figured out a tonne of patterns and idioms and had actually started becoming productive with it. Talking about the hurdles faced during the non avoidable learning curve seemed like a sensible thing to do.</p>
+
+<h3 id="tech-stack:f9a73f2e921275ebff59efd3600f4cd3">Tech Stack</h3>
+
+<p>Although I cannot reveal any actual URLs atm, the stack of the application we are developing is as follows:</p>
+
+<ul>
+<li>node.js (Platform)</li>
+<li>Express (Web Server)</li>
+<li>Sequelize (ORM)</li>
+<li>MySQL (Database)</li>
+<li>Q (Promises)</li>
+<li>Mocha/Sinon/Chai (and their -as-promised bretheren, for TDD)</li>
+<li>Grunt (Command runner)</li>
+<li>Coffee-Resque (For background jobs)</li>
+<li>Socket.io (For realtime tracking of connected clients)</li>
+<li>Redis (As a datastore for our generated socket.io handshake tokens)</li>
+<li>connect-assetmanager (For managing our assets; <strong>update</strong> we have now replaced this with our own hand rolled solution)</li>
+</ul>
+
+<h3 id="promises-to-keep-q:f9a73f2e921275ebff59efd3600f4cd3">Promises to Keep: Q</h3>
+
+<p>I think it is essential for any new node.js project to base itself on a solid promises library. As indicated above, the library of choice for us was Q. I would go out on a limb and say this - &ldquo;Avoiding callback hell is probably the least interesting feature of Q.&rdquo;</p>
+
+<p>Q allows us to beautifully structure our code without excessive &ldquo;pyramiding.&rdquo; You still end up with a few nested promises from time to time, but that is also avoidable with judicious usage of Q.spread.</p>
+
+<h3 id="testing:f9a73f2e921275ebff59efd3600f4cd3">Testing</h3>
+
+<p>Equally important is the need to get the TDD/BDD pattern flowing right from get go. Mocha/Sinon/Chai allow BDD in JavaScript to look almost as elegant as RSpec (which I consider to be the holy grail of developer friendly BDD.) Being smart and using the -as-promised utility node modules will also save you a lot of grief and restore a sense of sanity to the test cases (you can then essentially start returning promises of future asserts from your test cases, instead of having to call a <strong>done()</strong> at the end to signal the end.)</p>
+
+<h3 id="scaling-and-deployment:f9a73f2e921275ebff59efd3600f4cd3">Scaling and Deployment</h3>
+
+<p>Our dreams of serving a million requests from a single node.js process were quickly shattered when we discovered a pegged 100% CPU (on a single core.) Besides trying to fix the main issue (which turned out to be the MySQL driver being used by sequelize) we also spent some time getting the <a href="http://unicorn.bogomips.org/">unicornification</a> of node.js right. We ended up with a master-slave arrangement which allowed us to scale our application to N-1 cores (where N is the total number of cores available in the machine.) Common sense dictated the <strong>-1</strong> part (to leave a core aside for the kernel and various sub systems.)</p>
+
+<p>Figuring our deployments was also fun. Although there was some talk of building and deploying a .rpm (our target Linux distribution was CentOS 6.4), the general lack of time lead us to adapt a git based deployment mechanism. Any SHA is a good candidate for deployment to any of our environments. We obviously ended up tagging the good ones.</p>
+
+<h3 id="conclusion:f9a73f2e921275ebff59efd3600f4cd3">Conclusion</h3>
+
+<p>We really went out on a limb here by using node.js for the project when we did not actually have much in house expertise on the same. However, the effort has redeemed itself many fold. A lot of people have successfully managed to <strong>get</strong> &ldquo;concurrent programming&rdquo; as a result. Coming out from the comfort zone of RoR, .NET and Java also possibly has changed the course of their lives for ever! :)</p>
+
+    <p>
+      
+      <a href="javascript:location.href='http://www.reddit.com/submit?url='+encodeURIComponent(location.href)+'&title=node.js%20in%20action%3a%20Learnings'">Submit to Reddit</a>
+      
+      <br/>
+      
+      <a href="javascript:window.location='http://news.ycombinator.com/submitlink?u='+encodeURIComponent(location.href)+'&t=node.js%20in%20action%3a%20Learnings'">Submit to Hacker News</a>
+      
+      <br/>
+      <a href="javascript:window.location='http://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text=node.js%20in%20action%3a%20Learnings&via=kidoman_'">Tweet this</a>
+    </p>
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "kidoman";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "kidoman";
+    
+    var disqus_url = "http://kidoman.io/engineering/node-dot-js-in-action-learnings.html";
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://kidoman.io//js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-44459958-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>

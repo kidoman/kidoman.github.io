@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>TheBot - Adventures in Hardware | Karan Misra</title>
+
+  
+  <link rel="stylesheet" href="http://kidoman.io//css/poole.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/poole-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-x.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link href="/favicon.png" rel="icon">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Coder, Biker, Gamer | Karan Misra" />
+
+  <meta name="description" content="A crowd controlled robotic car.">
+  <meta name="keywords" content="kidoman,embd,sostronk">
+  <link rel="author" href="http://plus.google.com/109365517985703707273">
+</head>
+<body class="theme-base-0f">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://kidoman.io//"><img src="http://www.gravatar.com/avatar/8aea1ec57a05b988585f7f2c9e320cfe?s=200" alt="gravatar"></a>
+      <h1>Karan Misra</h1>
+      <p class="lead"><p>Coder, Biker, Gamer</p>
+
+<p>Co-Founder, CTO @<br/>
+  <a href="https://www.sostronk.com/">SoStronk</a></p>
+</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://kidoman.io//">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="mailto:kidoman@gmail.com">Contact</a></li>
+      
+      <li class="sidebar-nav-item"><a href="/about/">About</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://github.com/kidoman">GitHub</a></li>
+      
+      
+      
+      <li class="sidebar-nav-item"><a href="https://twitter.com/kidoman_">Twitter</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>TheBot - Adventures in Hardware</h1>
+    <span class="post-date">Mar 2, 2014 &middot; 6 minute read &middot; <a  href="javascript:window.location='http://kidoman.io/blog/thebot-adventures-in-hardware/#disqus_thread'" data-disqus-url="http://kidoman.io/engineering/thebot.html"  >Comments</a>
+
+    
+    <br/>
+    
+    <a class="label" href="http://kidoman.io//categories/engineering">engineering</a>
+    </span>
+    
+
+<p>(cross posted from the <a href="http://thoughtworks.github.io/p2/issue09/thebot">P2 Magazine</a>)</p>
+
+<p>“Robots that are controlled by node.js.” The idea imprinted on me immediately.</p>
+
+<p>“A crowd controlled robotic car!&rdquo;</p>
+
+<p>
+<figure >
+    
+        <img src="/images/thebot-1.png" alt="TheBot Mascot" />
+    
+    
+</figure>
+</p>
+
+<p>A fun product with a tonne of learning potential. However, doing a &ldquo;follow the blog posts/tutorials&rdquo; stitch and patch job recommended on the NodeBots site did not excite me one bit. Sure, we’d done it in two days, but what would we have learned in the process?</p>
+
+<p>Despite having worked extensively on node.js, the language did not interest me much - ambiguous syntax, callbacks, promises, etc. I had been looking for an opportunity do something real in Golang, and building a concurrent open source firmware for TheBot was just the ticket.</p>
+
+<p>
+<figure >
+    
+        <img src="/images/thebot-2.jpg" alt="TheBot" />
+    
+    
+</figure>
+</p>
+
+<p>TheBot is first and foremost an experiment. An experiment aimed at research and learning. An experiment to kickstart a hardware engineering culture in ThoughtWorks. Birthed as a crowd controlled robotic car that transmits video feed back to the controller; the vision has transformed many times during the development. Can it be the ultimate open source sensing/proximity prototyping platform? Could we extract a product out of this?</p>
+
+<blockquote>
+<p>“TheBot’s value is the immense learning and research potential.”</p>
+</blockquote>
+
+<p>On first appearance, TheBot looks like the result of odd inter-breeding between a remote-controlled car and the contents of your local Radio Shack. TheBot itself though, is not really just a car, it is actually a fully-fledged Golang based framework for working with hardware sensors and motor control. In it’s current incarnation, the RaspberryPi-based robot allows you to control it remotely using any device capable of running a modern browser. The on-board smarts do things like use rangefinders to implement collision avoidance, and you can even send it logo-ish commands like ‘turn 90 degrees right’.</p>
+
+<p>Right now, we are laying down the rails for what is to come next. The modules are already taking shape and we are using our learnings from TheBot to drive the development of the framework(s) and the underlying hardware abstraction layer.</p>
+
+<p>Unique Selling Proposal: TheBot’s value is the immense learning and research potential in its current form. The fact that it looks like a car and has 4 wheels is just a bonus.</p>
+
+<h3 id="the-guts:5988ca52097dd68cbe2a2aa7964103e1">The Guts</h3>
+
+<p>We plan on doing a proper video walk through of the hardware soon, but until then:</p>
+
+<p>
+<figure >
+    
+        <img src="/images/thebot-3.png" alt="Block Diagram" />
+    
+    
+</figure>
+</p>
+
+<h3 id="why-golang:5988ca52097dd68cbe2a2aa7964103e1">Why Golang?</h3>
+
+<p>Golang has excellent and remarkable support for concurrency in the core language. The RaspberryPi is single threaded and we needed the car to handle multiple real world interactions at the same time. Using threads would have forced us to use mutexes, etc, for synchronization. The ‘goroutines+channels&rsquo; architecture in Golang helped us focus on the &ldquo;actual&rdquo; interactions. (Goroutines are light weight threads which are executed via the Go runtime on real threads via a M:N mapping. Channels are a typed mechanism for passing messages between goroutines). The resulting code is much easier to read, reason with and understand.</p>
+
+<blockquote>
+<p>“Simply running the binary was always enough. This helped tremendously in shortening our development/build/deploy cycles and made the process even more gratifying.”</p>
+</blockquote>
+
+<p>Golang is a statically typed, garbage collected and compiled programming language. However, in use, it feels like a FAST (slightly) verbose scripting language which has support for systems programming  and duck typing. Since the cross compiled binary was entirely self contained, no runtime was needed. Simply running the binary was enough, which helped tremendously in shortening our development, build and deploy cycles and made the process even more gratifying.</p>
+
+<h3 id="why-raspberrypi:5988ca52097dd68cbe2a2aa7964103e1">Why RaspberryPi?</h3>
+
+<p>The RaspberryPi represents the most available lowest common denominator; an ARM chip running Linux. Besides marrying well with cross compiled Golang, it also doesn’t skimp in the I/O department. It supports I2C, GPIO, and PWM. The forgiving nature of the hardware, integrated HDMI/Ethernet/USB go a long way in making it a good first choice.</p>
+
+<p>That being said, we could deploy the firmware, in its current form, on any Linux based platform that has the ability to talk GPIO/I2C, including:
+BeagleBone Black
+PandaBoard, etc.</p>
+
+<p>Our long term goal is to be able to target raw microcontrollers.</p>
+
+<h3 id="what-does-it-do:5988ca52097dd68cbe2a2aa7964103e1">What does it do ?</h3>
+
+<p><div class="embed video-player">
+<iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/iMXjkZ4B3EM" allowfullscreen frameborder="0">
+</iframe>
+</div>
+</p>
+
+<h3 id="what-next:5988ca52097dd68cbe2a2aa7964103e1">What next?</h3>
+
+<p>The current form factor was an evolutionary step; a convenience which allowed us to get started quickly.</p>
+
+<p>We definitely want to cater to the hobbyist / education space - possibly in the form of a stripped down, dressed up Super 8 sensor kit, to help people get started quickly - as it has the potential for maximum impact at the grassroots level. At the same time, we want to balance things out by looking at solidly marketable areas like B2B logistics / delivery - which could apply to the rural health care space - and home automation. The home automation space is particularly exciting as the potential for integration between smart software and hardware innovation is really high - aptly demonstrated by the NEST devices.</p>
+
+<p>To make the above happen, we will need to stretch TheBot’s legs and expand its capabilities. We are in the process of extracting a hardware abstraction framework (EMBD) which will allow us to target a variety of hosts - RPi, BBB, etc. - from a single code base. This is particularly helpful because it will allow us to quickly prototype solutions using readily available hobby boards, while still retaining the ability to target the final hardware. Besides that, we are also interested in route mapping and visualization, as capability in this area will open many more opportunities.</p>
+
+<p>-&gt; ⁂ &lt;-</p>
+
+<p>The development process was nothing short of enthralling. We did not have well established libraries to lean back on. We went into this &ldquo;batteries not included.&rdquo; The decisions were deliberate; to use Golang and not pre-existing libraries because the potential for learning would have been limited. We optimized for maximized learning. And boy did it pay off. Not only did we end up writing our very own Golang libraries for interfacing with all these sensors, we also had the opportunity to try and model the interactions of software with the real world. Imagine for one second how many different ways there are to make the car turn right. Things we take for granted in software can open a can of worms when the &ldquo;real world&rdquo; gets involved!</p>
+
+<p>The technical attractiveness of such an undertaking is obvious, but there is more to it. I believe that a lot of good can be done for the &ldquo;voiceless&rdquo; by getting cheap commodity devices into their hands. A simple 2G connected solar powered open hardware device could allow a village like Panchayat, India, to bypass all the middle men and leverage social networking to report grievances to their congress representative. This could bring about a revolution. What minister worth his salt would want to look bad on Facebook? Our hope is that the resulting learnings and framework created from TheBot effort can and will make this possible.</p>
+
+<p>The possibilities are truly endless.</p>
+
+<h3 id="links-to-watch:5988ca52097dd68cbe2a2aa7964103e1">Links to Watch</h3>
+
+<p><a href="https://github.com/kidoman/embd" target="_blank">github.com/kidoman/embd</a></p>
+
+<h3 id="credits:5988ca52097dd68cbe2a2aa7964103e1">Credits</h3>
+
+<p>Contributors in no particular order: Sapto, Rohit, Kunal, Nikesh, Shantanu, Hanu, Gagan, Shaunak, Kashyap, Mukund, Akhil, Vishwas, Mallik, Deepthi, Shaun, Nag, Bala &amp; Sam Newman</p>
+
+<p>
+<figure >
+    
+        <img src="/images/thebot-4.jpg" alt="The Team" />
+    
+    
+</figure>
+</p>
+
+    <p>
+      
+      <a href="javascript:location.href='http://www.reddit.com/submit?url='+encodeURIComponent(location.href)+'&title=TheBot%20-%20Adventures%20in%20Hardware'">Submit to Reddit</a>
+      
+      <br/>
+      
+      <a href="javascript:window.location='http://news.ycombinator.com/submitlink?u='+encodeURIComponent(location.href)+'&t=TheBot%20-%20Adventures%20in%20Hardware'">Submit to Hacker News</a>
+      
+      <br/>
+      <a href="javascript:window.location='http://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text=TheBot%20-%20Adventures%20in%20Hardware&via=kidoman_'">Tweet this</a>
+    </p>
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "kidoman";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "kidoman";
+    
+    var disqus_url = "http://kidoman.io/engineering/thebot.html";
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://kidoman.io//js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-44459958-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>

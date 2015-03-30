@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Engineering on Coder, Biker, Gamer</title>
+    <link>http://kidoman.io/categories/engineering/</link>
+    <description>Recent content in Engineering on Coder, Biker, Gamer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2006 - 2015, Karan Misra; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 02 Mar 2014 08:00:00 +0530</lastBuildDate>
+    <atom:link href="http://kidoman.io/categories/engineering/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TheBot - Adventures in Hardware</title>
+      <link>http://kidoman.io/blog/thebot-adventures-in-hardware/</link>
+      <pubDate>Sun, 02 Mar 2014 08:00:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/thebot-adventures-in-hardware/</guid>
+      <description>
+
+&lt;p&gt;(cross posted from the &lt;a href=&#34;http://thoughtworks.github.io/p2/issue09/thebot&#34;&gt;P2 Magazine&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;“Robots that are controlled by node.js.” The idea imprinted on me immediately.&lt;/p&gt;
+
+&lt;p&gt;“A crowd controlled robotic car!&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/thebot-1.png&#34; alt=&#34;TheBot Mascot&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;A fun product with a tonne of learning potential. However, doing a &amp;ldquo;follow the blog posts/tutorials&amp;rdquo; stitch and patch job recommended on the NodeBots site did not excite me one bit. Sure, we’d done it in two days, but what would we have learned in the process?&lt;/p&gt;
+
+&lt;p&gt;Despite having worked extensively on node.js, the language did not interest me much - ambiguous syntax, callbacks, promises, etc. I had been looking for an opportunity do something real in Golang, and building a concurrent open source firmware for TheBot was just the ticket.&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/thebot-2.jpg&#34; alt=&#34;TheBot&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;TheBot is first and foremost an experiment. An experiment aimed at research and learning. An experiment to kickstart a hardware engineering culture in ThoughtWorks. Birthed as a crowd controlled robotic car that transmits video feed back to the controller; the vision has transformed many times during the development. Can it be the ultimate open source sensing/proximity prototyping platform? Could we extract a product out of this?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“TheBot’s value is the immense learning and research potential.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;On first appearance, TheBot looks like the result of odd inter-breeding between a remote-controlled car and the contents of your local Radio Shack. TheBot itself though, is not really just a car, it is actually a fully-fledged Golang based framework for working with hardware sensors and motor control. In it’s current incarnation, the RaspberryPi-based robot allows you to control it remotely using any device capable of running a modern browser. The on-board smarts do things like use rangefinders to implement collision avoidance, and you can even send it logo-ish commands like ‘turn 90 degrees right’.&lt;/p&gt;
+
+&lt;p&gt;Right now, we are laying down the rails for what is to come next. The modules are already taking shape and we are using our learnings from TheBot to drive the development of the framework(s) and the underlying hardware abstraction layer.&lt;/p&gt;
+
+&lt;p&gt;Unique Selling Proposal: TheBot’s value is the immense learning and research potential in its current form. The fact that it looks like a car and has 4 wheels is just a bonus.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-guts:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;The Guts&lt;/h3&gt;
+
+&lt;p&gt;We plan on doing a proper video walk through of the hardware soon, but until then:&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/thebot-3.png&#34; alt=&#34;Block Diagram&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;why-golang:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;Why Golang?&lt;/h3&gt;
+
+&lt;p&gt;Golang has excellent and remarkable support for concurrency in the core language. The RaspberryPi is single threaded and we needed the car to handle multiple real world interactions at the same time. Using threads would have forced us to use mutexes, etc, for synchronization. The ‘goroutines+channels&amp;rsquo; architecture in Golang helped us focus on the &amp;ldquo;actual&amp;rdquo; interactions. (Goroutines are light weight threads which are executed via the Go runtime on real threads via a M:N mapping. Channels are a typed mechanism for passing messages between goroutines). The resulting code is much easier to read, reason with and understand.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Simply running the binary was always enough. This helped tremendously in shortening our development/build/deploy cycles and made the process even more gratifying.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Golang is a statically typed, garbage collected and compiled programming language. However, in use, it feels like a FAST (slightly) verbose scripting language which has support for systems programming  and duck typing. Since the cross compiled binary was entirely self contained, no runtime was needed. Simply running the binary was enough, which helped tremendously in shortening our development, build and deploy cycles and made the process even more gratifying.&lt;/p&gt;
+
+&lt;h3 id=&#34;why-raspberrypi:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;Why RaspberryPi?&lt;/h3&gt;
+
+&lt;p&gt;The RaspberryPi represents the most available lowest common denominator; an ARM chip running Linux. Besides marrying well with cross compiled Golang, it also doesn’t skimp in the I/O department. It supports I2C, GPIO, and PWM. The forgiving nature of the hardware, integrated HDMI/Ethernet/USB go a long way in making it a good first choice.&lt;/p&gt;
+
+&lt;p&gt;That being said, we could deploy the firmware, in its current form, on any Linux based platform that has the ability to talk GPIO/I2C, including:
+BeagleBone Black
+PandaBoard, etc.&lt;/p&gt;
+
+&lt;p&gt;Our long term goal is to be able to target raw microcontrollers.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-does-it-do:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;What does it do ?&lt;/h3&gt;
+
+&lt;p&gt;&lt;div class=&#34;embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; width=&#34;640&#34; height=&#34;385&#34; src=&#34;http://www.youtube.com/embed/iMXjkZ4B3EM&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;what-next:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;What next?&lt;/h3&gt;
+
+&lt;p&gt;The current form factor was an evolutionary step; a convenience which allowed us to get started quickly.&lt;/p&gt;
+
+&lt;p&gt;We definitely want to cater to the hobbyist / education space - possibly in the form of a stripped down, dressed up Super 8 sensor kit, to help people get started quickly - as it has the potential for maximum impact at the grassroots level. At the same time, we want to balance things out by looking at solidly marketable areas like B2B logistics / delivery - which could apply to the rural health care space - and home automation. The home automation space is particularly exciting as the potential for integration between smart software and hardware innovation is really high - aptly demonstrated by the NEST devices.&lt;/p&gt;
+
+&lt;p&gt;To make the above happen, we will need to stretch TheBot’s legs and expand its capabilities. We are in the process of extracting a hardware abstraction framework (EMBD) which will allow us to target a variety of hosts - RPi, BBB, etc. - from a single code base. This is particularly helpful because it will allow us to quickly prototype solutions using readily available hobby boards, while still retaining the ability to target the final hardware. Besides that, we are also interested in route mapping and visualization, as capability in this area will open many more opportunities.&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; ⁂ &amp;lt;-&lt;/p&gt;
+
+&lt;p&gt;The development process was nothing short of enthralling. We did not have well established libraries to lean back on. We went into this &amp;ldquo;batteries not included.&amp;rdquo; The decisions were deliberate; to use Golang and not pre-existing libraries because the potential for learning would have been limited. We optimized for maximized learning. And boy did it pay off. Not only did we end up writing our very own Golang libraries for interfacing with all these sensors, we also had the opportunity to try and model the interactions of software with the real world. Imagine for one second how many different ways there are to make the car turn right. Things we take for granted in software can open a can of worms when the &amp;ldquo;real world&amp;rdquo; gets involved!&lt;/p&gt;
+
+&lt;p&gt;The technical attractiveness of such an undertaking is obvious, but there is more to it. I believe that a lot of good can be done for the &amp;ldquo;voiceless&amp;rdquo; by getting cheap commodity devices into their hands. A simple 2G connected solar powered open hardware device could allow a village like Panchayat, India, to bypass all the middle men and leverage social networking to report grievances to their congress representative. This could bring about a revolution. What minister worth his salt would want to look bad on Facebook? Our hope is that the resulting learnings and framework created from TheBot effort can and will make this possible.&lt;/p&gt;
+
+&lt;p&gt;The possibilities are truly endless.&lt;/p&gt;
+
+&lt;h3 id=&#34;links-to-watch:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;Links to Watch&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kidoman/embd&#34; target=&#34;_blank&#34;&gt;github.com/kidoman/embd&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;credits:5988ca52097dd68cbe2a2aa7964103e1&#34;&gt;Credits&lt;/h3&gt;
+
+&lt;p&gt;Contributors in no particular order: Sapto, Rohit, Kunal, Nikesh, Shantanu, Hanu, Gagan, Shaunak, Kashyap, Mukund, Akhil, Vishwas, Mallik, Deepthi, Shaun, Nag, Bala &amp;amp; Sam Newman&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/thebot-4.jpg&#34; alt=&#34;The Team&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Golang: testing the waters</title>
+      <link>http://kidoman.io/blog/testing-the-waters-with-golang/</link>
+      <pubDate>Fri, 26 Jul 2013 02:44:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/testing-the-waters-with-golang/</guid>
+      <description>
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;//1-ps.googleusercontent.com/x/s.golang-org.appspot.com/golang.org/doc/gopher/xfrontpage.png.pagespeed.ic._-JkwHsaKq.webp&#34; alt=&#34;Gopher&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://golang.org/&#34;&gt;Go&lt;/a&gt; has caught my fancy. There, I said it.&lt;/p&gt;
+
+&lt;p&gt;The Rubyist in me loves the static duck typing. Loves the promise of never having to navigate &amp;lsquo;murdered by design-patterns&amp;rsquo; code (AbstractFactoryFactory anyone?) Loves the near C/C++ speeds (ok, I know Ruby is not the fastest language, but I can always wish, right?) Loves the ability to compile large code bases in seconds. Loves the channels and the freedom they provide in implementing good/crisp CSP.&lt;/p&gt;
+
+&lt;p&gt;Sure, there are a few rough edges but nothing sharp enough to stop me from proposing to build the next enterprise application in Go. I mean, if Google betting YouTube and their primary &lt;a href=&#34;http://www.oscon.com/oscon2013/public/schedule/detail/28669&#34;&gt;download&lt;/a&gt; &lt;a href=&#34;http://talks.golang.org/2013/oscon-dl.slide#1&#34;&gt;service&lt;/a&gt; on it isn&amp;rsquo;t precedence enough, I don&amp;rsquo;t know what can be.&lt;/p&gt;
+
+&lt;p&gt;I do not want ThoughtWorks to be late to the party (&lt;a href=&#34;http://nodejs.org/&#34;&gt;again&lt;/a&gt;.) The time is ripe; the community is still taking shape and extremely malleable (in a good way.) So if a little/lot/hardcore evangelizing is what it takes, I am up for the challenge.&lt;/p&gt;
+
+&lt;h2 id=&#34;link-to-the-talk:a05636a247f88479f78e9e98ce654321&#34;&gt;Link to the talk&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://goo.gl/geuWOP&#34;&gt;click&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-talk:a05636a247f88479f78e9e98ce654321&#34;&gt;The Talk&lt;/h2&gt;
+
+&lt;p&gt;The talk was never intended to be a hands on session (although it transfigured into one towards the end.) More &amp;ldquo;daze and amaze.&amp;rdquo; I think I succeeded on the first part at least.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-amaze:a05636a247f88479f78e9e98ce654321&#34;&gt;The Amaze&lt;/h3&gt;
+
+&lt;p&gt;I wanted to highlight the best bits of Golang from the start. No stringing along for 40 slides whilst pretending to know a lot more than I did.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Static duck typing&lt;/li&gt;
+&lt;li&gt;No explicit inheritance + focus on composing&lt;/li&gt;
+&lt;li&gt;Pointers for efficient access&lt;/li&gt;
+&lt;li&gt;Built in language support for channels&lt;/li&gt;
+&lt;li&gt;Super fast compilation&lt;/li&gt;
+&lt;li&gt;Garbage collection&lt;/li&gt;
+&lt;li&gt;Gofmt (no more arguments about indentation)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;the-daze:a05636a247f88479f78e9e98ce654321&#34;&gt;The Daze&lt;/h3&gt;
+
+&lt;p&gt;Go will probably make inroads faster into some areas vs others. Main areas of focus are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Creating a highly efficient backend service based on RPC / JSON RPC&lt;/li&gt;
+&lt;li&gt;Best possible platform for implementing an API end point&lt;/li&gt;
+&lt;li&gt;Load balancer / database type applications&lt;/li&gt;
+&lt;li&gt;(world is Go&amp;rsquo;s oyster)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;testing-story:a05636a247f88479f78e9e98ce654321&#34;&gt;Testing Story&lt;/h3&gt;
+
+&lt;p&gt;The core members of Go are ensuring that people do not associate Go with not having to test their code. In fact, the best place to learn testing in Go is to browse through the implementation of Go packages (written by the creators of Go themselves.)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/pkg/testing/&#34;&gt;&amp;ldquo;testing&amp;rdquo;&lt;/a&gt; package makes testing really simple; some may say the approach taken is naive&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/orfjackal/gospec&#34;&gt;GoSpec&lt;/a&gt; aims to solve that. Provides a BDD type testing interface for Golang&lt;/li&gt;
+&lt;li&gt;Speed of running tests makes the whole process a joy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;deployment:a05636a247f88479f78e9e98ce654321&#34;&gt;Deployment&lt;/h3&gt;
+
+&lt;p&gt;Deployment couldn&amp;rsquo;t be easier. Go spits out a statically linked executable, making dependency management a thing of the past. Package up your executable into a RPM/DEB/what-not and throw it up. Couldn&amp;rsquo;t be simpler.&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion:a05636a247f88479f78e9e98ce654321&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;There are still nascent areas of Go which will require attention from the community to gain traction and get smoothened out. However this shouldn&amp;rsquo;t stop us from deploying Go as a API backend for a RoR powered AngularJS based single page application. Use the best bits of the various platforms to get going in the fastest manner possible. Throw the rot out as better Go based alternatives become available. :)&lt;/p&gt;
+
+&lt;h3 id=&#34;resources:a05636a247f88479f78e9e98ce654321&#34;&gt;Resources&lt;/h3&gt;
+
+&lt;p&gt;Listing the various resources and good to read links (in no particular order):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.usingcsp.com/&#34;&gt;CSP&lt;/a&gt; (&lt;a href=&#34;http://en.wikipedia.org/wiki/Communicating_sequential_processes&#34;&gt;wiki&lt;/a&gt;), a must read for understand CSP&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/&#34;&gt;Official homepage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://play.golang.org/&#34;&gt;A web based Go runner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.golang.org/&#34;&gt;Official blog roll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.mongodb.org/post/60359054233/going-with-go&#34;&gt;MongoDB Going with Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/channel/UCtXKDgv1AVoG88PLl8nGXmw&#34;&gt;Google Tech Talks YouTube channel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/diptanu/seli&#34;&gt;Seli&lt;/a&gt; (written by Diptanu)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/orfjackal/gospec&#34;&gt;GoSpec&lt;/a&gt;, BDD in Go&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/golang/groupcache&#34;&gt;GroupCache&lt;/a&gt;, a distributed hybrid client/server memcache alternative&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/languages/go&#34;&gt;Awesome language metrics by Github for Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/bradfitz&#34;&gt;Brad Fitzpatrik&amp;rsquo;s Github Profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/golang&#34;&gt;Golang Github Profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.docker.io/&#34;&gt;Docker&lt;/a&gt; an awesome LXC management tool (&lt;a href=&#34;https://github.com/dotcloud/docker&#34;&gt;github&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mozilla-services/heka&#34;&gt;Heka&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://flynn.io/&#34;&gt;Flynn&lt;/a&gt;, a Docker based OSS Heroku clone&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://robfig.github.io/revel/&#34;&gt;Revel&lt;/a&gt;, emerging defacto Go web framework&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.techempower.com/benchmarks&#34;&gt;Techempower Benchmarks&lt;/a&gt;, comparing Go&amp;rsquo;s performance to various other web frameworks&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://talks.golang.org/2013/oscon-dl.slide#1&#34;&gt;dl.google.com in Go&lt;/a&gt;, slides from Brad Fitzpatrik&amp;rsquo;s talk at oscon about reimplementing dl.google.com in Go&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dave.cheney.net/2013/08/06/go-1-1-on-the-cubieboard-2&#34;&gt;Go running on a Cubieboard2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Must watch videos on YouTube
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=f6kdp27TYZs&#34;&gt;Go Concurrency Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=MzYZhh6gpI0&#34;&gt;Tour of Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=kKQLhGZVN4A&#34;&gt;Go in Production&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>node.js in action: Learnings</title>
+      <link>http://kidoman.io/blog/nodejs-in-action-learnings/</link>
+      <pubDate>Fri, 31 May 2013 01:58:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/nodejs-in-action-learnings/</guid>
+      <description>
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/node.js.png&#34; alt=&#34;node.js&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I recently gave a talk on node.js at work&amp;hellip; the talk was surprisingly well attended. It was scheduled to start at 1 PM. At around 1:02 PM, I was alone in the room with not another soul in sight. The room filled to the brim in the next 10 minutes. Last count = 33&lt;/p&gt;
+
+&lt;h2 id=&#34;link-to-the-talk:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Link to the talk&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://goo.gl/Pcz2wQ&#34;&gt;click&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-talk:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;The Talk&lt;/h2&gt;
+
+&lt;p&gt;The theme of the talk was to get people excited about the node.js work we were doing for a large enterprise client. Almost 9 months into development, we had figured out a tonne of patterns and idioms and had actually started becoming productive with it. Talking about the hurdles faced during the non avoidable learning curve seemed like a sensible thing to do.&lt;/p&gt;
+
+&lt;h3 id=&#34;tech-stack:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Tech Stack&lt;/h3&gt;
+
+&lt;p&gt;Although I cannot reveal any actual URLs atm, the stack of the application we are developing is as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;node.js (Platform)&lt;/li&gt;
+&lt;li&gt;Express (Web Server)&lt;/li&gt;
+&lt;li&gt;Sequelize (ORM)&lt;/li&gt;
+&lt;li&gt;MySQL (Database)&lt;/li&gt;
+&lt;li&gt;Q (Promises)&lt;/li&gt;
+&lt;li&gt;Mocha/Sinon/Chai (and their -as-promised bretheren, for TDD)&lt;/li&gt;
+&lt;li&gt;Grunt (Command runner)&lt;/li&gt;
+&lt;li&gt;Coffee-Resque (For background jobs)&lt;/li&gt;
+&lt;li&gt;Socket.io (For realtime tracking of connected clients)&lt;/li&gt;
+&lt;li&gt;Redis (As a datastore for our generated socket.io handshake tokens)&lt;/li&gt;
+&lt;li&gt;connect-assetmanager (For managing our assets; &lt;strong&gt;update&lt;/strong&gt; we have now replaced this with our own hand rolled solution)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;promises-to-keep-q:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Promises to Keep: Q&lt;/h3&gt;
+
+&lt;p&gt;I think it is essential for any new node.js project to base itself on a solid promises library. As indicated above, the library of choice for us was Q. I would go out on a limb and say this - &amp;ldquo;Avoiding callback hell is probably the least interesting feature of Q.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Q allows us to beautifully structure our code without excessive &amp;ldquo;pyramiding.&amp;rdquo; You still end up with a few nested promises from time to time, but that is also avoidable with judicious usage of Q.spread.&lt;/p&gt;
+
+&lt;h3 id=&#34;testing:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Testing&lt;/h3&gt;
+
+&lt;p&gt;Equally important is the need to get the TDD/BDD pattern flowing right from get go. Mocha/Sinon/Chai allow BDD in JavaScript to look almost as elegant as RSpec (which I consider to be the holy grail of developer friendly BDD.) Being smart and using the -as-promised utility node modules will also save you a lot of grief and restore a sense of sanity to the test cases (you can then essentially start returning promises of future asserts from your test cases, instead of having to call a &lt;strong&gt;done()&lt;/strong&gt; at the end to signal the end.)&lt;/p&gt;
+
+&lt;h3 id=&#34;scaling-and-deployment:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Scaling and Deployment&lt;/h3&gt;
+
+&lt;p&gt;Our dreams of serving a million requests from a single node.js process were quickly shattered when we discovered a pegged 100% CPU (on a single core.) Besides trying to fix the main issue (which turned out to be the MySQL driver being used by sequelize) we also spent some time getting the &lt;a href=&#34;http://unicorn.bogomips.org/&#34;&gt;unicornification&lt;/a&gt; of node.js right. We ended up with a master-slave arrangement which allowed us to scale our application to N-1 cores (where N is the total number of cores available in the machine.) Common sense dictated the &lt;strong&gt;-1&lt;/strong&gt; part (to leave a core aside for the kernel and various sub systems.)&lt;/p&gt;
+
+&lt;p&gt;Figuring our deployments was also fun. Although there was some talk of building and deploying a .rpm (our target Linux distribution was CentOS 6.4), the general lack of time lead us to adapt a git based deployment mechanism. Any SHA is a good candidate for deployment to any of our environments. We obviously ended up tagging the good ones.&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion:f9a73f2e921275ebff59efd3600f4cd3&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;We really went out on a limb here by using node.js for the project when we did not actually have much in house expertise on the same. However, the effort has redeemed itself many fold. A lot of people have successfully managed to &lt;strong&gt;get&lt;/strong&gt; &amp;ldquo;concurrent programming&amp;rdquo; as a result. Coming out from the comfort zone of RoR, .NET and Java also possibly has changed the course of their lives for ever! :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Chrome DevTools Profiling Demystified</title>
+      <link>http://kidoman.io/blog/chrome-devtools-profiling-demystified/</link>
+      <pubDate>Sun, 12 May 2013 09:30:00 +0530</pubDate>
+      
+      <guid>http://kidoman.io/blog/chrome-devtools-profiling-demystified/</guid>
+      <description>&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://kidoman.io/images/chrome-profiler.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Came across this wonderful article by Addy. A must read for anyone trying to do anything with the Chrome DevTools&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://addyosmani.com/blog/taming-the-unicorn-easing-javascript-memory-profiling-in-devtools/&#34;&gt;http://addyosmani.com/blog/taming-the-unicorn-easing-javascript-memory-profiling-in-devtools/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

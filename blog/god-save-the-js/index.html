@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>God save the JS | Karan Misra</title>
+
+  
+  <link rel="stylesheet" href="http://kidoman.io//css/poole.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/poole-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-x.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link href="/favicon.png" rel="icon">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Coder, Biker, Gamer | Karan Misra" />
+
+  <meta name="description" content="The importance of gofmt.">
+  <meta name="keywords" content="kidoman,embd,sostronk">
+  <link rel="author" href="http://plus.google.com/109365517985703707273">
+</head>
+<body class="theme-base-0f">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://kidoman.io//"><img src="http://www.gravatar.com/avatar/8aea1ec57a05b988585f7f2c9e320cfe?s=200" alt="gravatar"></a>
+      <h1>Karan Misra</h1>
+      <p class="lead"><p>Coder, Biker, Gamer</p>
+
+<p>Co-Founder, CTO @<br/>
+  <a href="https://www.sostronk.com/">SoStronk</a></p>
+</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://kidoman.io//">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="mailto:kidoman@gmail.com">Contact</a></li>
+      
+      <li class="sidebar-nav-item"><a href="/about/">About</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://github.com/kidoman">GitHub</a></li>
+      
+      
+      
+      <li class="sidebar-nav-item"><a href="https://twitter.com/kidoman_">Twitter</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>God save the JS</h1>
+    <span class="post-date">May 10, 2014 &middot; 2 minute read &middot; <a  href="javascript:window.location='http://kidoman.io/blog/god-save-the-js/#disqus_thread'" data-disqus-url="http://kidoman.io/programming/god-save-the-js.html"  >Comments</a>
+
+    
+    <br/>
+    
+    <a class="label" href="http://kidoman.io//categories/programming">programming</a>
+    </span>
+    
+
+<p>Golang has has this feature right from the start. Very innocuously named <code>gofmt</code> this tool (distributed as part of the Go compiler toolchain) ensures that all Go code have a common look and feel to it. It does that by enforcing a few things:</p>
+
+<ul>
+<li>Ensure that the imports are all sorted alphabetically</li>
+<li>Removes all unneeded semicolon from the code</li>
+<li>Aligns <code>const</code>, <code>var</code> and <code>struct</code> constructs so that the variable names all line up nicely</li>
+</ul>
+
+<p>Since <code>gofmt</code> is integrated into most text editors used to work on Golang, using the tool becomes ubiquitous. Essentially, it can take Go code which looks like this:</p>
+
+<pre><code class="language-go">package main
+
+import &quot;github.com/go-martini/martini&quot;
+
+import &quot;log&quot;
+
+func main() {
+  m := martini.Classic()
+  log.Print(&quot;Starting...&quot;);
+    m.Run()
+}
+</code></pre>
+
+<p>and make it this:</p>
+
+<pre><code class="language-go">package main
+
+import (
+    &quot;log&quot;
+
+    &quot;github.com/go-martini/martini&quot;
+)
+
+func main() {
+    m := martini.Classic()
+    log.Print(&quot;Starting...&quot;)
+    m.Run()
+}
+</code></pre>
+
+<p>Unless otherwise instructed, it also does all indentation using real tabs. Before you turn away in disgust, let me tell you this. Its actually quite amazing how TABS, when done right, can actually be a benefit. Since all Go code gets run through <code>gofmt</code> anyways, all Go code end up using real TABs. And that allows for people to have their own indentation widths without effecting the actual sourde code. Want more spacing, sure go ahead and ask your favorite editor to represent the TAB as 8 spaces, DONE! Coming from Ruby land, 2 spaces for a TAB it is then. Might sound too good to be true, but it just works.</p>
+
+<h2 id="enter-javascript:2fa1dfed2095738c466eda77c46ee3f1">Enter JavaScript</h2>
+
+<p>This Github repo showed up in HackerNews front page today.</p>
+
+<p><a href="https://github.com/rdio/jsfmt">https://github.com/rdio/jsfmt</a></p>
+
+<p>Looks like an attempt to bring the same <code>gofmt</code> magic over to the JavaScript land. And I am excited about the sanity that will ensue if this becomes popular among JavaScript programmers. One true/universal way for all JavaScript code formatting. Having suffered <code>IntelliJ</code>&rsquo;s shoddy JavaScript default formatting enough, this feels like the light at the end of a tunnel.</p>
+
+<p>So <code>go spreadTheWord()</code></p>
+
+    <p>
+      
+      <a href="javascript:location.href='http://www.reddit.com/submit?url='+encodeURIComponent(location.href)+'&title=God%20save%20the%20JS'">Submit to Reddit</a>
+      
+      <br/>
+      
+      <a href="javascript:window.location='http://news.ycombinator.com/submitlink?u='+encodeURIComponent(location.href)+'&t=God%20save%20the%20JS'">Submit to Hacker News</a>
+      
+      <br/>
+      <a href="javascript:window.location='http://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text=God%20save%20the%20JS&via=kidoman_'">Tweet this</a>
+    </p>
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "kidoman";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "kidoman";
+    
+    var disqus_url = "http://kidoman.io/programming/god-save-the-js.html";
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://kidoman.io//js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-44459958-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>

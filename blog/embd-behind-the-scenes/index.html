@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>EMBD: Behind the Scenes | Karan Misra</title>
+
+  
+  <link rel="stylesheet" href="http://kidoman.io//css/poole.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/poole-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/hyde-x.css">
+  <link rel="stylesheet" href="http://kidoman.io//css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link href="/favicon.png" rel="icon">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Coder, Biker, Gamer | Karan Misra" />
+
+  <meta name="description" content="The backstory of the **EMBD** framework.">
+  <meta name="keywords" content="kidoman,embd,sostronk">
+  <link rel="author" href="http://plus.google.com/109365517985703707273">
+</head>
+<body class="theme-base-0f">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://kidoman.io//"><img src="http://www.gravatar.com/avatar/8aea1ec57a05b988585f7f2c9e320cfe?s=200" alt="gravatar"></a>
+      <h1>Karan Misra</h1>
+      <p class="lead"><p>Coder, Biker, Gamer</p>
+
+<p>Co-Founder, CTO @<br/>
+  <a href="https://www.sostronk.com/">SoStronk</a></p>
+</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://kidoman.io//">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="mailto:kidoman@gmail.com">Contact</a></li>
+      
+      <li class="sidebar-nav-item"><a href="/about/">About</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://github.com/kidoman">GitHub</a></li>
+      
+      
+      
+      <li class="sidebar-nav-item"><a href="https://twitter.com/kidoman_">Twitter</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>EMBD: Behind the Scenes</h1>
+    <span class="post-date">May 6, 2014 &middot; 5 minute read &middot; <a  href="javascript:window.location='http://kidoman.io/blog/embd-behind-the-scenes/#disqus_thread'" data-disqus-url="http://kidoman.io/life/embd-behind-scenes.html"  >Comments</a>
+
+    
+    <br/>
+    
+    <a class="label" href="http://kidoman.io//categories/life">life</a>
+    </span>
+    
+
+<p>For the impatient, TheBot was an experiment to kickstart a hardware engineering culture at <strong>ThoughtWorks</strong>. We choose the Raspberry Pi (RPi) as the prototyping platform and Golang as the language in which to create the firmware. We felt the need for a solid hardware abstraction layer (HAL) which would allow us to not only target the RPi, but soon expand to other platforms as well. We also wanted to make it dead easy to talk to a variety of sensors. Since there were no such existing frameworks for <a href="http://golang.org/">Golang</a>, we ended up writing our own, and we called it <a href="https://embd.kidoman.io/">EMBD</a> (<a href="https://github.com/kidoman/embd">Github</a>).</p>
+
+<blockquote>
+<p><strong>EMBD</strong> enables you to get started on your project quickly by providing build in support for the various <a href="https://github.com/kidoman/embd#platforms-supported">platforms</a>, <a href="https://github.com/kidoman/embd#protocols-supported">protocols</a>, <a href="https://github.com/kidoman/embd#sensors-supported">sensors</a>, <a href="https://github.com/kidoman/embd#controllers">controllers</a>. It also allows your prototyping code to survive through to production because of the built in hardware abstraction layer and Golang&rsquo;s <a href="https://github.com/kidoman/embd/wiki/Why-Go">versatility</a>. Thus significantly shortening the <strong>time to market</strong>.</p>
+</blockquote>
+
+<h2 id="a-little-history:2505723aeef3de4a9dea60209fc5f0de">A little history</h2>
+
+<p>A 20 year old company, <strong>ThoughtWorks</strong> has been primarily into software. We have made our mark in the ability to create high quality custom enterprise grade software over the years. Data analytics is a key focus areas, but there are others with deeper pockets already investing. Mobile development is also a conquered field. So when our chairman, <a href="http://en.wikipedia.org/wiki/Neville_Roy_Singham">Roy</a>, asked ThoughtWorkers to preempt the next big thing, we naturally started looking at the Internet of Things (<strong>IoT</strong>) as one of the avenues for innovation. Approaching it from a purely hardware perspective would have meant a lot of playing catch up, as we would need to seed a lot of talent in spaces before we could catch up:</p>
+
+<ul>
+<li>material science</li>
+<li>industrial design</li>
+<li>manufacturing, etc.</li>
+</ul>
+
+<p>We wanted to get started quickly, leveraging on abilities we have honed over the last two decades. And one of the low hanging fruits to explore was the software side of internet connected devices, firmware for the rovers and quadcopters, the user experiences of these <a href="https://nest.com/thermostat/life-with-nest-thermostat/">new contraptions</a>.</p>
+
+<h2 id="enter-thebot:2505723aeef3de4a9dea60209fc5f0de">Enter, TheBot</h2>
+
+<p>We deliberately choose to build something simple - to push the odds in our favor. However, the simplicity proved to be a boon as it allowed us a lot of scope for innovation in the software side of things. We also wanted to take this opportunity to study. To glean experiences from. From many angles, this is just scratching the surface of what is to come, but you have got to start somewhere. Think of it as bulb # 1.</p>
+
+<p><div class="embed video-player">
+<iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/iMXjkZ4B3EM" allowfullscreen frameborder="0">
+</iframe>
+</div>
+</p>
+
+<p>(We first showcased this to public on Jan 10, 2014 and dedicated the effort to Aaron, a good soul and a ThoughtWorker, who passed away on Jan 11, 2013.)</p>
+
+<p>
+<figure >
+    
+        <img src="/images/thebot-small.jpg" alt="TheBot" />
+    
+    
+</figure>
+</p>
+
+<p>It was a lot of work. A lot of things you took for granted suddenly needed to be taken care of in code and in hardware. The fact that the code now had to actually &ldquo;run&rdquo; on the hardware brought in additional challenges as well. Concurrency is the name of the game. Most of the events which you needed to handle and react to (ex: a obstacle suddenly apprearing infront of the car, while the car is turning on its own) would come concurrently, in no particular guarenteed order. The firmware had to be both efficient and easy to reason about.</p>
+
+<h2 id="golang-to-the-rescue:2505723aeef3de4a9dea60209fc5f0de">Golang to the rescue</h2>
+
+<blockquote>
+<p>Created by a team at Google in 2007, Golang aimed at making software development pleasurable again. Software that built quickly, ran well on multi-core hardware in networked environments.</p>
+</blockquote>
+
+<p>(see the official <a href="http://golang.org/doc/faq#What_is_the_purpose_of_the_project">FAQs</a> for a more complete picture)</p>
+
+<p>Golang has excellent support for concurrency in the core language. The RaspberryPi is single threaded and we needed the car to handle multiple real world interactions at the same time. Using threads would have forced us to use mutexes, etc, for synchronization. The ‘goroutines+channels’ architecture in Golang helped us focus on the “actual” interactions. (Goroutines are light weight threads which are executed via the Go runtime on real threads via a M:N mapping. Channels are a typed mechanism for passing messages between goroutines). The resulting code is much easier to read, reason with and understand.</p>
+
+<blockquote>
+<p>“Simply running the binary was always enough. This helped tremendously in shortening our development/build/deploy cycles and made the process even more gratifying.”</p>
+</blockquote>
+
+<p>Golang is a statically typed, garbage collected and compiled programming language. However, in use, it feels like a FAST (slightly) verbose scripting language which has support for systems programming and duck typing. Since the cross compiled binary was entirely self contained, no runtime was needed. Simply running the binary was enough, which helped tremendously in shortening our development, build and deploy cycles and made the process even more gratifying.</p>
+
+<p>(a recent article by <a href="https://www.spacemonkey.com/blog/posts/go-space-monkey">SpaceMonkey</a> details their story of switching from Python to Golang for the firmward of their embedded storage device. Its a must read to get a better idea of what Golang has to offer in this space.)</p>
+
+<h2 id="summary:2505723aeef3de4a9dea60209fc5f0de">Summary</h2>
+
+<p>These and various other reasons led us to create <a href="http://embd.kidoman.io/">EMBD</a> and release it to the world.</p>
+
+<p><strong>PS:</strong> Earlier, this article was part of the <a href="/framework/embd.html">Introducing EMBD</a> piece. However, based on feedback, I decided to split them so that they the original article focused solely on the new framework and did not pull focus to other tertiary things.</p>
+
+<h2 id="links:2505723aeef3de4a9dea60209fc5f0de">Links</h2>
+
+<p>Homepage: <a href="http://embd.io/">http://embd.io/</a><br/>
+Github: <a href="https://github.com/kidoman/embd">https://github.com/kidoman/embd</a></p>
+
+    <p>
+      
+      <a href="javascript:location.href='http://www.reddit.com/submit?url='+encodeURIComponent(location.href)+'&title=EMBD%3a%20Behind%20the%20Scenes'">Submit to Reddit</a>
+      
+      <br/>
+      
+      <a href="javascript:window.location='http://news.ycombinator.com/submitlink?u='+encodeURIComponent(location.href)+'&t=EMBD%3a%20Behind%20the%20Scenes'">Submit to Hacker News</a>
+      
+      <br/>
+      <a href="javascript:window.location='http://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text=EMBD%3a%20Behind%20the%20Scenes&via=kidoman_'">Tweet this</a>
+    </p>
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "kidoman";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "kidoman";
+    
+    var disqus_url = "http://kidoman.io/life/embd-behind-scenes.html";
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://kidoman.io//js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-44459958-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
