@@ -7,4 +7,5 @@ deploy:
     - hijonathan/gh-pages@0.2.3:
         token: $GIT_TOKEN
         branch: master
+        domain: kidoman.io
         basedir: public
