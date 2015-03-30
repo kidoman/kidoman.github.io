@@ -9,7 +9,7 @@ copyright = "Copyright (c) 2006 - 2015, Karan Misra; all rights reserved."
 [[menu.main]]
   url = "mailto:kidoman@gmail.com"
   name = "Contact"
-  weight = -10
+  weight = -1
 
 [[menu.main]]
   url = "/about"
